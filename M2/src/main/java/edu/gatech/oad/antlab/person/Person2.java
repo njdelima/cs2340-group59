@@ -31,15 +31,15 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  String ans = ""; 
-	  int strLength = input.length(); 
-	  while (strLength != 0) { 
-	  	int index = (int) Math.floor(Math.random() * strLength); 
-	  	char c = input.charAt(index); 
+	  String ans = "";
+	  int strLength = input.length();
+	  while (strLength != 0) {
+	  	int index = (int) Math.floor(Math.random() * strLength);
+	  	char c = input.charAt(index);
 	  	input = input.substring(0, index) + input.substring(index + 1);
 	  	ans += c;
-	  	strLength--; 
-	  }  
+	  	strLength--;
+	  }
 	  return ans;
 	}
 	/**
