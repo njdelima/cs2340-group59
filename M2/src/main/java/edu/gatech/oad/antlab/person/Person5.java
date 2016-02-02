@@ -35,9 +35,9 @@ public class Person5 {
 	  int counter = 0;
 	  for (int i = 0; i < newChar.length; i++) {
 	  	if (i == 1) {
-	  		newChar[newChar.length - 2] = inputChar[i];
-	  	} else if (i == 2) {
 	  		newChar[newChar.length - 1] = inputChar[i];
+	  	} else if (i == 2) {
+	  		newChar[newChar.length - 2] = inputChar[i];
 	  	} else {
 	  		newChar[counter] = inputChar[i];
 	  		counter++;
