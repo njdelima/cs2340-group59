@@ -4,7 +4,7 @@
     <string name="button_login">Login</string>
     <string name="button_register">Register</string>
     <string name="title_activity_login">Login</string>
-    <string name="welcome">Welcome!</string>
+    <string name="welcome">Welcome to the Movie App!</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
