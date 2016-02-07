@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TestApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_5cebee3ca8f0b82c6631011b62fe871bda717909.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TestApp/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_95847d3143ebe00e74d710554f84237bd1ddf622.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TestApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_f99c25f026f70f66ee3af131cd62e9f90ddc9f49.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TestApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_3da1064c9642ca944fc5cac06adb3cd4cf4d9b26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TestApp/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_e38f8ce1881a3837a860c1c571102a05cf124a3d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TestApp/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_07d598eafb477e73fb3d38bd985907bf39a9a84a.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TestApp/app/build/intermediates/pre-dexed/debug/debug_16a543433af9e896af803c1fcb1d1e0d5d5fbac2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
