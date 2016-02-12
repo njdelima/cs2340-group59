@@ -11,5 +11,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="inglorious_bastnerds.testapp.RegisterActivity"
     tools:showIn="@layout/activity_register">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/name_text_field"
+        android:id="@+id/textView" />
 </RelativeLayout>
