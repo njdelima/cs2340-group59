@@ -7,5 +7,4 @@
     <string name="login_hint">Login!</string>
     <string name="register_hint">Register</string>
     <string name="login_fail">Incorrect username/password combination!</string>
-    <string name="register_fail">Passwords do not match!</string>
 </resources>

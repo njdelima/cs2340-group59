@@ -13,7 +13,6 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 import org.w3c.dom.Text;
 
-
 public class HomeActivity extends AppCompatActivity {
 
     private ListView mDrawerList;

@@ -13,8 +13,8 @@
         android:id="@+id/main_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="User Profile"
         android:textAlignment="center"
-        android:textSize="30sp"
-        android:text="User Profile" />
+        android:textSize="30sp"/>
 
 </RelativeLayout>
