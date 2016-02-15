@@ -24,6 +24,8 @@
             android:text="Buzz Movie Selector"
             android:textAlignment="center"
             android:textSize="30sp"/>
+
+
     </RelativeLayout>
 
     <ListView

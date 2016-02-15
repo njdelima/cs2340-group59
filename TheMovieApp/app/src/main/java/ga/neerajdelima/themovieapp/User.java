@@ -9,6 +9,9 @@ import android.os.Parcel;
 public class User implements Parcelable {
     private String username;
     private String password;
+    private String major;
+    private String firstName;
+    private String lastName;
 
     public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>()
     {
@@ -36,14 +39,30 @@ public class User implements Parcelable {
     public String getPassword() {
         return this.password;
     }
-
+    public String getFirstName() {
+        return this.firstName;
+    }
+    public String getLastName() {
+        return this.lastName;
+    }
+    public String getMajor() {
+        return this.major;
+    }
     public void setUsername(String username) {
         this.username = username;
     }
     public void setPassword(String password) {
         this.password = password;
     }
-
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public void setMajor(String major) {
+        this.major = major;
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
