@@ -38,4 +38,9 @@ public class RegisterActivity extends AppCompatActivity {
         intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
     }
+    public void cancelRegistration(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
+        startActivity(intent);
+    }
 }
