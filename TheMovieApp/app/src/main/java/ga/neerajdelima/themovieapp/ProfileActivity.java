@@ -9,11 +9,14 @@ import android.os.Bundle;
  * @version 1.0
  */
 
+
 public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
     }
+
 }
