@@ -2,6 +2,7 @@
 <resources>
     <string-array name="navigation_array">
         <item>Search</item>
+        <item>Profile</item>
         <item>Top Rentals</item>
         <item>New Releases</item>
         <item>Logout</item>
