@@ -54,6 +54,10 @@ public class HomeActivity extends AppCompatActivity {
         if (label.equals("Logout")) {
             logout();
         }
+        if (label.equals("Profile")) {
+            Intent intent = new Intent(this, ProfileActivity.class);
+            startActivity(intent);
+        }
     }
 
     private void addDrawerItems(String[] optsArray) {
