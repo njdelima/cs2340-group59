@@ -20,4 +20,5 @@
         completions."
     </string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>
