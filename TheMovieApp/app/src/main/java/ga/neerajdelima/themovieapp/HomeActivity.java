@@ -10,18 +10,21 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
-
+import java.util.ArrayList;
 import org.w3c.dom.Text;
 
 public class HomeActivity extends AppCompatActivity {
 
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
+    ArrayList<User> valid_credentials;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        valid_credentials = this.getIntent().getParcelableArrayListExtra("CREDENTIALS");
 
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
@@ -44,8 +47,6 @@ public class HomeActivity extends AppCompatActivity {
 
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.home_main_layout);
         relativeLayout.addView(textView);
-
-
     }
 
     private void handleNavClick(View view) {
@@ -62,6 +63,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void logout() {
         Intent intent = new Intent(this, LoginActivity.class);
+        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
         finish();
     }
