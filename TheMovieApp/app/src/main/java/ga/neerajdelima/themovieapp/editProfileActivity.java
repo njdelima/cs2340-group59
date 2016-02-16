@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
@@ -60,7 +63,17 @@ public class editProfileActivity extends AppCompatActivity {
         password = passwordText.getText().toString();
         major = majorText.getText().toString();
 
-        if (firstName != null & userName != null & lastName != null & password != null & major != null) {
+        if (firstName.equals("") | userName.equals("") | lastName.equals("")
+                | password.equals("") | major.equals("")) {
+            TextView errorMessage = new TextView(this);
+            errorMessage.setText("Please fill in all slots");
+            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.editProfile_layout);
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
+            params.addRule(RelativeLayout.BELOW, R.id.saveChanges);
+            relativeLayout.addView(errorMessage, params);
+        } else {
             currentUser.setFirstName(firstName);
             currentUser.setUsername(userName);
             currentUser.setLastName(lastName);

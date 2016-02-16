@@ -77,4 +77,8 @@ public class viewProfileActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void editProfile(View view) {
+        Intent intent = new Intent(this, editProfileActivity.class);
+        startActivity(intent);
+    }
 }

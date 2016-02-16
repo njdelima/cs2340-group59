@@ -84,6 +84,15 @@
             android:id="@+id/view_profile_major"
             android:layout_toRightOf="@id/view_profile_major_label"
             android:layout_below="@id/view_profile_lastName"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_edit_button"
+            android:text="Edit Profile"
+            android:layout_below="@id/view_profile_major_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:onClick="editProfile"/>
     </RelativeLayout>
     <ListView
         android:id="@id/navList"
