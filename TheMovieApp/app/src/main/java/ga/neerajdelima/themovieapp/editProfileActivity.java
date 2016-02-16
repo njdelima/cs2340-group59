@@ -33,9 +33,6 @@ public class editProfileActivity extends AppCompatActivity {
         firstName = firstNameText.getText().toString();
         userName = userNameText.getText().toString();
 
-        if (firstName == null) {
-            firstNameText.setText("Enter First Name Here");
-        }
     }
     public void saveChanges(View view) {
 
