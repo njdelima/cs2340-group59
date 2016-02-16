@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ga.neerajdelima.themovieapp.editProfileActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_profile_screen"
+        android:text="Edit Profile"
+        android:textAlignment="center"
+        android:textSize="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstName_edit_label"
+        android:text="First Name: "
+        android:layout_below="@id/edit_profile_screen"/>
+    <EditText
+        android:id="@+id/edit_firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/firstName_edit_label"
+        android:hint="@+id/firstName_hint"
+        android:layout_marginTop="40dp"
+        android:padding="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveChanges"
+        android:text="Save Changes"
+        android:layout_below="@id/edit_firstName"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveChanges"/>
+
+</RelativeLayout>

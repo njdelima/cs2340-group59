@@ -21,6 +21,7 @@ public class viewProfileActivity extends AppCompatActivity {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     TextView userName;
+    TextView firstName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,8 @@ public class viewProfileActivity extends AppCompatActivity {
         });
         userName = (TextView) findViewById(R.id.view_profile_userName);
         userName.setText(currentUser.getUsername());
+        firstName = (TextView) findViewById(R.id.view_profile_firstName);
+        firstName.setText(currentUser.getFirstName());
     }
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
