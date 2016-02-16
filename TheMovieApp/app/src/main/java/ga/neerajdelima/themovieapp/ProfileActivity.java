@@ -10,9 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-
 import ga.neerajdelima.themovieapp.model.UserModel;
 
 /**
@@ -41,6 +38,11 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Method to handle the different options presented in the navigation bar
+     * @param view the current view of the navigation bar
+     */
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
         if (label.equals("Logout")) {
@@ -52,17 +54,29 @@ public class ProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to add the different options to the drawer in the navigation bar
+     * @param optsArray the array that lists all of the options presented in the navigation bar
+     */
     private void addDrawerItems(String[] optsArray) {
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
 
+    /**
+     * Method that enables the current logged in user to log out from their account
+     */
     private void logout() {
         userModel.logUserOut(userModel.getLoggedInUsername());
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
+
+    /**
+     * Method to view the user's profile page when the view profile button on the main profile screen is clicked
+     * @param view the current view of the main profile screen
+     */
     public void viewProfile(View view) {
         if (userModel.getLoggedInUser().getFirstName() != null) {
             Intent intent = new Intent(this, viewProfileActivity.class);
@@ -79,6 +93,11 @@ public class ProfileActivity extends AppCompatActivity {
             relativeLayout.addView(errorMessage, params);
         }
     }
+
+    /**
+     * Method to go to the edit profile page when the edit profile button on the main profile screen is clicked
+     * @param view the current view of the main profile screen
+     */
     public void editProfile(View view) {
         Intent intent = new Intent(this, editProfileActivity.class);
         startActivity(intent);

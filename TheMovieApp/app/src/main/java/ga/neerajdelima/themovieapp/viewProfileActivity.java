@@ -8,12 +8,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-
 import ga.neerajdelima.themovieapp.model.UserModel;
 import ga.neerajdelima.themovieapp.model.User;
 
+/**
+ * This class represents all of the activity that is shown on the view profile screen
+ * @author Komal Hirani
+ * @version 1.0
+ */
 public class viewProfileActivity extends AppCompatActivity {
     Intent intent;
     UserModel userModel;
@@ -55,6 +57,11 @@ public class viewProfileActivity extends AppCompatActivity {
         major = (TextView) findViewById(R.id.view_profile_major);
         major.setText(currentUser.getMajor());
     }
+
+    /**
+     * Method to handle the different options presented in the navigation bar
+     * @param view the current view of the navigation bar
+     */
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
         if (label.equals("Logout")) {
@@ -65,18 +72,29 @@ public class viewProfileActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
+    /**
+     *
+     * Method to add the different options to the drawer in the navigation bar
+     * @param optsArray the array that lists all of the options presented in the navigation bar
+     */
     private void addDrawerItems(String[] optsArray) {
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
 
+    /**
+     * Method that enables the current logged in user to log out from their account
+     */
     private void logout() {
         userModel.logUserOut(userModel.getLoggedInUsername());
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
+    /**
+     * Method to go to the edit profile page when the edit profile button on the view profile screen is clicked
+     * @param view the current view of the view profile screen
+     */
     public void editProfile(View view) {
         Intent intent = new Intent(this, editProfileActivity.class);
         startActivity(intent);
