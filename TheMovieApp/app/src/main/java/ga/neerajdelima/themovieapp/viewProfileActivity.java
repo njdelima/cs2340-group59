@@ -11,21 +11,18 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Profile Activity
- * @author Komal Hirani
- * @version 1.0
- */
-
-public class ProfileActivity extends AppCompatActivity {
+public class viewProfileActivity extends AppCompatActivity {
+    Intent intent;
+    ArrayList<User> valid_credentials;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    ArrayList<User> valid_credentials;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-        valid_credentials = this.getIntent().getParcelableArrayListExtra("CREDENTIALS");
+        setContentView(R.layout.activity_view_profile);
+        intent = this.getIntent();
+        valid_credentials = intent.getParcelableArrayListExtra("CREDENTIALS");
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -58,13 +55,5 @@ public class ProfileActivity extends AppCompatActivity {
         intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
         finish();
-    }
-    public void viewProfile(View view) {
-        Intent intent = new Intent(this, viewProfileActivity.class);
-        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
-        startActivity(intent);
-    }
-    public void editProfile(View view) {
-
     }
 }

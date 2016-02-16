@@ -16,33 +16,13 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="ga.neerajdelima.themovieapp.HomeActivity">
-
-    <TextView
-        android:id="@+id/main_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="User Profile"
-        android:textAlignment="center"
-        android:textSize="30sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:id="@+id/view_profile_button"
-        android:layout_below="@id/main_title"
-        android:hint="View Profile"
-        android:onClick="viewProfile"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_profile_button"
-        android:layout_below="@id/view_profile_button"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:hint="Edit Profile"
-        android:onClick="editProfile"/>
+        <TextView
+            android:id="@+id/view_profile_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Profile"
+            android:textAlignment="center"
+            android:textSize="30sp"/>
 
     </RelativeLayout>
     <ListView

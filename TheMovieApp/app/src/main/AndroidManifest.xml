@@ -27,7 +27,8 @@
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".viewProfileActivity"></activity>
     </application>
 
 </manifest>
