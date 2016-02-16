@@ -1,36 +1,32 @@
-package ga.neerajdelima.themovieapp;
-
-import android.os.Parcelable;
-import android.os.Parcel;
+package ga.neerajdelima.themovieapp.model;
 
 /**
  * Created by Neeraj on 2/15/16.
  */
-public class User implements Parcelable {
+public class User {
     private String username;
     private String password;
     private String major;
     private String firstName;
     private String lastName;
 
-    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>()
-    {
-        @Override
-        public User createFromParcel(Parcel source)
-        {
-            return new User(source);
-        }
-
-        @Override
-        public User[] newArray(int size)
-        {
-            return new User[size];
-        }
-    };
+    private boolean loggedIn;
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.loggedIn = false;
+    }
+
+    public boolean isLoggedIn() {
+        return this.loggedIn;
+    }
+    public void logOut() {
+        this.loggedIn = false;
+    }
+
+    public void logIn() {
+        this.loggedIn = true;
     }
 
     public String getUsername() {
@@ -76,21 +72,5 @@ public class User implements Parcelable {
         } else {
             return false;
         }
-    }
-
-    public User(Parcel in) {
-        this.username = in.readString();
-        this.password = in.readString();
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.username);
-        dest.writeString(this.password);
     }
 }

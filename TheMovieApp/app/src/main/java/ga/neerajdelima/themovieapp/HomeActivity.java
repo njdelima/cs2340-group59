@@ -5,27 +5,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
-import android.widget.Toast;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
 import java.util.ArrayList;
-import org.w3c.dom.Text;
+
+import ga.neerajdelima.themovieapp.model.User;
+import ga.neerajdelima.themovieapp.model.UserModel;
 
 public class HomeActivity extends AppCompatActivity {
 
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    ArrayList<User> valid_credentials;
+    UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        valid_credentials = this.getIntent().getParcelableArrayListExtra("CREDENTIALS");
-
+        userModel = new UserModel();
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -38,8 +38,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
-        String message = intent.getStringExtra("USERNAME");
+        String message = userModel.getLoggedInUsername();
 
         TextView textView = new TextView(this);
         textView.setTextSize(40);
@@ -66,8 +65,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void logout() {
+        userModel.logUserOut(userModel.getLoggedInUsername());
         Intent intent = new Intent(this, LoginActivity.class);
-        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
         finish();
     }

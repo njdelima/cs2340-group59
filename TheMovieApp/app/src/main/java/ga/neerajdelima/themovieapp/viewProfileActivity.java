@@ -4,29 +4,38 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import ga.neerajdelima.themovieapp.model.UserModel;
+import ga.neerajdelima.themovieapp.model.User;
 
 /**
- * Profile Activity
+ * This class represents all of the activity that is shown on the view profile screen
  * @author Komal Hirani
  * @version 1.0
  */
-
-public class ProfileActivity extends AppCompatActivity {
+public class viewProfileActivity extends AppCompatActivity {
+    Intent intent;
+    UserModel userModel;
+    User currentUser;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    UserModel userModel;
+    TextView userName;
+    TextView firstName;
+    TextView lastName;
+    TextView passWord;
+    TextView major;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_view_profile);
+        intent = this.getIntent();
         userModel = new UserModel();
+        currentUser = userModel.getLoggedInUser();
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -37,6 +46,16 @@ public class ProfileActivity extends AppCompatActivity {
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
+        userName = (TextView) findViewById(R.id.view_profile_userName);
+        userName.setText(currentUser.getUsername());
+        firstName = (TextView) findViewById(R.id.view_profile_firstName);
+        firstName.setText(currentUser.getFirstName());
+        lastName = (TextView) findViewById(R.id.view_profile_lastName);
+        lastName.setText(currentUser.getLastName());
+        passWord = (TextView) findViewById(R.id.view_profile_password);
+        passWord.setText(currentUser.getPassword());
+        major = (TextView) findViewById(R.id.view_profile_major);
+        major.setText(currentUser.getMajor());
     }
 
     /**
@@ -53,8 +72,8 @@ public class ProfileActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
     /**
+     *
      * Method to add the different options to the drawer in the navigation bar
      * @param optsArray the array that lists all of the options presented in the navigation bar
      */
@@ -72,31 +91,9 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
     /**
-     * Method to view the user's profile page when the view profile button on the main profile screen is clicked
-     * @param view the current view of the main profile screen
-     */
-    public void viewProfile(View view) {
-        if (userModel.getLoggedInUser().getFirstName() != null) {
-            Intent intent = new Intent(this, viewProfileActivity.class);
-            startActivity(intent);
-        } else {
-            TextView errorMessage = new TextView(this);
-            errorMessage.setText("Profile has not been created");
-            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.home_profile_layout);
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
-            params.addRule(RelativeLayout.BELOW, R.id.edit_profile_button);
-
-            relativeLayout.addView(errorMessage, params);
-        }
-    }
-
-    /**
-     * Method to go to the edit profile page when the edit profile button on the main profile screen is clicked
-     * @param view the current view of the main profile screen
+     * Method to go to the edit profile page when the edit profile button on the view profile screen is clicked
+     * @param view the current view of the view profile screen
      */
     public void editProfile(View view) {
         Intent intent = new Intent(this, editProfileActivity.class);
