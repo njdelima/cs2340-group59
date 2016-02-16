@@ -23,7 +23,18 @@
             android:text="User Profile"
             android:textAlignment="center"
             android:textSize="30sp"/>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile_userName_label"
+            android:text="User Name: "
+            android:layout_below="@id/view_profile_main"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile_userName"
+            android:layout_toRightOf="@id/view_profile_userName_label" />
     </RelativeLayout>
     <ListView
         android:id="@id/navList"

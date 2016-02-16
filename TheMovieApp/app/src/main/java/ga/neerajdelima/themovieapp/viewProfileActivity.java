@@ -11,18 +11,25 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import ga.neerajdelima.themovieapp.model.UserModel;
+import ga.neerajdelima.themovieapp.model.User;
+
 public class viewProfileActivity extends AppCompatActivity {
     Intent intent;
-    ArrayList<User> valid_credentials;
+    UserModel userModel;
+    User currentUser;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
+    TextView userName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
         intent = this.getIntent();
-        valid_credentials = intent.getParcelableArrayListExtra("CREDENTIALS");
+        userModel = new UserModel();
+        currentUser = userModel.getLoggedInUser();
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -33,6 +40,8 @@ public class viewProfileActivity extends AppCompatActivity {
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
+        userName = (TextView) findViewById(R.id.view_profile_userName);
+        userName.setText(currentUser.getUsername());
     }
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
@@ -51,9 +60,12 @@ public class viewProfileActivity extends AppCompatActivity {
     }
 
     private void logout() {
+        userModel.logUserOut(userModel.getLoggedInUsername());
         Intent intent = new Intent(this, LoginActivity.class);
-        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
         finish();
+    }
+    private String getProfileFirstName() {
+        return currentUser.getFirstName();
     }
 }

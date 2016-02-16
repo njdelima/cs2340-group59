@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import ga.neerajdelima.themovieapp.model.UserModel;
+
 /**
  * Profile Activity
  * @author Komal Hirani
@@ -20,12 +22,12 @@ import java.util.ArrayList;
 public class ProfileActivity extends AppCompatActivity {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    ArrayList<User> valid_credentials;
+    UserModel userModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        valid_credentials = this.getIntent().getParcelableArrayListExtra("CREDENTIALS");
+        userModel = new UserModel();
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -54,14 +56,13 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void logout() {
+        userModel.logUserOut(userModel.getLoggedInUsername());
         Intent intent = new Intent(this, LoginActivity.class);
-        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
         finish();
     }
     public void viewProfile(View view) {
         Intent intent = new Intent(this, viewProfileActivity.class);
-        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
     }
     public void editProfile(View view) {
