@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -62,8 +64,20 @@ public class ProfileActivity extends AppCompatActivity {
         finish();
     }
     public void viewProfile(View view) {
-        Intent intent = new Intent(this, viewProfileActivity.class);
-        startActivity(intent);
+        if (userModel.getLoggedInUser().getFirstName() != null) {
+            Intent intent = new Intent(this, viewProfileActivity.class);
+            startActivity(intent);
+        } else {
+            TextView errorMessage = new TextView(this);
+            errorMessage.setText("Profile has not been created");
+            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.home_profile_layout);
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
+            params.addRule(RelativeLayout.BELOW, R.id.edit_profile_button);
+
+            relativeLayout.addView(errorMessage, params);
+        }
     }
     public void editProfile(View view) {
 
