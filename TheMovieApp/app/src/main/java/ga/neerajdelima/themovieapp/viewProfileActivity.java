@@ -22,6 +22,9 @@ public class viewProfileActivity extends AppCompatActivity {
     private ArrayAdapter<String> mAdapter;
     TextView userName;
     TextView firstName;
+    TextView lastName;
+    TextView passWord;
+    TextView major;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,12 @@ public class viewProfileActivity extends AppCompatActivity {
         userName.setText(currentUser.getUsername());
         firstName = (TextView) findViewById(R.id.view_profile_firstName);
         firstName.setText(currentUser.getFirstName());
+        lastName = (TextView) findViewById(R.id.view_profile_lastName);
+        lastName.setText(currentUser.getLastName());
+        passWord = (TextView) findViewById(R.id.view_profile_password);
+        passWord.setText(currentUser.getPassword());
+        major = (TextView) findViewById(R.id.view_profile_major);
+        major.setText(currentUser.getMajor());
     }
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
@@ -67,8 +76,5 @@ public class viewProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
-    }
-    private String getProfileFirstName() {
-        return currentUser.getFirstName();
     }
 }

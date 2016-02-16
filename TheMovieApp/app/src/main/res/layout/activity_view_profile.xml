@@ -39,15 +39,51 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/view_profile_password_label"
+            android:text="Password: "
+            android:layout_below="@id/view_profile_userName_label"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile_password"
+            android:layout_toRightOf="@id/view_profile_password_label"
+            android:layout_below="@id/view_profile_userName"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/view_profile_firstName_label"
             android:text="First Name: "
-            android:layout_below="@id/view_profile_userName_label"/>
+            android:layout_below="@id/view_profile_password_label"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/view_profile_firstName"
             android:layout_toRightOf="@id/view_profile_firstName_label"
-            android:layout_below="@id/view_profile_userName"/>
+            android:layout_below="@id/view_profile_password"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile_lastName_label"
+            android:text="Last Name: "
+            android:layout_below="@id/view_profile_firstName_label"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile_lastName"
+            android:layout_toRightOf="@id/view_profile_lastName_label"
+            android:layout_below="@id/view_profile_firstName"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile_major_label"
+            android:text="Major: "
+            android:layout_below="@id/view_profile_lastName_label"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile_major"
+            android:layout_toRightOf="@id/view_profile_major_label"
+            android:layout_below="@id/view_profile_lastName"/>
     </RelativeLayout>
     <ListView
         android:id="@id/navList"
