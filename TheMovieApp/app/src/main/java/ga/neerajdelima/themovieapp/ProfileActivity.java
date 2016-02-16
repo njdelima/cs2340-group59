@@ -9,8 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import ga.neerajdelima.themovieapp.model.UserModel;
 
 /**
@@ -22,12 +20,13 @@ import ga.neerajdelima.themovieapp.model.UserModel;
 public class ProfileActivity extends AppCompatActivity {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    UserModel userModel;
+    UserModel userModel = new UserModel();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        userModel = new UserModel();
+
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -56,16 +55,9 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        userModel.logUserOut(userModel.getLoggedInUsername());
+
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
-    }
-    public void viewProfile(View view) {
-        Intent intent = new Intent(this, viewProfileActivity.class);
-        startActivity(intent);
-    }
-    public void editProfile(View view) {
-
     }
 }

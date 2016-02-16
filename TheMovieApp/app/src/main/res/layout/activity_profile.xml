@@ -17,32 +17,113 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="ga.neerajdelima.themovieapp.HomeActivity">
 
-    <TextView
-        android:id="@+id/main_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="User Profile"
-        android:textAlignment="center"
-        android:textSize="30sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:id="@+id/view_profile_button"
-        android:layout_below="@id/main_title"
-        android:hint="View Profile"
-        android:onClick="viewProfile"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_profile_button"
-        android:layout_below="@id/view_profile_button"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:hint="Edit Profile"
-        android:onClick="editProfile"/>
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Profile"
+            android:textAlignment="center"
+            android:textSize="30sp"/>
+
+        <LinearLayout
+            android:id="@+id/profile_username_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/main_title"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/profile_username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:textAlignment="viewEnd"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/profile_username_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_firstname_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/profile_username_container"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/profile_firstname_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textAlignment="viewEnd"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/profile_firstname_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_lastname_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/profile_firstname_container"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/profile_lastname_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textAlignment="viewEnd"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/profile_lastname_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_major_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/profile_lastname_container"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/profile_major_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Major"
+                android:textAlignment="viewEnd"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/profile_major_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_submit_button"
+            android:hint="Submit"
+            android:onClick="updateProfile"
+            android:layout_below="@id/profile_major_container"
+            android:layout_centerInParent="true"/>
 
     </RelativeLayout>
     <ListView
