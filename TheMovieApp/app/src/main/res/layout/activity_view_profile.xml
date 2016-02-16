@@ -34,7 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/view_profile_userName"
-            android:layout_toRightOf="@id/view_profile_userName_label" />
+            android:layout_toRightOf="@id/view_profile_userName_label"
+            android:layout_below="@id/view_profile_main"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/view_profile_firstName"
-            android:layout_toRightOf="@id/view_profile_firstName_label"/>
+            android:layout_toRightOf="@id/view_profile_firstName_label"
+            android:layout_below="@id/view_profile_userName"/>
     </RelativeLayout>
     <ListView
         android:id="@id/navList"

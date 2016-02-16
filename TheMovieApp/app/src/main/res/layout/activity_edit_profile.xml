@@ -18,24 +18,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/userName_edit_label"
+        android:text="User Name: "
+        android:layout_below="@id/edit_profile_screen"
+        android:paddingTop="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_userName"
+        android:padding="20dp"
+        android:layout_above="@+id/firstName_edit_label"
+        android:layout_toRightOf="@+id/userName_edit_label"
+        android:layout_toEndOf="@+id/userName_edit_label" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/firstName_edit_label"
         android:text="First Name: "
-        android:layout_below="@id/edit_profile_screen"/>
+        android:layout_below="@id/userName_edit_label"
+        android:paddingTop="20dp"/>
     <EditText
         android:id="@+id/edit_firstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/firstName_edit_label"
-        android:hint="@+id/firstName_hint"
-        android:layout_marginTop="40dp"
-        android:padding="20dp"/>
+        android:padding="20dp"
+        android:layout_alignBottom="@+id/firstName_edit_label"
+        android:layout_alignLeft="@+id/edit_userName"
+        android:layout_alignStart="@+id/edit_userName" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/saveChanges"
         android:text="Save Changes"
-        android:layout_below="@id/edit_firstName"
-        android:layout_centerHorizontal="true"
-        android:onClick="saveChanges"/>
+        android:onClick="saveChanges"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
