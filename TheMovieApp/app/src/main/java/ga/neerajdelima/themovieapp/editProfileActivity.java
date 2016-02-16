@@ -8,9 +8,14 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
+
+/**
+ * Class that handles all of the activity on the edit Profile Screen
+ * @author Komal Hirani
+ * @version 1.0
+ */
 
 public class editProfileActivity extends AppCompatActivity {
 
@@ -49,6 +54,11 @@ public class editProfileActivity extends AppCompatActivity {
         majorText.setText(currentUser.getMajor());
 
     }
+
+    /**
+     * Method that saves all of the changes that the user makes to his/her profile
+     * @param view the current view of the edit profile screen
+     */
     public void saveChanges(View view) {
 
         userNameText.setText(userNameText.getText());
