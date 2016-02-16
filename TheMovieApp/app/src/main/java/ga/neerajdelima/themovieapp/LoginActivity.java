@@ -3,27 +3,25 @@ package ga.neerajdelima.themovieapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.view.View;
 import android.view.ViewGroup;
-import java.util.ArrayList;
+
+import ga.neerajdelima.themovieapp.model.UserModel;
 
 public class LoginActivity extends AppCompatActivity {
 
-    ArrayList<User> valid_credentials;
-
+    UserModel userModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        valid_credentials = this.getIntent().getParcelableArrayListExtra("CREDENTIALS");
-        if (valid_credentials == null) {
-            valid_credentials = new ArrayList<User>();
-            valid_credentials.add(new User("user", "pass"));
-        }
+        userModel = new UserModel();
+        userModel.logAllUsers();
     }
 
     public void checkLogin(View view) {
@@ -33,13 +31,10 @@ public class LoginActivity extends AppCompatActivity {
         String username = usernameText.getText().toString();
         String password = passwordText.getText().toString();
 
-        User toCheck = new User(username, password);
-
         //if (username.equals("user") && password.equals("pass")) {
-        if (valid_credentials.contains(toCheck)) {
+        if (userModel.checkLogin(username, password)) {
+            userModel.logUserIn(username);
             Intent intent = new Intent(this, HomeActivity.class);
-            intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
-            intent.putExtra("USERNAME", username);
             startActivity(intent);
         } else {
             TextView errorMessage = new TextView(this);
@@ -56,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void registerClick(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
-        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
     }
 }

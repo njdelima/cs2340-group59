@@ -11,17 +11,19 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import ga.neerajdelima.themovieapp.model.UserModel;
+
 public class RegisterActivity extends AppCompatActivity {
 
     Intent intent;
-    ArrayList<User> valid_credentials;
+    UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         intent = this.getIntent();
-        valid_credentials = intent.getParcelableArrayListExtra("CREDENTIALS");
+        userModel = new UserModel();
     }
 
     public void checkRegister(View view) {
@@ -34,10 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
         String confirmPassword = confirmPasswordText.getText().toString();
 
         if (password.equals(confirmPassword)) {
-            User toAdd = new User(username, password);
-            valid_credentials.add(toAdd);
+            userModel.addUser(username, password);
             Intent intent = new Intent(this, LoginActivity.class);
-            intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
             startActivity(intent);
         } else {
             TextView errorMessage = new TextView(this);
@@ -58,7 +58,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
     public void cancelRegistration(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
-        intent.putParcelableArrayListExtra("CREDENTIALS", valid_credentials);
         startActivity(intent);
     }
 }
