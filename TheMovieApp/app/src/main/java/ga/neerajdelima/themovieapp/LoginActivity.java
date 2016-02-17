@@ -11,7 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import ga.neerajdelima.themovieapp.model.UserModel;
-
+/**
+ * Class that handles LoginActivity.
+ * @author
+ * @version 1.0
+ */
 public class LoginActivity extends AppCompatActivity {
 
     UserModel userModel;
