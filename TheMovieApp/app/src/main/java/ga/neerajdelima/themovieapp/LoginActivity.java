@@ -23,7 +23,13 @@ public class LoginActivity extends AppCompatActivity {
         userModel = new UserModel();
         userModel.logAllUsers();
     }
-
+    /**
+     * Method for login.
+     * Check the user's username and password,
+     * and navigate the user to the home screen if username and password match,
+     * show the error message if not matched.
+     * @param view the current view of the login screen
+     */
     public void checkLogin(View view) {
         EditText usernameText = (EditText) findViewById(R.id.username_text);
         EditText passwordText = (EditText) findViewById(R.id.password_text);
@@ -49,6 +55,10 @@ public class LoginActivity extends AppCompatActivity {
             relativeLayout.addView(errorMessage, params);
         }
     }
+    /**
+     * Method to navigate the user to the register screen.
+     * @param view the register button
+     */
     public void registerClick(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
