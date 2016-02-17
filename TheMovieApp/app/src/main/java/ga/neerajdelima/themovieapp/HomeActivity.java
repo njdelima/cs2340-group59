@@ -47,7 +47,10 @@ public class HomeActivity extends AppCompatActivity {
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.home_main_layout);
         relativeLayout.addView(textView);
     }
-
+    /**
+     * Method to navigate the user to the selected option.
+     * @param view the current view of the main home screen
+     */
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
         if (label.equals("Logout")) {
@@ -58,12 +61,17 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
+    /**
+     * Method to add the different options to the drawer in the navigation bar
+     * @param optsArray the array that lists all of the options presented in the navigation bar
+     */
     private void addDrawerItems(String[] optsArray) {
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
-
+    /**
+     * Method that enables the current logged in user to log out from their account
+     */
     private void logout() {
         userModel.logUserOut(userModel.getLoggedInUsername());
         Intent intent = new Intent(this, LoginActivity.class);
