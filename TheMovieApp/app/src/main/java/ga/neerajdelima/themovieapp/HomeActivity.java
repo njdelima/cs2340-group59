@@ -14,6 +14,12 @@ import java.util.ArrayList;
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
 
+/**
+ * Class that handles HomeActivity.
+ * @author
+ * @version 1.0
+ */
+
 public class HomeActivity extends AppCompatActivity {
 
     private ListView mDrawerList;

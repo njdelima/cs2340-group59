@@ -11,7 +11,11 @@ import android.widget.TextView;
 
 
 import ga.neerajdelima.themovieapp.model.UserModel;
-
+/**
+ * Class that handles RegisterActivity.
+ * @author
+ * @version 1.0
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     Intent intent;
