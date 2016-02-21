@@ -1,12 +1,16 @@
 package ga.neerajdelima.themovieapp.model;
 
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import android.util.Log;
 import android.os.AsyncTask;
+
+import org.apache.http.params.HttpParams;
+import org.json.JSONException;
 import org.json.JSONObject;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -17,31 +21,35 @@ import java.net.URL;
 public class UserModel {
     static ArrayList<User> users = new ArrayList<User>();
 
-    private class UserTask extends AsyncTask {
-        @Override
-        protected String doInBackground(Object... args) {
-            String requestURL = (String) args[0];
-            String jsonData = (String) args[1];
+    private abstract class BackgroundTask extends AsyncTask {
+        protected String sendPostData(String requestURL, JSONObject jsonData) {
             try {
                 URL url = new URL(requestURL);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setDoOutput(true);
-                connection.setInstanceFollowRedirects(false);
                 connection.setRequestMethod("POST");
-                connection.setRequestProperty("Content-Type", "application/json");
-                connection.setRequestProperty("charset", "utf-8");
-                connection.setRequestProperty("Content-Length", Integer.toString(jsonData.length()));
-                connection.setUseCaches(false);
 
-                byte[] postData = jsonData.getBytes(StandardCharsets.UTF_8);
+                byte[] postData = jsonData.toString().getBytes();
                 connection.getOutputStream().write(postData);
                 return connection.getResponseMessage();
             } catch (MalformedURLException e) {
-                Log.d("Malformed URL", e.getMessage());
+                Log.d("Malformed URL Exception", e.getMessage());
             } catch (IOException e) {
                 Log.d("IOException", e.getMessage());
             }
             return null;
+        }
+    }
+
+    private class UserTask extends BackgroundTask {
+        @Override
+        protected String doInBackground(Object... args) {
+            String requestURL = (String) args[0];
+            JSONObject jsonData = (JSONObject) args[1];
+
+            String temp = sendPostData(requestURL, jsonData);
+            Log.d("response", temp);
+            return temp;
         }
 
         protected void onPostExecute(String response) {
@@ -55,8 +63,15 @@ public class UserModel {
     }
 
     public void addUser(String username, String password) {
-        String data = "{\"username\":\"tanay\",\"password\",\"12345\"}";
-        new UserTask().execute("http://128.61.104.207:2340/api/users/add.php", data);
+        try {
+            JSONObject data = new JSONObject();
+            data.put("username", username);
+            data.put("password", password);
+            new UserTask().execute("http://128.61.104.207:2340/api/users/add.php", data);
+        } catch (JSONException e) {
+            Log.d("JSONException", e.getMessage());
+        }
+
         //User toAdd = new User(username, password);
         //users.add(toAdd);
     }
