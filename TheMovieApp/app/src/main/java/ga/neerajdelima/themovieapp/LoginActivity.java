@@ -54,7 +54,13 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    /*
+     * This task just checks the network connectivity.
+     * See ga.neerajdelima.themovieapp.model.network.NetworkCheckTask
+     * for what it does in the background.
+     *
+     * If the connection succeeds, it calls the ProcessLoginTask
+     */
     private class LoginNetworkCheckTask extends NetworkCheckTask {
         public LoginNetworkCheckTask() {
             super("http://128.61.104.207:2340/api/users/fetch.php");
@@ -71,6 +77,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /*
+     * This task processes the login attempt. Checks the password
+     * provided against the one in the database for the user
+     * and if they match, logs him in and goes to HomeActivity.
+     */
     private class ProcessLoginTask extends FetchTask {
 
         String username;
@@ -80,6 +91,9 @@ public class LoginActivity extends AppCompatActivity {
             super("http://128.61.104.207:2340/api/users/fetch.php");
         }
 
+        /*
+         * Get the username and password from the View
+         */
         @Override
         protected void onPreExecute() {
             EditText usernameText = (EditText) findViewById(R.id.username_text);
@@ -96,12 +110,12 @@ public class LoginActivity extends AppCompatActivity {
                 JSONObject data = new JSONObject();
                 data.put("username", username);
                 Log.d("JSON data", data.toString());
-                sendPostData(data);
+                sendPostData(data); // POST the username to the URL. The DB returns the password for the username
                 Log.d("Checkpoint", "made it past sendpostdata");
-                JSONObject response = new JSONObject(getInputString());
-                String retrievedPassword = response.getString("password");
+                JSONObject response = new JSONObject(getInputString()); // Get the returned password
+                String retrievedPassword = response.getString("password"); // parse JSON
                 Log.d("RETRIEVED PASSWORD", retrievedPassword);
-                return retrievedPassword.equals(password);
+                return retrievedPassword.equals(password); // CHECK THE PASSWORD
 
             } catch (JSONException e) {
                 Log.d("JsonException", e.getMessage());
@@ -112,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Object response) {
             boolean success = (boolean) response;
-            if (success) {
+            if (success) { // Password checks out , go to HomeActivity
                 Log.d("About to set logged in user as", username);
                 userModel.setLoggedInUser(username);
                 Log.d("Finished setting logged in user", username);

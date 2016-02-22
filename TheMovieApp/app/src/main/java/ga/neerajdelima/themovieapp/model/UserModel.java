@@ -1,42 +1,13 @@
 package ga.neerajdelima.themovieapp.model;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
-import java.security.spec.KeySpec;
-import java.util.ArrayList;
 
 import java.security.MessageDigest;
 
-import android.content.Intent;
-import android.util.Base64;
 import android.util.Log;
-import android.os.AsyncTask;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import org.apache.http.params.HttpParams;
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.UUID;
-
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.PBEKeySpec;
-
-import ga.neerajdelima.themovieapp.HomeActivity;
-import ga.neerajdelima.themovieapp.R;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
 
 /**
@@ -44,8 +15,17 @@ import ga.neerajdelima.themovieapp.model.network.FetchTask;
  */
 public class UserModel {
 
+    /*
+     * Keeps track of the currently logged in user.
+     * If no one's logged in it should be null.
+     */
     static User loggedInUser = null;
 
+    /*
+     * For hashing passwords.
+     * Don't move plain text passwords around. hash it
+     * as soon as you read from the text box.
+     */
     public String md5(String stringToHash) {
         String hashedString = null;
         try {
@@ -58,16 +38,22 @@ public class UserModel {
         return hashedString;
     }
 
+    // Sets the currently logged in user to be @param username
     public void setLoggedInUser(String username) {
         new setLoggedInUserTask(username).execute();
     }
 
+    /*
+     * this task queries the database for the @param username
+     * and gets the rest of the information about the user.
+     * Sets the loggedInUser variable accordingly
+     */
     private class setLoggedInUserTask extends FetchTask {
 
         JSONObject data;
 
         public setLoggedInUserTask(String username) {
-            super("http://128.61.104.207:2340/api/users/fetch.php");
+            super("http://128.61.104.207:2340/api/users/fetch.php"); //Make a FetchTask
             data = new JSONObject();
             try {
                 data.put("username", username);
@@ -80,9 +66,10 @@ public class UserModel {
         protected Object doInBackground(Object... args) {
             try {
                 Log.d("json to send", data.toString());
-                sendPostData(data);
-                JSONObject response = new JSONObject(getInputString());
+                sendPostData(data); //Sends a POST request with the JSON containing the username
+                JSONObject response = new JSONObject(getInputString()); // get the server response
                 Log.d("Json received", response.toString());
+                //Create a new User from the received data
                 User user = new User(response.getString("username"), response.getString("password"),
                                         response.getString("first_name"), response.getString("last_name"),
                                         response.getString("major"));
@@ -102,19 +89,25 @@ public class UserModel {
         return loggedInUser.getUsername();
     }
 
+
     public void updateProfile(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
         Log.d("Checkpoint", "about to start updateprofileTask");
         new updateProfileTask(username, newUsername, newPassword, newFirstName, newLastName, newMajor).execute();
     }
 
+    /*
+     * This task updates the user in the database with the new information
+     *
+     */
     private class updateProfileTask extends FetchTask {
 
         JSONObject data;
 
         public updateProfileTask(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
-            super("http://128.61.104.207:2340/api/users/update.php");
+            super("http://128.61.104.207:2340/api/users/update.php"); // Create a FetchTask
             Log.d("Checkpoint", "inside updateProfileTask constructor");
             data = new JSONObject();
+            // Put all the information into a JSON
             try {
                 data.put("username", username);
                 data.put("new_username", newUsername);
@@ -129,10 +122,10 @@ public class UserModel {
         @Override
         protected Object doInBackground(Object... args) {
             Log.d("About to send json", data.toString());
-            sendPostData(data);
-            Log.d("response", getResponseMessage());
+            sendPostData(data); // POST the JSON
+            Log.d("response", getResponseMessage()); // should be 'OK'
             try {
-                setLoggedInUser(data.getString("username"));
+                setLoggedInUser(data.getString("username")); //update the loggedInUser's information
             } catch (JSONException e) {
                 e.printStackTrace();
             }

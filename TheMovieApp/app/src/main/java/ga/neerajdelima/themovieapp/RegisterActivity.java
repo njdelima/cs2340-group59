@@ -58,6 +58,9 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /*
+     * Same as login, checks the network connection before attempting registration
+     */
     private class RegisterNetworkCheckTask extends NetworkCheckTask {
 
         public RegisterNetworkCheckTask() {
@@ -75,6 +78,10 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    /*
+     * Process the registration. Pull the data from the View and add it to
+     * the database
+     */
     private class ProcessRegisterTask extends FetchTask {
 
         String username;
