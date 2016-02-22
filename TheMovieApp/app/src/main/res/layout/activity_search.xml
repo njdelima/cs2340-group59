@@ -8,5 +8,37 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ga.neerajdelima.themovieapp.SearchActivity">
-
+    <TextView
+        android:id="@+id/movie_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Search"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/movie_search"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_search_title"
+        android:hint="Enter Movie Name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:padding="20dp" />
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_search"
+        android:layout_centerHorizontal="true"
+        android:hint="Search for Movie!"
+        android:onClick="searchClick"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_button">
+    </ListView>
 </RelativeLayout>

@@ -54,6 +54,10 @@ public class ProfileActivity extends AppCompatActivity {
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
+        if (label.equals("Search")){
+            Intent intent = new Intent(this, SearchActivity.class);
+            startActivity(intent);
+        }
     }
 
     /**
