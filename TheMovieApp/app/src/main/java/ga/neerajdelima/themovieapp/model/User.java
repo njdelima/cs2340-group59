@@ -10,23 +10,16 @@ public class User {
     private String firstName;
     private String lastName;
 
-    private boolean loggedIn;
-
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.loggedIn = false;
     }
-
-    public boolean isLoggedIn() {
-        return this.loggedIn;
-    }
-    public void logOut() {
-        this.loggedIn = false;
-    }
-
-    public void logIn() {
-        this.loggedIn = true;
+    public User(String username, String password, String firstName, String lastName, String major) {
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.major = major;
     }
 
     public String getUsername() {
@@ -72,5 +65,15 @@ public class User {
         } else {
             return false;
         }
+    }
+    @Override
+    public String toString() {
+        String s = "";
+        s = s + "Username: " + this.username + ", ";
+        s = s + "Password: " + this.password + ", ";
+        s = s + "First Name: " + this.firstName + ", ";
+        s = s + "Last Name: " + this.lastName + ", ";
+        s = s + "Major: " + this.major;
+        return s;
     }
 }
