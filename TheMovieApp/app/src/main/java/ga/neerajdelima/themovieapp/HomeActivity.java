@@ -90,6 +90,9 @@ public class HomeActivity extends AppCompatActivity {
         finish();
     }
 
+    /*
+     * Example call to open movie db API.
+     */
     private class MovieFetcherTask extends FetchTask {
 
         String params;
@@ -100,16 +103,16 @@ public class HomeActivity extends AppCompatActivity {
 
         @Override
         protected JSONObject doInBackground(Object... args) {
-            sendGetData("http://www.omdbapi.com/", params);
-            Log.d("HTTP Response", getResponseMessage());
-            JSONObject response = getInputJSON();
-            return response;
+            sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
+            Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
+            JSONObject response = getInputJSON(); // Gets the response from the API
+            return response; // gives it to onPostExecute
         }
 
         @Override
         protected void onPostExecute(Object response) {
             JSONObject serverResponse = (JSONObject) response;
-            Log.d("Server response", serverResponse.toString());
+            Log.d("Server response", serverResponse.toString()); // Look through this in the logs
 
             //Parsing the JSON example
             JSONArray searchResults = null;
