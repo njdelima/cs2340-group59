@@ -71,6 +71,10 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
+        if (label.equals("Search")){
+            Intent intent = new Intent(this, SearchActivity.class);
+            startActivity(intent);
+        }
     }
     /**
      * Method to add the different options to the drawer in the navigation bar
