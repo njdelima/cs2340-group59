@@ -86,7 +86,7 @@ public class viewProfileActivity extends AppCompatActivity {
      * Method that enables the current logged in user to log out from their account
      */
     private void logout() {
-        userModel.logUserOut(userModel.getLoggedInUsername());
+        userModel.setLoggedInUser(null);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();

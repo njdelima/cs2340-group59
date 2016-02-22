@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import ga.neerajdelima.themovieapp.model.UserModel;
 
 /**
@@ -67,7 +69,7 @@ public class ProfileActivity extends AppCompatActivity {
      * Method that enables the current logged in user to log out from their account
      */
     private void logout() {
-        userModel.logUserOut(userModel.getLoggedInUsername());
+        userModel.setLoggedInUser(null);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
@@ -82,15 +84,7 @@ public class ProfileActivity extends AppCompatActivity {
             Intent intent = new Intent(this, viewProfileActivity.class);
             startActivity(intent);
         } else {
-            TextView errorMessage = new TextView(this);
-            errorMessage.setText("Profile has not been created");
-            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.home_profile_layout);
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
-            params.addRule(RelativeLayout.BELOW, R.id.edit_profile_button);
-
-            relativeLayout.addView(errorMessage, params);
+            Toast.makeText(ProfileActivity.this, "Profile has not been created", Toast.LENGTH_SHORT).show();
         }
     }
 

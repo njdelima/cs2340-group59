@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 import ga.neerajdelima.themovieapp.model.User;
@@ -44,14 +46,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        String message = userModel.getLoggedInUsername();
-
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(message);
-
-        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.home_main_layout);
-        relativeLayout.addView(textView);
+        String message = "Logged in as: " + userModel.getLoggedInUsername();
+        Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
     }
     /**
      * Method to navigate the user to the selected option.
@@ -79,7 +75,7 @@ public class HomeActivity extends AppCompatActivity {
      * Method that enables the current logged in user to log out from their account
      */
     private void logout() {
-        userModel.logUserOut(userModel.getLoggedInUsername());
+        userModel.setLoggedInUser(null);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
