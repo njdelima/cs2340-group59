@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
 
@@ -75,24 +77,11 @@ public class editProfileActivity extends AppCompatActivity {
 
         if (firstName.equals("") | userName.equals("") | lastName.equals("")
                 | password.equals("") | major.equals("")) {
-            TextView errorMessage = new TextView(this);
-            errorMessage.setText("Please fill in all slots");
-            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.editProfile_layout);
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
-            params.addRule(RelativeLayout.BELOW, R.id.saveChanges);
-            relativeLayout.addView(errorMessage, params);
+            Toast.makeText(editProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
-            currentUser.setFirstName(firstName);
-            currentUser.setUsername(userName);
-            currentUser.setLastName(lastName);
-            currentUser.setPassword(password);
-            currentUser.setMajor(major);
+            userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
-
-
     }
 }
