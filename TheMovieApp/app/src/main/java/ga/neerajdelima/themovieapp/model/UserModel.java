@@ -44,12 +44,7 @@ import ga.neerajdelima.themovieapp.model.network.FetchTask;
  */
 public class UserModel {
 
-    static User loggedInUser;
-    static String loggedInUsername;
-
-    public UserModel() {
-        loggedInUser = null;
-    }
+    static User loggedInUser = null;
 
     public String md5(String stringToHash) {
         String hashedString = null;
@@ -82,7 +77,7 @@ public class UserModel {
         }
 
         @Override
-        protected User doInBackground(Object... args) {
+        protected Object doInBackground(Object... args) {
             try {
                 Log.d("json to send", data.toString());
                 sendPostData(data);
@@ -91,32 +86,24 @@ public class UserModel {
                 User user = new User(response.getString("username"), response.getString("password"),
                                         response.getString("first_name"), response.getString("last_name"),
                                         response.getString("major"));
-                return user;
+                UserModel.loggedInUser = user;
             } catch (JSONException e) {
                 Log.d("JsonException", e.getMessage());
             }
             return null;
         }
-        @Override
-        protected void onPostExecute(Object u) {
-            User user = (User) u;
-            UserModel.loggedInUser = user;
-            Log.d("Usermodel Logged in user = ", UserModel.loggedInUser.toString());
-        }
     }
 
     public User getLoggedInUser() {
-        return loggedInUser;
+        return UserModel.loggedInUser;
     }
 
     public String getLoggedInUsername() {
-        return loggedInUsername;
-    }
-    public void setLoggedInUsername(String username) {
-        loggedInUsername = username;
+        return loggedInUser.getUsername();
     }
 
     public void updateProfile(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
+        Log.d("Checkpoint", "about to start updateprofileTask");
         new updateProfileTask(username, newUsername, newPassword, newFirstName, newLastName, newMajor).execute();
     }
 
@@ -126,6 +113,7 @@ public class UserModel {
 
         public updateProfileTask(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
             super("http://128.61.104.207:2340/api/users/update.php");
+            Log.d("Checkpoint", "inside updateProfileTask constructor");
             data = new JSONObject();
             try {
                 data.put("username", username);
@@ -140,7 +128,14 @@ public class UserModel {
         }
         @Override
         protected Object doInBackground(Object... args) {
+            Log.d("About to send json", data.toString());
             sendPostData(data);
+            Log.d("response", getResponseMessage());
+            try {
+                setLoggedInUser(data.getString("username"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             return null;
         }
     }

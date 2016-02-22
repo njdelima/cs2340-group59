@@ -113,7 +113,6 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPostExecute(Object response) {
             boolean success = (boolean) response;
             if (success) {
-                userModel.setLoggedInUsername(username);
                 Log.d("About to set logged in user as", username);
                 userModel.setLoggedInUser(username);
                 Log.d("Finished setting logged in user", username);
