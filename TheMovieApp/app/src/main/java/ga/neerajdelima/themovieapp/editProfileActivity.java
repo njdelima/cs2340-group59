@@ -34,6 +34,7 @@ public class editProfileActivity extends AppCompatActivity {
     String lastName;
     String password;
     String major;
+    String oldPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class editProfileActivity extends AppCompatActivity {
         passwordText.setText(currentUser.getPassword());
         majorText.setText(currentUser.getMajor());
 
+        oldPassword = currentUser.getPassword();
     }
 
     /**
@@ -73,6 +75,9 @@ public class editProfileActivity extends AppCompatActivity {
         userName = userNameText.getText().toString();
         lastName = lastNameText.getText().toString();
         password = passwordText.getText().toString();
+
+        password = password.equals(oldPassword) ? password : userModel.md5(password);
+
         major = majorText.getText().toString();
 
         if (firstName.equals("") | userName.equals("") | lastName.equals("")
