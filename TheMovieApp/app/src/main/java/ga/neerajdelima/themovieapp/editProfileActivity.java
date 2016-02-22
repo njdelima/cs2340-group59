@@ -76,7 +76,7 @@ public class editProfileActivity extends AppCompatActivity {
         lastName = lastNameText.getText().toString();
         password = passwordText.getText().toString();
 
-        //password = password.equals(oldPassword) ? password : userModel.md5(password);
+        password = password.equals(oldPassword) ? password : userModel.md5(password);
 
         major = majorText.getText().toString();
 
