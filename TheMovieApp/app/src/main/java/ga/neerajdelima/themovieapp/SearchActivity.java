@@ -2,6 +2,8 @@ package ga.neerajdelima.themovieapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -22,10 +24,23 @@ import ga.neerajdelima.themovieapp.model.network.FetchTask;
 
 public class SearchActivity extends AppCompatActivity {
 
+    EditText searchBox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        searchBox = (EditText) findViewById(R.id.movie_search);
+        searchBox.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                new MovieFetcherTask().execute();
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+        });
     }
     public void searchClick(View view) {
         new MovieFetcherTask().execute();
@@ -39,8 +54,7 @@ public class SearchActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            EditText searchText = (EditText) findViewById(R.id.movie_search);
-            String temp = searchText.getText().toString();
+            String temp = searchBox.getText().toString();
             try {
                 temp = URLEncoder.encode(temp, "UTF-8");
             } catch (UnsupportedEncodingException e) {
