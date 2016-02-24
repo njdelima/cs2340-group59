@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">The Movie App</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_hint">Login!</string>
+    <string name="register_hint">Register</string>
+    <string name="login_fail">Incorrect username/password combination!</string>
+    <string name="register_fail">Passwords do not match!</string>
+</resources>
