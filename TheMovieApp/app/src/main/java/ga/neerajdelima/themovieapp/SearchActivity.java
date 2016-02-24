@@ -22,6 +22,13 @@ import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
 
+/**
+ * Class for handling searching for movies
+ * @author Komal Hirani
+ * @author Neeraj DeLima
+ * @version 1.0
+ */
+
 public class SearchActivity extends AppCompatActivity {
 
     EditText searchBox;
@@ -42,9 +49,18 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Fuction that executes the fetcher to fetch movie results when you click the search button
+     * @param view the current view of the search movies screen
+     */
     public void searchClick(View view) {
         new MovieFetcherTask().execute();
     }
+
+    /**
+     * Class that fetches movies from the Open Movie Database
+     */
     private class MovieFetcherTask extends FetchTask {
 
         String params;
@@ -92,6 +108,10 @@ public class SearchActivity extends AppCompatActivity {
             updateListView(resultsArray.toArray(new String[resultsArray.size()]));
         }
 
+        /**
+         * This method updates the list of all the movies that results from your search params
+         * @param results the list of the movies that comes from the OMDB with the search params
+         */
         private void updateListView(String[] results) {
             ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
             ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
