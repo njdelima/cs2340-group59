@@ -3,16 +3,25 @@ package ga.neerajdelima.themovieapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
+import ga.neerajdelima.themovieapp.model.network.FetchTask;
 
 /**
  * Class that handles HomeActivity.
@@ -44,14 +53,10 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        String message = userModel.getLoggedInUsername();
+        String message = "Logged in as: " + userModel.getLoggedInUsername();
+        //Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
 
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(message);
-
-        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.home_main_layout);
-        relativeLayout.addView(textView);
+        //new MovieFetcherTask("s=Dead").execute();
     }
     /**
      * Method to navigate the user to the selected option.
@@ -64,6 +69,10 @@ public class HomeActivity extends AppCompatActivity {
         }
         if (label.equals("Profile")) {
             Intent intent = new Intent(this, ProfileActivity.class);
+            startActivity(intent);
+        }
+        if (label.equals("Search")){
+            Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         }
     }
@@ -79,10 +88,47 @@ public class HomeActivity extends AppCompatActivity {
      * Method that enables the current logged in user to log out from their account
      */
     private void logout() {
-        userModel.logUserOut(userModel.getLoggedInUsername());
+        userModel.setLoggedInUser(null);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    /*
+     * Example call to open movie db API.
+     */
+    private class MovieFetcherTask extends FetchTask {
+
+        String params;
+        public MovieFetcherTask(String params) {
+            super();
+            this.params = params;
+        }
+
+        @Override
+        protected JSONObject doInBackground(Object... args) {
+            sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
+            Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
+            JSONObject response = getInputJSON(); // Gets the response from the API
+            return response; // gives it to onPostExecute
+        }
+
+        @Override
+        protected void onPostExecute(Object response) {
+            JSONObject serverResponse = (JSONObject) response;
+            Log.d("Server response", serverResponse.toString()); // Look through this in the logs
+
+            //Parsing the JSON example
+            JSONArray searchResults = null;
+            try {
+                searchResults = (JSONArray) serverResponse.get("Search");
+                for (int i = 0; i < searchResults.length(); i++) {
+                    Toast.makeText(HomeActivity.this, searchResults.getJSONObject(i).get("Title").toString(), Toast.LENGTH_SHORT).show();
+                }
+            } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        }
     }
 
 }

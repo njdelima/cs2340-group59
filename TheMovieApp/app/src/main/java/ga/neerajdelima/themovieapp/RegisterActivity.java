@@ -3,14 +3,24 @@ package ga.neerajdelima.themovieapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 
 import ga.neerajdelima.themovieapp.model.UserModel;
+import ga.neerajdelima.themovieapp.model.network.FetchTask;
+import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
+
 /**
  * Class that handles RegisterActivity.
  * @author
@@ -37,30 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
      * @param view the current view of the register screen
      */
     public void checkRegister(View view) {
-        EditText usernameText = (EditText) findViewById(R.id.register_username_text);
-        EditText passwordText = (EditText) findViewById(R.id.register_password_text);
-        EditText confirmPasswordText = (EditText) findViewById(R.id.register_password_confirm);
-
-        String username = usernameText.getText().toString();
-        String password = passwordText.getText().toString();
-        String confirmPassword = confirmPasswordText.getText().toString();
-
-        if (password.equals(confirmPassword)) {
-            userModel.addUser(username, password);
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-        } else {
-            TextView errorMessage = new TextView(this);
-            errorMessage.setText(R.string.register_fail);
-            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.register_layout);
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
-            params.addRule(RelativeLayout.BELOW, R.id.register_cancel_button);
-
-            relativeLayout.addView(errorMessage, params);
-        }
-
+        new RegisterNetworkCheckTask().execute();
     }
     /**
      * Method to navigate back the user to the login screen.
@@ -69,5 +56,94 @@ public class RegisterActivity extends AppCompatActivity {
     public void cancelRegistration(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+    }
+
+    /*
+     * Same as login, checks the network connection before attempting registration
+     */
+    private class RegisterNetworkCheckTask extends NetworkCheckTask {
+
+        public RegisterNetworkCheckTask() {
+            super("http://128.61.104.207:2340/api/users/add.php");
+        }
+
+        @Override
+        protected void onPostExecute(Object response) {
+            boolean success = (boolean) response;
+            if (success) {
+                new ProcessRegisterTask().execute();
+            } else {
+                Toast.makeText(RegisterActivity.this, "Error in Network Connection", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    /*
+     * Process the registration. Pull the data from the View and add it to
+     * the database
+     */
+    private class ProcessRegisterTask extends FetchTask {
+
+        String username;
+        String password;
+        String confirmPassword;
+
+        public ProcessRegisterTask() {
+            super("http://128.61.104.207:2340/api/users/add.php");
+        }
+
+        @Override
+        protected void onPreExecute() {
+            EditText usernameText = (EditText) findViewById(R.id.register_username_text);
+            EditText passwordText = (EditText) findViewById(R.id.register_password_text);
+            EditText confirmPasswordText = (EditText) findViewById(R.id.register_password_confirm);
+
+            username = usernameText.getText().toString();
+            password = userModel.md5(passwordText.getText().toString());
+            confirmPassword = userModel.md5(confirmPasswordText.getText().toString());
+        }
+
+        @Override
+        protected Boolean doInBackground(Object... args) {
+            try {
+                if (!password.equals(confirmPassword)) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(RegisterActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    return false;
+                }
+                connection.setConnectTimeout(0);
+                JSONObject data = new JSONObject();
+                data.put("username", username);
+                data.put("password", password);
+                sendPostData(data);
+                Log.d("Checkpoint", "made it past sendpostdata");
+                if (!getInputString().equals("Success!")) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(RegisterActivity.this, "Something went wrong.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    return false;
+                }
+                return true;
+            } catch (JSONException e) {
+                Log.d("JsonException", e.getMessage());
+            }
+            return false;
+        }
+
+        @Override
+        protected void onPostExecute(Object response) {
+            boolean success = (boolean) response;
+            if (success) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        }
     }
 }

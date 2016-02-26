@@ -40,6 +40,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:id="@+id/edit_password"
         android:layout_alignBottom="@id/password_edit_label"
         android:layout_alignLeft="@id/edit_userName"
