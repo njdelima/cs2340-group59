@@ -4,11 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Spinner;
 
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
@@ -35,6 +34,7 @@ public class editProfileActivity extends AppCompatActivity {
     String password;
     String major;
     String oldPassword;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,18 +43,18 @@ public class editProfileActivity extends AppCompatActivity {
         intent = this.getIntent();
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
+        spinner = (Spinner) findViewById(R.id.edit_major_spinner);
+        //spinner.setAdapter(new ArrayAdapter<Major>(this, android.R.layout.simple_spinner_item, Major.values()));
         //userNameText.setHint(currentUser.getUsername());
         userNameText = (EditText) findViewById(R.id.edit_userName);
         firstNameText = (EditText) findViewById(R.id.edit_firstName);
         lastNameText = (EditText) findViewById(R.id.edit_lastName);
         passwordText = (EditText) findViewById(R.id.edit_password);
-        majorText = (EditText) findViewById(R.id.edit_major);
 
         userNameText.setText(currentUser.getUsername());
         firstNameText.setText(currentUser.getFirstName());
         lastNameText.setText(currentUser.getLastName());
         passwordText.setText(currentUser.getPassword());
-        majorText.setText(currentUser.getMajor());
 
         oldPassword = currentUser.getPassword();
     }
@@ -69,7 +69,6 @@ public class editProfileActivity extends AppCompatActivity {
         firstNameText.setText(firstNameText.getText());
         lastNameText.setText(lastNameText.getText());
         passwordText.setText(passwordText.getText());
-        majorText.setText(majorText.getText());
 
         firstName = firstNameText.getText().toString();
         userName = userNameText.getText().toString();
@@ -78,7 +77,6 @@ public class editProfileActivity extends AppCompatActivity {
 
         password = password.equals(oldPassword) ? password : userModel.md5(password);
 
-        major = majorText.getText().toString();
 
         if (firstName.equals("") | userName.equals("") | lastName.equals("")
                 | password.equals("") | major.equals("")) {
