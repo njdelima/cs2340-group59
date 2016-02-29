@@ -32,7 +32,8 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".viewProfileActivity" />
         <activity android:name=".editProfileActivity" />
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ResultActivity"></activity>
     </application>
 
 </manifest>

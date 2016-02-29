@@ -1,14 +1,17 @@
 package ga.neerajdelima.themovieapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -116,6 +119,22 @@ public class SearchActivity extends AppCompatActivity {
             ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
             ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
             mListView.setAdapter(mArrayAdapter);
+            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position,
+                                        long id) {
+
+                    String item = ((TextView) view).getText().toString();
+                    sendGetData("http://www.omdbapi.com/?t=", params); // get request i.e. http://www.omdbapi.com/?params
+                    Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
+                    JSONObject response = getInputJSON(); // Gets the response from the API
+                    String result = response.toString();
+                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+                    intent.putExtra("result", result);
+                    startActivity(intent);
+                }
+            });
         }
     }
 }
