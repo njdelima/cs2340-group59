@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.Spinner;
+import android.widget.AdapterView;
 
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
@@ -27,7 +28,7 @@ public class editProfileActivity extends AppCompatActivity {
     EditText firstNameText;
     EditText lastNameText;
     EditText passwordText;
-    EditText majorText;
+    //EditText majorText;
     String firstName;
     String userName;
     String lastName;
@@ -35,6 +36,9 @@ public class editProfileActivity extends AppCompatActivity {
     String major;
     String oldPassword;
     Spinner spinner;
+    String selected;
+    String[] majors;
+    int sp_position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,18 @@ public class editProfileActivity extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
         //spinner.setAdapter(new ArrayAdapter<Major>(this, android.R.layout.simple_spinner_item, Major.values()));
         //userNameText.setHint(currentUser.getUsername());
+        major = currentUser.getMajor();
+        majors = getResources().getStringArray(R.array.majors_array);
+        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
+        sp_position = ad.getPosition(major);
+        spinner.setAdapter(ad);
+        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setSelection(sp_position);
+
+//      ArrayAdapter arr = (ArrayAdapter) spinner.getAdapter();
+//        int spinnerPos = arr.getPosition(major);
+        //int pos = spinner.getSelectedItemPosition();
+        //spinner.setSelection(pos);
         userNameText = (EditText) findViewById(R.id.edit_userName);
         firstNameText = (EditText) findViewById(R.id.edit_firstName);
         lastNameText = (EditText) findViewById(R.id.edit_lastName);
@@ -74,6 +90,7 @@ public class editProfileActivity extends AppCompatActivity {
         userName = userNameText.getText().toString();
         lastName = lastNameText.getText().toString();
         password = passwordText.getText().toString();
+        major = String.valueOf(spinner.getSelectedItem());
 
         password = password.equals(oldPassword) ? password : userModel.md5(password);
 

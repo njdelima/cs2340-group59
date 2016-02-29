@@ -86,7 +86,9 @@
         android:id="@+id/edit_major_spinner"
         android:layout_alignBottom="@id/major_edit_label"
         android:layout_alignLeft="@id/edit_lastName"
-        android:layout_alignStart="@id/edit_lastName"/>
+        android:layout_alignStart="@id/edit_lastName"
+        android:prompt="@string/majors_prompt"
+        android:entries="@array/majors_array"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
