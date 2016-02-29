@@ -96,7 +96,7 @@ public class SearchActivity extends AppCompatActivity {
         }
 
         private void updateListView(String[] results) {
-            ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
+            final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
             ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
             mListView.setAdapter(mArrayAdapter);
             mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -104,13 +104,18 @@ public class SearchActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position,
                                         long id) {
 
-                    String item = ((TextView) view).getText().toString();
-                    sendGetData("http://www.omdbapi.com/?t=", params); // get request i.e. http://www.omdbapi.com/?params
-                    Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-                    JSONObject response = getInputJSON(); // Gets the response from the API
-                    String result = response.toString();
+                   // params = "s=" + mListView.getItemAtPosition(position).toString();
+                    //JSONObject needed = getInputJSON();
+
+
+                    //sendGetData("http://www.omdbapi.com/?t=", item); // get request i.e. http://www.omdbapi.com/?params
+                    //Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
+                    //JSONObject response = getInputJSON(); // Gets the response from the API
+                    //String result = response.toString();
+                    String result = needed.toString();
+
                     Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                    Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
                     intent.putExtra("result", result);
                     startActivity(intent);
                 }
