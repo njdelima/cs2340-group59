@@ -18,7 +18,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.StringTokenizer;
 
+/**
+ * Class that handles ResultActivity.
+ * @author Min Ho Lee
+ * @version 1.0
+ */
 public class ResultActivity extends AppCompatActivity {
     String result;
     private TextView textView;
@@ -28,16 +34,20 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         textView = (TextView)findViewById(R.id.resultView);
         Intent intent = getIntent();
-        result = "http://www.omdbapi.com/?t=" + intent.getStringExtra("result");
-//        textView.setText(result);
-//        Button button1 = (Button) findViewById(R.id.button1);
-//        button1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-                new JSONTask().execute("http://www.omdbapi.com/?t=Star%20Wars:%20Episode%20IV%20-%20A%20New%20Hope");
-           // }
-//        });
+        result = "http://www.omdbapi.com/?t=";
+        String s = intent.getStringExtra("result");
+        StringTokenizer tokens = new StringTokenizer(s);
+        String urlFormat = "";
+        while (tokens.hasMoreTokens()) {
+            urlFormat += tokens.nextToken() + "+";
+        }
+        urlFormat.substring(0, urlFormat.length() - 2);
+        result += urlFormat;
+        new JSONTask().execute(result);
     }
+    /**
+     * Class that shows the result of the search
+     */
     public class JSONTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... params) {
