@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.Spinner;
-import android.widget.AdapterView;
 
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
@@ -36,7 +35,7 @@ public class editProfileActivity extends AppCompatActivity {
     String major;
     String oldPassword;
     Spinner spinner;
-    String selected;
+    //String selected;
     String[] majors;
     int sp_position;
 
