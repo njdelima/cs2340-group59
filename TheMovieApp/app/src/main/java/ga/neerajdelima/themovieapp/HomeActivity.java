@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         String message = "Logged in as: " + userModel.getLoggedInUsername();
         Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
 
-        new MovieFetcherTask("s=Dead").execute();
+        //new MovieFetcherTask("s=Dead").execute();
     }
     /**
      * Method to navigate the user to the selected option.
