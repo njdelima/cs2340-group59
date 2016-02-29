@@ -136,6 +136,33 @@ public class SearchActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
                     intent.putExtra("result", item);
                     startActivity(intent);
+//                    HttpURLConnection connection = null;
+//                    BufferedReader reader = null;
+//                    try {
+//                        URL url = new URL("http://www.omdbapi.com/?t=" + item);
+//                        connection = (HttpURLConnection) url.openConnection();
+//                        connection.connect();
+//                        InputStream stream = connection.getInputStream();
+//                        reader = new BufferedReader(new InputStreamReader(stream));
+//                        StringBuffer buffer = new StringBuffer();
+//                        String line = "";
+//                        while ((line = reader.readLine()) != null) {
+//                            buffer.append(line);
+//                        }
+//                    } catch (MalformedURLException e) {
+//                        e.printStackTrace();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    } finally {
+//                        if(connection != null)
+//                            connection.disconnect();
+//                        try {
+//                            if (reader != null)
+//                                reader.close();
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
                 }
             });
         }
