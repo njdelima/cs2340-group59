@@ -8,31 +8,4 @@
     <string name="register_hint">Register</string>
     <string name="login_fail">Incorrect username/password combination!</string>
     <string name="register_fail">Passwords do not match!</string>
-    <string name="majors_prompt">Choose your major</string>
-
-    <string-array name="majors_array">
-        <item>Architecture</item>
-        <item>Industrial Design</item>
-        <item>Computer Science</item>
-        <item>Computational Media</item>
-        <item>Aereospace Engineering</item>
-        <item>Biomedical Enginnering</item>
-        <item>Chemical Engineering</item>
-        <item>Civil Engineering</item>
-        <item>Computer Engineering</item>
-        <item>Electrical Engineering</item>
-        <item>Environmental Engineering</item>
-        <item>Industrial Engineering</item>
-        <item>Material Sciences and Engineering</item>
-        <item>Mechanical Engineering</item>
-        <item>Nuclear Engineering</item>
-        <item>Business</item>
-        <item>Liberal Arts</item>
-        <item>Math</item>
-        <item>Physics</item>
-        <item>Biochemistry</item>
-        <item>Biology</item>
-        <item>Chemistry</item>
-        <item>Psychology</item>
-    </string-array>
 </resources>
