@@ -99,7 +99,7 @@ public class SearchActivity extends AppCompatActivity {
             final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
             ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
             mListView.setAdapter(mArrayAdapter);
-            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           /* mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position,
                                         long id) {
@@ -119,7 +119,7 @@ public class SearchActivity extends AppCompatActivity {
                    // intent.putExtra("result", result);
                    // startActivity(intent);
                 }
-            });
+            });*/
         }
     }
 }
