@@ -3,12 +3,14 @@ package ga.neerajdelima.themovieapp.model;
 /**
  * Created by Neeraj on 2/15/16.
  */
+
 public class User {
     private String username;
     private String password;
     private String major;
     private String firstName;
     private String lastName;
+
 
     /*public User(String username, String password) {
         this.username = username;
@@ -34,9 +36,7 @@ public class User {
     public String getLastName() {
         return this.lastName;
     }
-    public String getMajor() {
-        return this.major;
-    }
+    public String getMajor() {return this.major;}
     public void setUsername(String username) {
         this.username = username;
     }

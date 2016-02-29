@@ -80,10 +80,12 @@
         android:text="Major: "
         android:layout_below="@id/lastName_edit_label"
         android:paddingTop="20dp"/>
-    <EditText
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_major"
+        android:id="@+id/edit_major_spinner"
+        android:entries="@array/majors_array"
+        android:prompt="@string/majors_prompt"
         android:layout_alignBottom="@id/major_edit_label"
         android:layout_alignLeft="@id/edit_lastName"
         android:layout_alignStart="@id/edit_lastName"/>
