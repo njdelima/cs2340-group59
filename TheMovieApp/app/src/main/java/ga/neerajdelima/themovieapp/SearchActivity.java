@@ -112,12 +112,12 @@ public class SearchActivity extends AppCompatActivity {
                     //Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
                     //JSONObject response = getInputJSON(); // Gets the response from the API
                     //String result = response.toString();
-                    String result = needed.toString();
+                    //String result = needed.toString();
 
-                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                    //Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
-                    intent.putExtra("result", result);
-                    startActivity(intent);
+                    //Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                   // //Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+                   // intent.putExtra("result", result);
+                   // startActivity(intent);
                 }
             });
         }
