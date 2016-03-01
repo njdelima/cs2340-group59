@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -27,7 +28,6 @@ public class editProfileActivity extends AppCompatActivity {
     EditText firstNameText;
     EditText lastNameText;
     EditText passwordText;
-    //EditText majorText;
     String firstName;
     String userName;
     String lastName;
@@ -35,7 +35,6 @@ public class editProfileActivity extends AppCompatActivity {
     String major;
     String oldPassword;
     Spinner spinner;
-    //String selected;
     String[] majors;
     int sp_position;
 
@@ -47,8 +46,6 @@ public class editProfileActivity extends AppCompatActivity {
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
-        //spinner.setAdapter(new ArrayAdapter<Major>(this, android.R.layout.simple_spinner_item, Major.values()));
-        //userNameText.setHint(currentUser.getUsername());
         major = currentUser.getMajor();
         majors = getResources().getStringArray(R.array.majors_array);
         ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);

@@ -18,7 +18,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +54,11 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
         });
     }
 
+    /**
+     * Fuction that executes the fetcher to fetch movie results when you click the search button
+     * @param view the current view of the search movies screen
+     */
+
     public void searchClick(View view) {
         ratingsModel.searchForMovie(this, searchBox.getText().toString());
     }
@@ -73,6 +85,19 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
         final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
         ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
         mListView.setAdapter(mArrayAdapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                String item = ((TextView) view).getText().toString();
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+                intent.putExtra("result", item);
+                startActivity(intent);
+            }
+        });
     }
 
 }
