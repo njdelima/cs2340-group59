@@ -6,6 +6,12 @@ import android.widget.Toast;
 import java.io.IOException;
 
 /**
+ * This class checks the network connection with any URL passed in
+ * Calls NetworkCheckResponse.onNetworkCheckSuccess() or
+ * NetworkCheckResponse.onNetworkCheckFailure() based on the result.
+ *
+ * Don't use directly, use it through UtilitiesModel
+ *
  * Created by Joshua on 2/21/16.
  */
 public class NetworkCheckTask extends FetchTask {
