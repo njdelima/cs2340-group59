@@ -8,7 +8,9 @@ import java.io.IOException;
 /**
  * Created by Joshua on 2/21/16.
  */
-public abstract class NetworkCheckTask extends FetchTask {
+public class NetworkCheckTask extends FetchTask {
+
+    public NetworkCheckResponse delegate;
 
     public NetworkCheckTask(String requestURL) {
         super(requestURL);
@@ -26,5 +28,14 @@ public abstract class NetworkCheckTask extends FetchTask {
             Log.d("IOException", e.getMessage());
         }
         return false;
+    }
+
+    protected void onPostExecute(Object response) {
+        boolean success = (boolean) response;
+        if (success) {
+            delegate.onNetworkCheckSuccess();
+        } else {
+            delegate.onNetworkCheckFailure();
+        }
     }
 }
