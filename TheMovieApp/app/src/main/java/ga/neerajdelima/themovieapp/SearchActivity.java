@@ -30,32 +30,31 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import ga.neerajdelima.themovieapp.model.RatingsModel;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
+import ga.neerajdelima.themovieapp.model.network.MovieSearcherResponse;
 
-/**
- * Class for handling searching for movies
- * @author Komal Hirani
- * @author Neeraj DeLima
- * @version 1.0
- */
-
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity implements MovieSearcherResponse {
 
     EditText searchBox;
+    RatingsModel ratingsModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        ratingsModel = new RatingsModel();
+
         searchBox = (EditText) findViewById(R.id.movie_search);
         searchBox.addTextChangedListener(new TextWatcher() {
 
-            public void afterTextChanged(Editable s) {
-                new MovieFetcherTask().execute();
-            }
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
+            public void afterTextChanged(Editable s) {}
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                searchClick(searchBox);
             }
         });
     }
@@ -64,80 +63,46 @@ public class SearchActivity extends AppCompatActivity {
      * Fuction that executes the fetcher to fetch movie results when you click the search button
      * @param view the current view of the search movies screen
      */
+
     public void searchClick(View view) {
-        new MovieFetcherTask().execute();
+        ratingsModel.searchForMovie(this, searchBox.getText().toString());
     }
 
-    /**
-     * Class that fetches movies from the Open Movie Database
-     */
-    private class MovieFetcherTask extends FetchTask {
+    @Override
+    public void onMovieSearchComplete(JSONObject results) {
+        ArrayList<String> resultsArray = new ArrayList<String>();
 
-        String params;
-        public MovieFetcherTask() {
-            super();
-        }
-
-        @Override
-        protected void onPreExecute() {
-            String temp = searchBox.getText().toString();
-            try {
-                temp = URLEncoder.encode(temp, "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+        //Parsing the JSON example
+        JSONArray searchResults = null;
+        try {
+            searchResults = (JSONArray) results.get("Search");
+            for (int i = 0; i < searchResults.length(); i++) {
+                //Toast.makeText(HomeActivity.this, searchResults.getJSONObject(i).get("Title").toString(), Toast.LENGTH_SHORT).show();
+                resultsArray.add(searchResults.getJSONObject(i).get("Title").toString());
             }
-            params = "s=" + temp;
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-
-        @Override
-        protected JSONObject doInBackground(Object... args) {
-            sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
-            Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-            JSONObject response = getInputJSON(); // Gets the response from the API
-            return response; // gives it to onPostExecute
-        }
-
-        @Override
-        protected void onPostExecute(Object response) {
-            JSONObject serverResponse = (JSONObject) response;
-            Log.d("Server response", serverResponse.toString()); // Look through this in the logs
-
-            ArrayList<String> resultsArray = new ArrayList<String>();
-
-            //Parsing the JSON example
-            JSONArray searchResults = null;
-            try {
-                searchResults = (JSONArray) serverResponse.get("Search");
-                for (int i = 0; i < searchResults.length(); i++) {
-                    //Toast.makeText(HomeActivity.this, searchResults.getJSONObject(i).get("Title").toString(), Toast.LENGTH_SHORT).show();
-                    resultsArray.add(searchResults.getJSONObject(i).get("Title").toString());
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            updateListView(resultsArray.toArray(new String[resultsArray.size()]));
-        }
-
-        /**
-         * This method updates the list of all the movies that results from your search params
-         * @param results the list of the movies that comes from the OMDB with the search params
-         */
-        private void updateListView(String[] results) {
-            final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
-            ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
-            mListView.setAdapter(mArrayAdapter);
-            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position,
-                                        long id) {
-
-                    String item = ((TextView) view).getText().toString();
-                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                    Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
-                    intent.putExtra("result", item);
-                    startActivity(intent);
-                }
-            });
-        }
+        updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }
+
+    private void updateListView(String[] results) {
+        final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
+        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
+        mListView.setAdapter(mArrayAdapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                String item = ((TextView) view).getText().toString();
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+                intent.putExtra("result", item);
+                startActivity(intent);
+            }
+        });
+    }
+
 }
