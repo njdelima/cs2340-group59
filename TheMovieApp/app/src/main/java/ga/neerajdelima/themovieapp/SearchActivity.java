@@ -23,103 +23,56 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import ga.neerajdelima.themovieapp.model.RatingsModel;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
+import ga.neerajdelima.themovieapp.model.network.MovieSearcherResponse;
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity implements MovieSearcherResponse {
 
     EditText searchBox;
+    RatingsModel ratingsModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        ratingsModel = new RatingsModel();
+
         searchBox = (EditText) findViewById(R.id.movie_search);
         searchBox.addTextChangedListener(new TextWatcher() {
-
-            public void afterTextChanged(Editable s) {
-                new MovieFetcherTask().execute();
-            }
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                searchClick(searchBox);
             }
         });
     }
+
     public void searchClick(View view) {
-        new MovieFetcherTask().execute();
+        ratingsModel.searchForMovie(this, searchBox.getText().toString());
     }
-    private class MovieFetcherTask extends FetchTask {
 
-        String params;
-        public MovieFetcherTask() {
-            super();
-        }
+    @Override
+    public void onMovieSearchComplete(JSONObject results) {
+        ArrayList<String> resultsArray = new ArrayList<String>();
 
-        @Override
-        protected void onPreExecute() {
-            String temp = searchBox.getText().toString();
-            try {
-                temp = URLEncoder.encode(temp, "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+        //Parsing the JSON example
+        JSONArray searchResults = null;
+        try {
+            searchResults = (JSONArray) results.get("Search");
+            for (int i = 0; i < searchResults.length(); i++) {
+                //Toast.makeText(HomeActivity.this, searchResults.getJSONObject(i).get("Title").toString(), Toast.LENGTH_SHORT).show();
+                resultsArray.add(searchResults.getJSONObject(i).get("Title").toString());
             }
-            params = "s=" + temp;
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-
-        @Override
-        protected JSONObject doInBackground(Object... args) {
-            sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
-            Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-            JSONObject response = getInputJSON(); // Gets the response from the API
-            return response; // gives it to onPostExecute
-        }
-
-        @Override
-        protected void onPostExecute(Object response) {
-            JSONObject serverResponse = (JSONObject) response;
-            Log.d("Server response", serverResponse.toString()); // Look through this in the logs
-
-            ArrayList<String> resultsArray = new ArrayList<String>();
-
-            //Parsing the JSON example
-            JSONArray searchResults = null;
-            try {
-                searchResults = (JSONArray) serverResponse.get("Search");
-                for (int i = 0; i < searchResults.length(); i++) {
-                    //Toast.makeText(HomeActivity.this, searchResults.getJSONObject(i).get("Title").toString(), Toast.LENGTH_SHORT).show();
-                    resultsArray.add(searchResults.getJSONObject(i).get("Title").toString());
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            updateListView(resultsArray.toArray(new String[resultsArray.size()]));
-        }
-
-        private void updateListView(String[] results) {
-            final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
-            ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
-            mListView.setAdapter(mArrayAdapter);
-           /* mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position,
-                                        long id) {
-
-                   // params = "s=" + mListView.getItemAtPosition(position).toString();
-                    //JSONObject needed = getInputJSON();
-
-
-                    //sendGetData("http://www.omdbapi.com/?t=", item); // get request i.e. http://www.omdbapi.com/?params
-                    //Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-                    //JSONObject response = getInputJSON(); // Gets the response from the API
-                    //String result = response.toString();
-                    //String result = needed.toString();
-
-                    //Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                   // //Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
-                   // intent.putExtra("result", result);
-                   // startActivity(intent);
-                }
-            });*/
-        }
+        updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }
+
+    private void updateListView(String[] results) {
+        final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
+        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
+        mListView.setAdapter(mArrayAdapter);
+    }
+
 }
