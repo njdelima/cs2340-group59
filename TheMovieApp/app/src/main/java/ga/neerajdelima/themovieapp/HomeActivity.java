@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import ga.neerajdelima.themovieapp.model.RatingsModel;
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
@@ -34,7 +35,6 @@ public class HomeActivity extends AppCompatActivity {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     UserModel userModel;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
