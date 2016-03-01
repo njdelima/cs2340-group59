@@ -5,10 +5,13 @@ import java.security.NoSuchAlgorithmException;
 
 import java.security.MessageDigest;
 
+import android.app.Activity;
 import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
+import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
+import ga.neerajdelima.themovieapp.model.network.ProcessLoginTask;
 
 /**
  * Created by Neeraj on 2/15/16.
@@ -38,6 +41,11 @@ public class UserModel {
         return hashedString;
     }
 
+    public void processLogin(Activity activity, String username, String password) {
+        ProcessLoginTask processLoginTask = new ProcessLoginTask(username, password);
+        processLoginTask.delegate = (ProcessLoginResponse) activity;
+        processLoginTask.execute();
+    }
     // Sets the currently logged in user to be @param username
     public void setLoggedInUser(String username) {
         new setLoggedInUserTask(username).execute();
