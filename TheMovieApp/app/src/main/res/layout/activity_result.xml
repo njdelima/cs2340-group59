@@ -11,8 +11,22 @@
     android:weightSum="1">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/rating"
+        />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/s"
+        android:layout_height="wrap_content"></Spinner>
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="479dp"
-        android:id="@+id/resultView"
-        android:layout_gravity="bottom" />
+        android:layout_height="20dp"
+        android:id="@+id/resultView" />
+
 </LinearLayout>

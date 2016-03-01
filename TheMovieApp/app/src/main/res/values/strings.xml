@@ -10,6 +10,20 @@
     <string name="register_fail">Passwords do not match!</string>
     <string name="majors_prompt">Choose your major</string>
     <string name="poster">poster</string>
+    <string name="rating">Rating</string>
+    <string-array name="rating_score">
+        <item>10</item>
+        <item>9</item>
+        <item>8</item>
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
     <string-array name="majors_array">
         <item>Architecture</item>
         <item>Industrial Design</item>

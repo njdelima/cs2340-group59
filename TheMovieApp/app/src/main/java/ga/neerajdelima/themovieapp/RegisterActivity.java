@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +29,6 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
  * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
-
     Intent intent;
     UserModel userModel;
 
