@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -27,24 +28,37 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.StringTokenizer;
 
+import ga.neerajdelima.themovieapp.model.RatingsModel;
+import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoResponse;
+import ga.neerajdelima.themovieapp.model.network.FetchMovieRatingResponse;
+
 /**
  * Class that handles ResultActivity.
  * @author Min Ho Lee
  * @version 1.0
  */
-public class ResultActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity implements FetchMovieInfoResponse, FetchMovieRatingResponse {
     private String result;
     Spinner spinner;
     ArrayAdapter<CharSequence> adapter;
 //    private String imgUrl;
     private TextView textView;
 //    private ImageView imgView;
+    RatingsModel ratingsModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+
+        ratingsModel = new RatingsModel();
+        ratingsModel.rateMovie("neeraj", "123456789", 3);
+        ratingsModel.getMovieRating(this, "123456789"); // look below for onMovieRatingResponse()
+
         textView = (TextView)findViewById(R.id.resultView);
         Intent intent = getIntent();
+<<<<<<< HEAD
         result = "http://www.omdbapi.com/?t=";
         String s = intent.getStringExtra("result");
         StringTokenizer tokens = new StringTokenizer(s);
@@ -70,69 +84,31 @@ public class ResultActivity extends AppCompatActivity {
         urlFormat.substring(0, urlFormat.length() - 2);
         result += urlFormat;
         new JSONTask().execute(result);
-    }
-    /**
-     * Class that shows the result of the search
-     */
-    public class JSONTask extends AsyncTask<String, String, String> {
-        @Override
-        protected String doInBackground(String... params) {
-            HttpURLConnection connection = null;
-            BufferedReader reader = null;
-            try {
-                URL url = new URL(params[0]);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.connect();
-                InputStream stream = connection.getInputStream();
-                reader = new BufferedReader((new InputStreamReader(stream)));
-                StringBuffer buffer = new StringBuffer();
-                String line = "";
-                while ((line = reader.readLine()) != null) {
-                    buffer.append(line);
-                }
-                String output = buffer.toString();
-                JSONObject jsonObject = new JSONObject(output);
-                String title = jsonObject.optString("Title");
-                String year = jsonObject.optString("Year");
-                String rated = jsonObject.optString("Rated");
-                String released = jsonObject.optString("Released");
-                String runtime = jsonObject.optString("Runtime");
-                String genre = jsonObject.optString("Genre");
-                String director = jsonObject.optString("Director");
-                String writer = jsonObject.optString("Writer");
-                String actors = jsonObject.optString("Actors");
-                String plot = jsonObject.optString("Plot");
-                String language = jsonObject.optString("Language");
-                String country = jsonObject.optString("Country");
-                String awards = jsonObject.optString("Awards");
-//                imgUrl = jsonObject.optString("Poster");
-                String finalOutput = "Title : " + title + "\nYear : "+ year +"\nRated : "+ rated + "\nReleased : "+ released
-                        + "\nRuntime : " + runtime + "\nGenre : " + genre + "\nDirector : " + director + "\nWriter : "
-                        + writer + "\nActors : " + actors + "\nPlot : " + plot + "\nLanguage " + language + "\nCountry : "
-                        + country + "\nAwards : " + awards;
-                return finalOutput;
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } finally {
-                if (connection != null)
-                    connection.disconnect();
-                try {
-                    if (reader != null)
-                        reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return null;
-        }
+=======
+        String movieTitle = intent.getStringExtra("result");
 
-        @Override
-        protected void onPostExecute(String result) {
-            super.onPostExecute(result);
-            textView.setText(result);
-        }
-
+        ratingsModel.getMovieInfo(this, movieTitle);
+>>>>>>> master
     }
+
+    @Override
+    public void onMovieRatingResponse(int totalRating, int ratingCount) {
+        Log.d("Total Rating", Integer.toString(totalRating));
+        Log.d("Rating Count", Integer.toString(ratingCount));
+    }
+
+    @Override
+    public void onFetchMovieInfoResponse(String title, String year, String rated,
+                                         String released, String runtime,
+                                         String genre, String director, String writer,
+                                         String actors, String plot, String language,
+                                         String country, String awards) {
+        String finalOutput = "Title : " + title + "\nYear : "+ year +"\nRated : "+ rated + "\nReleased : "+ released
+                + "\nRuntime : " + runtime + "\nGenre : " + genre + "\nDirector : " + director + "\nWriter : "
+                + writer + "\nActors : " + actors + "\nPlot : " + plot + "\nLanguage " + language + "\nCountry : "
+                + country + "\nAwards : " + awards;
+
+        textView.setText(finalOutput);
+    }
+
 }

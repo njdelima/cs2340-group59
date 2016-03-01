@@ -15,6 +15,11 @@ import java.util.ArrayList;
 import ga.neerajdelima.themovieapp.R;
 
 /**
+ * This class searches the omdb API and passes a JSONObject of the results
+ * to MovieSearcherResponse.onMovieSearchComplete().
+ *
+ * Don't use this class directly - use it through RatingsModel.
+ *
  * Created by Neeraj on 2/29/16.
  */
 public class MovieSearcherTask extends FetchTask {

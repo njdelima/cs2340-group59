@@ -14,6 +14,14 @@ import ga.neerajdelima.themovieapp.model.UserModel;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
 import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
 
+/**
+ * This class processes a login attempt
+ * Calls ProcessLoginResponse.onProcessLoginSuccess() or
+ * ProcessLoginResponse.ononProcessLoginFailure() based on the result.
+ *
+ * Don't use directly, use it through UserModel
+ */
+
 public class ProcessLoginTask extends FetchTask {
 
     public ProcessLoginResponse delegate;
