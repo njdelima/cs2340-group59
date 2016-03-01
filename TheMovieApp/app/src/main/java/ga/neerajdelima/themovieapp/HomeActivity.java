@@ -53,10 +53,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        String message = "Logged in as: " + userModel.getLoggedInUsername();
-        Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
-
-        //new MovieFetcherTask("s=Dead").execute();
+//        String message = "Logged in as: " + userModel.getLoggedInUsername();
+//        Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
     }
     /**
      * Method to navigate the user to the selected option.
@@ -93,42 +91,4 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-    /*
-     * Example call to open movie db API.
-     */
-    private class MovieFetcherTask extends FetchTask {
-
-        String params;
-        public MovieFetcherTask(String params) {
-            super();
-            this.params = params;
-        }
-
-        @Override
-        protected JSONObject doInBackground(Object... args) {
-            sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
-            Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-            JSONObject response = getInputJSON(); // Gets the response from the API
-            return response; // gives it to onPostExecute
-        }
-
-        @Override
-        protected void onPostExecute(Object response) {
-            JSONObject serverResponse = (JSONObject) response;
-            Log.d("Server response", serverResponse.toString()); // Look through this in the logs
-
-            //Parsing the JSON example
-            JSONArray searchResults = null;
-            try {
-                searchResults = (JSONArray) serverResponse.get("Search");
-                for (int i = 0; i < searchResults.length(); i++) {
-                    Toast.makeText(HomeActivity.this, searchResults.getJSONObject(i).get("Title").toString(), Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        }
-    }
-
 }
