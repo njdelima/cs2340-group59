@@ -28,7 +28,11 @@ public class editProfileActivity extends AppCompatActivity {
     EditText firstNameText;
     EditText lastNameText;
     EditText passwordText;
+<<<<<<< HEAD
+    //EditText majorText;
+=======
    // EditText majorText;
+>>>>>>> min-ho
     String firstName;
     String userName;
     String lastName;
@@ -36,9 +40,16 @@ public class editProfileActivity extends AppCompatActivity {
     String major;
     String oldPassword;
     Spinner spinner;
+<<<<<<< HEAD
+    //String selected;
+    String[] majors;
+    int sp_position;
+
+=======
     String selected;
     String[] majors;
     int sp_position;
+>>>>>>> min-ho
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +58,11 @@ public class editProfileActivity extends AppCompatActivity {
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
+<<<<<<< HEAD
+        //spinner.setAdapter(new ArrayAdapter<Major>(this, android.R.layout.simple_spinner_item, Major.values()));
+        //userNameText.setHint(currentUser.getUsername());
+=======
+>>>>>>> min-ho
         major = currentUser.getMajor();
         majors = getResources().getStringArray(R.array.majors_array);
         ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);

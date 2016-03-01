@@ -123,13 +123,14 @@ public class SearchActivity extends AppCompatActivity {
          * @param results the list of the movies that comes from the OMDB with the search params
          */
         private void updateListView(String[] results) {
-            ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
+            final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
             ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
             mListView.setAdapter(mArrayAdapter);
             mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position,
                                         long id) {
+
                     String item = ((TextView) view).getText().toString();
                     Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                     Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
