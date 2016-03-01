@@ -18,12 +18,26 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
+
+/**
+ * Class for handling searching for movies
+ * @author Komal Hirani
+ * @author Neeraj DeLima
+ * @version 1.0
+ */
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -45,9 +59,18 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Fuction that executes the fetcher to fetch movie results when you click the search button
+     * @param view the current view of the search movies screen
+     */
     public void searchClick(View view) {
         new MovieFetcherTask().execute();
     }
+
+    /**
+     * Class that fetches movies from the Open Movie Database
+     */
     private class MovieFetcherTask extends FetchTask {
 
         String params;
@@ -95,31 +118,26 @@ public class SearchActivity extends AppCompatActivity {
             updateListView(resultsArray.toArray(new String[resultsArray.size()]));
         }
 
+        /**
+         * This method updates the list of all the movies that results from your search params
+         * @param results the list of the movies that comes from the OMDB with the search params
+         */
         private void updateListView(String[] results) {
             final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
             ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
             mListView.setAdapter(mArrayAdapter);
-           /* mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position,
                                         long id) {
 
-                   // params = "s=" + mListView.getItemAtPosition(position).toString();
-                    //JSONObject needed = getInputJSON();
-
-
-                    //sendGetData("http://www.omdbapi.com/?t=", item); // get request i.e. http://www.omdbapi.com/?params
-                    //Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-                    //JSONObject response = getInputJSON(); // Gets the response from the API
-                    //String result = response.toString();
-                    //String result = needed.toString();
-
-                    //Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                   // //Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
-                   // intent.putExtra("result", result);
-                   // startActivity(intent);
+                    String item = ((TextView) view).getText().toString();
+                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+                    intent.putExtra("result", item);
+                    startActivity(intent);
                 }
-            });*/
+            });
         }
     }
 }

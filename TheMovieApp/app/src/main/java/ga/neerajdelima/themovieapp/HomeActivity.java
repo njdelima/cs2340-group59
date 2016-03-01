@@ -54,7 +54,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         String message = "Logged in as: " + userModel.getLoggedInUsername();
-        Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
 
         //new MovieFetcherTask("s=Dead").execute();
     }

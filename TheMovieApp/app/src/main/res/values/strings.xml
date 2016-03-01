@@ -9,6 +9,11 @@
     <string name="login_fail">Incorrect username/password combination!</string>
     <string name="register_fail">Passwords do not match!</string>
     <string name="majors_prompt">Choose your major</string>
+<<<<<<< HEAD
+=======
+    <string name="poster">poster</string>
+
+>>>>>>> min-ho
     <string-array name="majors_array">
         <item>Architecture</item>
         <item>Industrial Design</item>

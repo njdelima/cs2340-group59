@@ -127,9 +127,9 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPostExecute(Object response) {
             boolean success = (boolean) response;
             if (success) { // Password checks out , go to HomeActivity
-                Log.d("About to set logged in user as", username);
+                Log.d("set logged in user as", username);
                 userModel.setLoggedInUser(username);
-                Log.d("Finished setting logged in user", username);
+                Log.d("Finished setting", username);
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
             } else {
