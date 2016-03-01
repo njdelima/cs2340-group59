@@ -14,4 +14,12 @@ public class RatingsModel {
         movieSearcherTask.delegate = (MovieSearcherResponse) activity;
         movieSearcherTask.execute();
     }
+
+    public void rateMovie(String username, String imdbID, int rating) {
+
+    }
+
+    public void getMovieRating(Activity activity, String imdbID) {
+
+    }
 }
