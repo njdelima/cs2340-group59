@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +30,8 @@ import java.net.URL;
 import java.util.StringTokenizer;
 
 import ga.neerajdelima.themovieapp.model.RatingsModel;
+import ga.neerajdelima.themovieapp.model.User;
+import ga.neerajdelima.themovieapp.model.UserModel;
 import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoResponse;
 import ga.neerajdelima.themovieapp.model.network.FetchMovieRatingResponse;
 
@@ -40,6 +43,9 @@ import ga.neerajdelima.themovieapp.model.network.FetchMovieRatingResponse;
 public class ResultActivity extends AppCompatActivity implements FetchMovieInfoResponse, FetchMovieRatingResponse {
     private String result;
     Spinner spinner;
+    int rating;
+    private String imdbID;
+    UserModel userModel;
     ArrayAdapter<CharSequence> adapter;
 //    private String imgUrl;
     private TextView textView;
@@ -50,30 +56,23 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-
-
-        ratingsModel = new RatingsModel();
-        ratingsModel.rateMovie("neeraj", "123456789", 3);
-        ratingsModel.getMovieRating(this, "123456789"); // look below for onMovieRatingResponse()
+        userModel = new UserModel();
+        final String loggedInUser = userModel.getLoggedInUsername();
 
         textView = (TextView)findViewById(R.id.resultView);
         Intent intent = getIntent();
-<<<<<<< HEAD
-        result = "http://www.omdbapi.com/?t=";
-        String s = intent.getStringExtra("result");
-        StringTokenizer tokens = new StringTokenizer(s);
-        String urlFormat = "";
-        while (tokens.hasMoreTokens()) {
-            urlFormat += tokens.nextToken() + "+";
-        }
-        spinner = (Spinner) findViewById(R.id.spinner);
+        String movieTitle = intent.getStringExtra("result");
+        ratingsModel = new RatingsModel();
+        ratingsModel.getMovieInfo(this, movieTitle);
+        ratingsModel.getMovieRating(this, imdbID);
+        spinner = (Spinner) findViewById(R.id.rating_spinner);
         adapter = ArrayAdapter.createFromResource(this,R.array.rating_score, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(), parent.getItemIdAtPosition(position) + " selected", Toast.LENGTH_LONG).show();
+                rating = Integer.parseInt(spinner.getSelectedItem().toString());
             }
 
             @Override
@@ -81,14 +80,13 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
 
             }
         });
-        urlFormat.substring(0, urlFormat.length() - 2);
-        result += urlFormat;
-        new JSONTask().execute(result);
-=======
-        String movieTitle = intent.getStringExtra("result");
-
-        ratingsModel.getMovieInfo(this, movieTitle);
->>>>>>> master
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ratingsModel.rateMovie(loggedInUser, imdbID, rating);
+                Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -102,12 +100,12 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
                                          String released, String runtime,
                                          String genre, String director, String writer,
                                          String actors, String plot, String language,
-                                         String country, String awards) {
+                                         String country, String awards, String imdbID) {
         String finalOutput = "Title : " + title + "\nYear : "+ year +"\nRated : "+ rated + "\nReleased : "+ released
                 + "\nRuntime : " + runtime + "\nGenre : " + genre + "\nDirector : " + director + "\nWriter : "
                 + writer + "\nActors : " + actors + "\nPlot : " + plot + "\nLanguage " + language + "\nCountry : "
                 + country + "\nAwards : " + awards;
-
+        this.imdbID = imdbID;
         textView.setText(finalOutput);
     }
 

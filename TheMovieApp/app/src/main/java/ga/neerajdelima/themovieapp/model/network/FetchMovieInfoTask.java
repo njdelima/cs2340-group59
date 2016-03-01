@@ -67,9 +67,10 @@ public class FetchMovieInfoTask extends FetchTask {
         String language = jsonObject.optString("Language");
         String country = jsonObject.optString("Country");
         String awards = jsonObject.optString("Awards");
+        String imdbID = jsonObject.optString("imdbID");
         //                imgUrl = jsonObject.optString("Poster");
 
         delegate.onFetchMovieInfoResponse(title, year, rated, released, runtime, genre,
-                director, writer, actors, plot, language, country, awards);
+                director, writer, actors, plot, language, country, awards, imdbID);
     }
 }

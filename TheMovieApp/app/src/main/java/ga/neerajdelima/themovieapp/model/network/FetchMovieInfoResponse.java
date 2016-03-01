@@ -13,5 +13,5 @@ public interface FetchMovieInfoResponse {
                                   String released, String runtime,
                                   String genre, String director, String writer,
                                   String actors, String plot, String language,
-                                  String country, String awards);
+                                  String country, String awards, String imdbID);
 }
