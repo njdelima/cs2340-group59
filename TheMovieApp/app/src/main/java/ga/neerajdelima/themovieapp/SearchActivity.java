@@ -48,6 +48,11 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
 
         searchBox = (EditText) findViewById(R.id.movie_search);
         searchBox.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {}
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 searchClick(searchBox);
             }
