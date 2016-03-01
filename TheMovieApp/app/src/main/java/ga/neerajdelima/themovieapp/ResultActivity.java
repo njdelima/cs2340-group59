@@ -1,11 +1,14 @@
 package ga.neerajdelima.themovieapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -26,8 +29,10 @@ import java.util.StringTokenizer;
  * @version 1.0
  */
 public class ResultActivity extends AppCompatActivity {
-    String result;
+    private String result;
+//    private String imgUrl;
     private TextView textView;
+//    private ImageView imgView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +72,7 @@ public class ResultActivity extends AppCompatActivity {
                 String output = buffer.toString();
                 JSONObject jsonObject = new JSONObject(output);
                 String title = jsonObject.optString("Title");
-                int year = Integer.parseInt(jsonObject.optString("Year"));
+                String year = jsonObject.optString("Year");
                 String rated = jsonObject.optString("Rated");
                 String released = jsonObject.optString("Released");
                 String runtime = jsonObject.optString("Runtime");
@@ -79,6 +84,7 @@ public class ResultActivity extends AppCompatActivity {
                 String language = jsonObject.optString("Language");
                 String country = jsonObject.optString("Country");
                 String awards = jsonObject.optString("Awards");
+//                imgUrl = jsonObject.optString("Poster");
                 String finalOutput = "Title : " + title + "\nYear : "+ year +"\nRated : "+ rated + "\nReleased : "+ released
                         + "\nRuntime : " + runtime + "\nGenre : " + genre + "\nDirector : " + director + "\nWriter : "
                         + writer + "\nActors : " + actors + "\nPlot : " + plot + "\nLanguage " + language + "\nCountry : "
@@ -106,5 +112,6 @@ public class ResultActivity extends AppCompatActivity {
             super.onPostExecute(result);
             textView.setText(result);
         }
+
     }
 }
