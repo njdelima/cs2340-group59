@@ -85,6 +85,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 ratingsModel.rateMovie(loggedInUser, imdbID, rating);
+                ratingsModel.getMovieRating(ResultActivity.this, imdbID);
                 Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_LONG).show();
 
             }
