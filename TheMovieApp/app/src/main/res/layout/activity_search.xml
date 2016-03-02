@@ -28,18 +28,10 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="40dp"
         android:padding="20dp"/>
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/movie_search"
-        android:layout_centerHorizontal="true"
-        android:hint="Search for Movie!"
-        android:onClick="searchClick"/>
     <ListView
         android:id="@+id/search_results_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/search_button">
+        android:layout_below="@id/movie_search">
     </ListView>
 </RelativeLayout>
