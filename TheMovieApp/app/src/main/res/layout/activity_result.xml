@@ -2,17 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="550dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ga.neerajdelima.themovieapp.ResultActivity"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="479dp"
+        android:layout_width="354dp"
+        android:layout_height="323dp"
         android:id="@+id/resultView"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="top"
+        android:layout_weight="0.57" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Rate this movie!"
+            android:id="@+id/textView2"
+            android:layout_weight="0.09"
+            android:layout_marginTop="15dp" />
+
+        <Spinner
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_spinner"
+            android:prompt="@string/rating_prompt"
+            android:entries="@array/rating_score"
+            android:focusable="false"
+            android:layout_weight="0.34"
+            android:layout_gravity="bottom" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/button"
+            android:layout_weight="0.09"
+            android:layout_gravity="top|bottom"
+            android:onClick="onButton1Clicked" />
+
+    </LinearLayout>
+
 </LinearLayout>
