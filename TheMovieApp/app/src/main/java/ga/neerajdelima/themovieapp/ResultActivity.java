@@ -97,10 +97,14 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
     @Override
     public void onMovieRatingResponse(int totalRating, int ratingCount) {
         //totalRatingText.setText(totalRating);
-        actualTotalRating = totalRating / ratingCount;
+        actualTotalRating = ratingCount == 0 ? -1 : totalRating / ratingCount;
         Log.d("Total Rating", Integer.toString(actualTotalRating));
         Log.d("Rating Count", Integer.toString(ratingCount));
-        totalRatingText.setText(Integer.toString(actualTotalRating));
+        if (actualTotalRating == -1) {
+            totalRatingText.setText("n/a");
+        } else {
+            totalRatingText.setText(Integer.toString(actualTotalRating));
+        }
     }
 
     @Override
