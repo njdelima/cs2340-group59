@@ -85,6 +85,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 ratingsModel.rateMovie(loggedInUser, imdbID, rating);
+                ratingsModel.getMovieRating(ResultActivity.this, imdbID);
                 Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_LONG).show();
 
             }
@@ -103,7 +104,11 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
         }
         Log.d("Total Rating", Integer.toString(actualTotalRating));
         Log.d("Rating Count", Integer.toString(ratingCount));
-        totalRatingText.setText(Integer.toString(actualTotalRating));
+        if (actualTotalRating == -1) {
+            totalRatingText.setText("n/a");
+        } else {
+            totalRatingText.setText(Integer.toString(actualTotalRating));
+        }
     }
 
     @Override
