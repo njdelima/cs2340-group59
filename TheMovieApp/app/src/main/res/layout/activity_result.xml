@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="550dp"
@@ -13,46 +13,55 @@
 
     <TextView
         android:layout_width="354dp"
-        android:layout_height="323dp"
-        android:id="@+id/resultView"
-        android:layout_gravity="top"
-        android:layout_weight="0.57" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="1">
+        android:id="@+id/resultView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/resultView"
+        android:paddingTop="20dp"
+        android:text="Rate this movie!"
+        android:id="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Spinner
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_spinner"
+        android:prompt="@string/rating_prompt"
+        android:entries="@array/rating_score"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/resultView"
+        android:paddingTop="20dp"
+        android:layout_toRightOf="@id/textView2"/>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button"
+        android:layout_below="@id/resultView"
+        android:layout_toRightOf="@id/rating_spinner"
+        android:paddingTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayRating"
+        android:paddingTop="20dp"
+        android:text="Average Rating"
+        android:layout_below="@id/rating_spinner"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalRatings"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/displayRating" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Rate this movie!"
-            android:id="@+id/textView2"
-            android:layout_weight="0.09"
-            android:layout_marginTop="15dp" />
-
-        <Spinner
-            android:layout_width="99dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/rating_spinner"
-            android:prompt="@string/rating_prompt"
-            android:entries="@array/rating_score"
-            android:focusable="false"
-            android:layout_weight="0.34"
-            android:layout_gravity="bottom" />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:id="@+id/button"
-            android:layout_weight="0.09"
-            android:layout_gravity="top|bottom"
-            android:onClick="onButton1Clicked" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

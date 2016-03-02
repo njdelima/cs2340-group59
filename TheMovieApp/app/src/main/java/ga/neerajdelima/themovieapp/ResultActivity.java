@@ -51,6 +51,8 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
     private TextView textView;
 //    private ImageView imgView;
     RatingsModel ratingsModel;
+    TextView totalRatingText;
+    int actualTotalRating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +60,12 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
         setContentView(R.layout.activity_result);
         userModel = new UserModel();
         final String loggedInUser = userModel.getLoggedInUsername();
-
+        totalRatingText = (TextView) findViewById(R.id.totalRatings);
         textView = (TextView)findViewById(R.id.resultView);
         Intent intent = getIntent();
         String movieTitle = intent.getStringExtra("result");
         ratingsModel = new RatingsModel();
         ratingsModel.getMovieInfo(this, movieTitle);
-        ratingsModel.getMovieRating(this, imdbID);
         spinner = (Spinner) findViewById(R.id.rating_spinner);
         adapter = ArrayAdapter.createFromResource(this,R.array.rating_score, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -85,14 +86,20 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
             public void onClick(View v) {
                 ratingsModel.rateMovie(loggedInUser, imdbID, rating);
                 Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_LONG).show();
+
             }
         });
+       // totalRatingText.setText(actualTotalRating);
     }
+
 
     @Override
     public void onMovieRatingResponse(int totalRating, int ratingCount) {
-        Log.d("Total Rating", Integer.toString(totalRating));
+        //totalRatingText.setText(totalRating);
+        actualTotalRating = totalRating / ratingCount;
+        Log.d("Total Rating", Integer.toString(actualTotalRating));
         Log.d("Rating Count", Integer.toString(ratingCount));
+        totalRatingText.setText(Integer.toString(actualTotalRating));
     }
 
     @Override
@@ -106,6 +113,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
                 + writer + "\nActors : " + actors + "\nPlot : " + plot + "\nLanguage " + language + "\nCountry : "
                 + country + "\nAwards : " + awards;
         this.imdbID = imdbID;
+        ratingsModel.getMovieRating(this, imdbID);
         textView.setText(finalOutput);
     }
 
