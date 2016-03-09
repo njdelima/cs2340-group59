@@ -94,6 +94,10 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
             Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         }
+        if (label.equals("Home")) {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+        }
     }
     /**
      * Method to add the different options to the drawer in the navigation bar
