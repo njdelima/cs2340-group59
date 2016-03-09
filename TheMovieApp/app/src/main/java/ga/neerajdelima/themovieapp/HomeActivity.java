@@ -116,17 +116,26 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     public void onTopMoviesResponse(ArrayList<Movie> results) {
         this.results = results; //results is a sorted arraylist
         ArrayList<String> actualResults = new ArrayList<String>();
-        for (int i = 0; i < results.size() ; i++) {
-            actualResults.add(results.get(i).toString());
+        ArrayList<String> movieTitles = new ArrayList<String>();
+        if (results == null) {
+            actualResults.add("No recommendations by " + major + " majors");
+        } else {
+            for (int i = 0; i < results.size(); i++) {
+                actualResults.add(results.get(i).toString());
+            }
+            for (int i = 0; i < results.size(); i++) {
+                movieTitles.add(results.get(i).getTitle());
+            }
         }
-        updateListView(actualResults.toArray(new String[results.size()]));
+
+        updateListView(actualResults.toArray(new String[actualResults.size()]),movieTitles.toArray(new String[movieTitles.size()]));
 
     }
     public void filter(View view) {
         major = String.valueOf(spinner.getSelectedItem());
         ratingsModel.getTopMovies(HomeActivity.this,major);
     }
-    private void updateListView(String[] results) {
+    private void updateListView(String[] results, final String[] movieResults) {
         final ListView mListView = (ListView) findViewById(R.id.recommend_list);
         ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results);
         mListView.setAdapter(mArrayAdapter);
@@ -135,11 +144,11 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-
-                String item = ((TextView) view).getText().toString();
+                String actual = movieResults[position];
+                //String item = ((TextView) view).getText().toString();
                 Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
-                intent.putExtra("result", item);
+                Toast.makeText(getBaseContext(), actual, Toast.LENGTH_LONG).show();
+                intent.putExtra("result", actual);
                 startActivity(intent);
             }
         });
