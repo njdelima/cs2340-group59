@@ -1,6 +1,7 @@
 package ga.neerajdelima.themovieapp.model;
 
 import android.app.Activity;
+import android.content.Context;
 
 import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoResponse;
 import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoTask;
@@ -75,8 +76,19 @@ public class RatingsModel {
      * @param activity
      * @param title
      */
-    public void getMovieInfo(Activity activity, String title) {
-        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
+    public void getMovieInfoByTitle(Activity activity, String title) {
+        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask("t=" + title);
+        fetchMovieInfoTask.delegate = (FetchMovieInfoResponse) activity;
+        fetchMovieInfoTask.execute();
+    }
+
+    /**
+     * HAVE NOT TESTED THIS METHOD YET
+     * @param activity
+     * @param imdbID
+     */
+    public void getMovieInfoById(Activity activity, String imdbID) {
+        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask("i=" + imdbID);
         fetchMovieInfoTask.delegate = (FetchMovieInfoResponse) activity;
         fetchMovieInfoTask.execute();
     }
@@ -93,7 +105,7 @@ public class RatingsModel {
      * @param activity
      * @param major
      */
-    public void getRecommendations(Activity activity, String major) {
+    public void getTopMovies(Activity activity, String major) {
         FetchTopMoviesTask fetchTopMoviesTask = new FetchTopMoviesTask(major);
         fetchTopMoviesTask.delegate = (FetchTopMoviesResponse) activity;
         fetchTopMoviesTask.execute();
