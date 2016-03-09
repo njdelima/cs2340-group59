@@ -76,9 +76,10 @@ public class Movie implements Comparable<Movie> {
     @Override
     public String toString() {
         String s = "";
-        s = s + "imdbID: " + this.imdbID + ", ";
-        s = s + "title: " + this.title + ", ";
-        s = s + "average rating: " + this.totalRating / this.ratingCount;
+        //s = s + "imdbID: " + this.imdbID + ", ";
+        //s = s + "title: " + this.title + ", ";
+        s = s + this.title + ",";
+        s = s + "Average Rating: " + this.totalRating / this.ratingCount;
         return s;
     }
 }
