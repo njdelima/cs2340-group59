@@ -1,6 +1,7 @@
 package ga.neerajdelima.themovieapp;
 
 import android.content.Intent;
+import android.media.Rating;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,10 +20,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import ga.neerajdelima.themovieapp.model.Movie;
 import ga.neerajdelima.themovieapp.model.RatingsModel;
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
+import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoResponse;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
+import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
 
 /**
  * Class that handles HomeActivity.
@@ -30,17 +34,22 @@ import ga.neerajdelima.themovieapp.model.network.FetchTask;
  * @version 1.0
  */
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements FetchTopMoviesResponse {
 
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     UserModel userModel;
+    RatingsModel ratingsModel;
+    ArrayList<Movie> results;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         userModel = new UserModel();
+        ratingsModel = new RatingsModel();
+
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -52,6 +61,8 @@ public class HomeActivity extends AppCompatActivity {
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        ratingsModel.getTopMovies(HomeActivity.this, "all");
 
 //        String message = "Logged in as: " + userModel.getLoggedInUsername();
 //        Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
@@ -90,5 +101,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
+    }
+    @Override
+    public void onTopMoviesResponse(ArrayList<Movie> results) {
+        this.results = results; //results is a sorted arraylist
     }
 }
