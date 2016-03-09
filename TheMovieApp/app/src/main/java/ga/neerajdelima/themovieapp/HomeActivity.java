@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
+import android.widget.Spinner;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,10 +38,14 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
 
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
+    private ArrayAdapter<String> ad;
     UserModel userModel;
     RatingsModel ratingsModel;
     ArrayList<Movie> results;
-
+    Spinner spinner;
+    String major;
+    String[] majors;
+    int sp_position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +57,14 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
-
+        majors = getResources().getStringArray(R.array.majorsfilter_array);
+        spinner = (Spinner) findViewById(R.id.major_spinner);
+        ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
+        major = "all";
+        sp_position = ad.getPosition(major);
+        spinner.setAdapter(ad);
+        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setSelection(sp_position);
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -61,7 +72,6 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
-
         ratingsModel.getTopMovies(HomeActivity.this, "all");
 
 //        String message = "Logged in as: " + userModel.getLoggedInUsername();
@@ -105,5 +115,33 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     @Override
     public void onTopMoviesResponse(ArrayList<Movie> results) {
         this.results = results; //results is a sorted arraylist
+        ArrayList<String> actualResults = new ArrayList<String>();
+        for (int i = 0; i < results.size() ; i++) {
+            actualResults.add(results.get(i).toString());
+        }
+        updateListView(actualResults.toArray(new String[results.size()]));
+
+    }
+    public void filter(View view) {
+        major = String.valueOf(spinner.getSelectedItem());
+        ratingsModel.getTopMovies(HomeActivity.this,major);
+    }
+    private void updateListView(String[] results) {
+        final ListView mListView = (ListView) findViewById(R.id.recommend_list);
+        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results);
+        mListView.setAdapter(mArrayAdapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+
+                String item = ((TextView) view).getText().toString();
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+                intent.putExtra("result", item);
+                startActivity(intent);
+            }
+        });
     }
 }
