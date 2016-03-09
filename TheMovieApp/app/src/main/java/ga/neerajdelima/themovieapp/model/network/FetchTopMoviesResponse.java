@@ -1,13 +1,18 @@
 package ga.neerajdelima.themovieapp.model.network;
 
-import android.support.annotation.ArrayRes;
-
 import java.util.ArrayList;
 
 import ga.neerajdelima.themovieapp.model.Movie;
 
 /**
- * Created by Joshua on 3/7/16.
+ *
+ * This interface should be implemented by any class that calls
+ * RatingsModel.getTopMovies().
+ *
+ * The results of that call will be passed as params to onTopMoviesResponse()
+ *
+ *
+ * Created by Neeraj on 2/29/16.
  */
 public interface FetchTopMoviesResponse {
     public void onTopMoviesResponse(ArrayList<Movie> results);
