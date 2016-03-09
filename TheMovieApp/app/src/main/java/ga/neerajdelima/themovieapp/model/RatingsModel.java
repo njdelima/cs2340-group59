@@ -77,18 +77,7 @@ public class RatingsModel {
      * @param title
      */
     public void getMovieInfoByTitle(Activity activity, String title) {
-        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask("t=" + title);
-        fetchMovieInfoTask.delegate = (FetchMovieInfoResponse) activity;
-        fetchMovieInfoTask.execute();
-    }
-
-    /**
-     * HAVE NOT TESTED THIS METHOD YET
-     * @param activity
-     * @param imdbID
-     */
-    public void getMovieInfoById(Activity activity, String imdbID) {
-        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask("i=" + imdbID);
+        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
         fetchMovieInfoTask.delegate = (FetchMovieInfoResponse) activity;
         fetchMovieInfoTask.execute();
     }

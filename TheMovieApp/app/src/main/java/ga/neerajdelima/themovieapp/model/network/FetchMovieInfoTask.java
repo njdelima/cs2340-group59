@@ -42,16 +42,19 @@ public class FetchMovieInfoTask extends FetchTask {
 
     @Override
     protected Object doInBackground(Object... args) {
-        Log.d("SENDING REQ", "http://www.omdbapi.com/?" + params);
-        sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
+        Log.d("SENDING REQ", "http://www.omdbapi.com/?t=" + params);
+        sendGetData("http://www.omdbapi.com/?t=", params); // get request i.e. http://www.omdbapi.com/?params
         Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
         JSONObject response = getInputJSON(); // Gets the response from the API
+        Log.d("Imm json response", response.toString());
         return response; // gives it to onPostExecute
     }
 
     @Override
     protected void onPostExecute(Object response) {
         JSONObject jsonObject = (JSONObject) response;
+
+        Log.d("movie info response", jsonObject.toString());
 
         String title = jsonObject.optString("Title");
         String year = jsonObject.optString("Year");
