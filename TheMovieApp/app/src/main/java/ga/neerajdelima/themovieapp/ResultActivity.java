@@ -65,7 +65,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
         Intent intent = getIntent();
         String movieTitle = intent.getStringExtra("result");
         ratingsModel = new RatingsModel();
-        ratingsModel.getMovieInfo(this, movieTitle);
+        ratingsModel.getMovieInfoByTitle(this, movieTitle);
         spinner = (Spinner) findViewById(R.id.rating_spinner);
         adapter = ArrayAdapter.createFromResource(this,R.array.rating_score, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
