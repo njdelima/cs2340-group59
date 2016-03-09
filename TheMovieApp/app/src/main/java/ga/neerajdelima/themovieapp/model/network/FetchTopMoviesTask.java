@@ -51,27 +51,31 @@ public class FetchTopMoviesTask extends FetchTask {
     @Override
     protected void onPostExecute(Object response) {
         JSONObject jsonResponse = (JSONObject) response;
-        Log.d("Topmovies response", jsonResponse.toString());
+        if (jsonResponse == null) {
+            delegate.onTopMoviesResponse(null);
+        } else {
+            Log.d("Topmovies response", jsonResponse.toString());
 
-        Iterator<String> keys = jsonResponse.keys();
+            Iterator<String> keys = jsonResponse.keys();
 
-        results = new ArrayList<Movie>();
+            results = new ArrayList<Movie>();
 
-        while (keys.hasNext()) {
-            String key = (String)keys.next();
-            Log.d("Current key", key);
+            while (keys.hasNext()) {
+                String key = (String) keys.next();
+                Log.d("Current key", key);
 
-            JSONObject curRating = (JSONObject) jsonResponse.opt(key);
+                JSONObject curRating = (JSONObject) jsonResponse.opt(key);
 
-            Movie movie = new Movie(key, curRating.optString("title"), curRating.optInt("total_rating"), curRating.optInt("rating_count"));
+                Movie movie = new Movie(key, curRating.optString("title"), curRating.optInt("total_rating"), curRating.optInt("rating_count"));
 
-            results.add(movie);
+                results.add(movie);
+            }
+            Log.d("results arraylist", results.toString());
+            Collections.sort(results);
+            Collections.reverse(results);
+            Log.d("sorted results arraylist", results.toString());
+
+            delegate.onTopMoviesResponse(results);
         }
-        Log.d("results arraylist" ,results.toString());
-        Collections.sort(results);
-        Collections.reverse(results);
-        Log.d("sorted results arraylist", results.toString());
-
-        delegate.onTopMoviesResponse(results);
     }
 }
