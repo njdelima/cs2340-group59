@@ -38,7 +38,6 @@ public class FetchMovieInfoTask extends FetchTask {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        params = "t=" + params;
     }
 
     @Override
