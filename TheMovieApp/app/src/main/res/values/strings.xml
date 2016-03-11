@@ -50,4 +50,30 @@
         <item>Chemistry</item>
         <item>Psychology</item>
     </string-array>
+    <string-array name="majorsfilter_array">
+        <item>All</item>
+        <item>Architecture</item>
+        <item>Industrial Design</item>
+        <item>Computer Science</item>
+        <item>Computational Media</item>
+        <item>Aereospace Engineering</item>
+        <item>Biomedical Enginnering</item>
+        <item>Chemical Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Computer Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Environmental Engineering</item>
+        <item>Industrial Engineering</item>
+        <item>Material Sciences and Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Nuclear Engineering</item>
+        <item>Business</item>
+        <item>Liberal Arts</item>
+        <item>Math</item>
+        <item>Physics</item>
+        <item>Biochemistry</item>
+        <item>Biology</item>
+        <item>Chemistry</item>
+        <item>Psychology</item>
+    </string-array>
 </resources>
