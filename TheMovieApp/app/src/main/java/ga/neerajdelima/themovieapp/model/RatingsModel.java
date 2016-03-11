@@ -6,6 +6,8 @@ import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoResponse;
 import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoTask;
 import ga.neerajdelima.themovieapp.model.network.FetchMovieRatingResponse;
 import ga.neerajdelima.themovieapp.model.network.FetchMovieRatingTask;
+import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
+import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesTask;
 import ga.neerajdelima.themovieapp.model.network.StoreMovieRatingTask;
 import ga.neerajdelima.themovieapp.model.network.MovieSearcherResponse;
 import ga.neerajdelima.themovieapp.model.network.MovieSearcherTask;
@@ -77,5 +79,23 @@ public class RatingsModel {
         FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
         fetchMovieInfoTask.delegate = (FetchMovieInfoResponse) activity;
         fetchMovieInfoTask.execute();
+    }
+
+    /**
+     * Get an ArrayList of movies that have been rated by a particular major.
+     * Returns a sorted arraylist of movies.
+     *
+     * IMPORTANT: Any activity that calls this method MUST implement
+     * the FetchTopMoviesResponse interface and override the
+     * onTopMoviesResponse() method
+     * The returned movies are passed as an arraylist to the onTopMoviesResponse()
+     * method
+     * @param activity
+     * @param major
+     */
+    public void getRecommendations(Activity activity, String major) {
+        FetchTopMoviesTask fetchTopMoviesTask = new FetchTopMoviesTask(major);
+        fetchTopMoviesTask.delegate = (FetchTopMoviesResponse) activity;
+        fetchTopMoviesTask.execute();
     }
 }
