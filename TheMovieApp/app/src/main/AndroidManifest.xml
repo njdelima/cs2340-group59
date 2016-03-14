@@ -33,7 +33,8 @@
         <activity android:name=".viewProfileActivity" />
         <activity android:name=".editProfileActivity" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".AdminHomeActivity"></activity>
     </application>
 
 </manifest>
