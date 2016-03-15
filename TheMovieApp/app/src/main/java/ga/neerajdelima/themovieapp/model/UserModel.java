@@ -88,7 +88,8 @@ public class UserModel {
                 //Create a new User from the received data
                 User user = new User(response.getString("username"), response.getString("password"),
                                         response.getString("first_name"), response.getString("last_name"),
-                                        response.getString("major"));
+                                        response.getString("major"), response.optBoolean("locked"),
+                                        response.optBoolean("banned"), response.optBoolean("admin"));
                 UserModel.loggedInUser = user;
             } catch (JSONException e) {
                 Log.d("JsonException", e.getMessage());
