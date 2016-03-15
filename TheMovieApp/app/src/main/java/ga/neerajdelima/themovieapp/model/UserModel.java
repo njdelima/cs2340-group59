@@ -9,9 +9,13 @@ import android.app.Activity;
 import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import ga.neerajdelima.themovieapp.model.network.AdminTask;
+import ga.neerajdelima.themovieapp.model.network.BanTask;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
 import ga.neerajdelima.themovieapp.model.network.FetchUserListResponse;
 import ga.neerajdelima.themovieapp.model.network.FetchUserListTask;
+import ga.neerajdelima.themovieapp.model.network.LockTask;
 import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
 import ga.neerajdelima.themovieapp.model.network.ProcessLoginTask;
 
@@ -110,6 +114,24 @@ public class UserModel {
     public void updateProfile(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
         Log.d("Checkpoint", "about to start updateprofileTask");
         new updateProfileTask(username, newUsername, newPassword, newFirstName, newLastName, newMajor).execute();
+    }
+    public void lockUser(String username) {
+        new LockTask(username, 1);
+    }
+    public void unlockUser(String username) {
+        new LockTask(username, 0);
+    }
+    public void makeAdmin(String username) {
+        new AdminTask(username, 1);
+    }
+    public void removeAdmin(String username) {
+        new AdminTask(username, 0);
+    }
+    public void banUser(String username) {
+        new BanTask(username, 1);
+    }
+    public void unbanUser(String username) {
+        new BanTask(username, 0);
     }
 
     /*
