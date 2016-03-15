@@ -11,7 +11,6 @@ import org.json.JSONObject;
  * Created by komalhirani on 3/14/16.
  */
 public class BanTask extends FetchTask{
-    public BanResponse delegate;
     private String username;
     private int set;
 
@@ -37,15 +36,6 @@ public class BanTask extends FetchTask{
             Log.d("JsonException", e.getMessage());
         }
         return false;
-    }
-    @Override
-    protected void onPostExecute(Object response) {
-        boolean success = (boolean) response;
-        if (success) {
-            delegate.onProcessBanSuccess(this.username, this.set);
-        } else {
-            delegate.onProcessBanFailure();
-        }
     }
 
 }
