@@ -11,12 +11,38 @@ public class User {
     private String firstName;
     private String lastName;
 
+    private boolean locked;
+    private boolean banned;
+    private boolean admin;
 
+    public boolean isLocked() {
+        return this.locked;
+    }
+
+    public boolean isBanned() {
+        return this.banned;
+    }
+
+    public boolean isAdmin() {
+        return this.admin;
+    }
+
+    public void setLocked(boolean locked) {
+        this.locked = locked;
+    }
+
+    public void setBanned(boolean banned) {
+        this.banned = banned;
+    }
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
     /*public User(String username, String password) {
         this.username = username;
         this.password = password;
     }*/
-    public User(String username, String password, String firstName, String lastName, String major) {
+    public User(String username, String password, String firstName, String lastName, String major,
+                boolean locked, boolean banned, boolean admin) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
