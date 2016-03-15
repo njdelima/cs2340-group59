@@ -11,7 +11,6 @@ import org.json.JSONObject;
  * Created by komalhirani on 3/14/16.
  */
 public class LockTask extends FetchTask {
-    public LockResponse delegate;
     private String username;
     private int set;
 
@@ -36,16 +35,5 @@ public class LockTask extends FetchTask {
             Log.d("JsonException", e.getMessage());
         }
         return false;
-    }
-    @Override
-    protected void onPostExecute(Object response) {
-        boolean success = (boolean) response;
-        if (success) {
-            delegate.onProcessLockSuccess(this.username, this.set);
-        } else {
-            delegate.onProcessLockFailure();
-        }
-
-
     }
 }
