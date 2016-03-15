@@ -2,6 +2,7 @@ package ga.neerajdelima.themovieapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,8 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 
     @Override
     public void onFetchUserListComplete(ArrayList<User> users) {
-
+        for (User user : users) {
+            Log.d("current user", user.toString());
+        }
     }
 }
