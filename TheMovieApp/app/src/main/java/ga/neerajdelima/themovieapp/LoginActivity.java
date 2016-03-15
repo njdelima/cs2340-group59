@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -86,7 +87,7 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
      * @param view the register button
      */
     public void registerClick(View view) {
-        Intent intent = new Intent(this, RegisterActivity.class);
+        Intent intent = new Intent(this, AdminHomeActivity.class);
         startActivity(intent);
     }
 }

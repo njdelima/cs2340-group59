@@ -10,6 +10,8 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
+import ga.neerajdelima.themovieapp.model.network.FetchUserListResponse;
+import ga.neerajdelima.themovieapp.model.network.FetchUserListTask;
 import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
 import ga.neerajdelima.themovieapp.model.network.ProcessLoginTask;
 
@@ -49,6 +51,12 @@ public class UserModel {
     // Sets the currently logged in user to be @param username
     public void setLoggedInUser(String username) {
         new setLoggedInUserTask(username).execute();
+    }
+
+    public void getUserList(Activity activity) {
+        FetchUserListTask fetchUserListTask = new FetchUserListTask();
+        fetchUserListTask.delegate = (FetchUserListResponse) activity;
+        fetchUserListTask.execute();
     }
 
     /*
