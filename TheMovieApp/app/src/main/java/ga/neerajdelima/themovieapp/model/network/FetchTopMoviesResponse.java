@@ -15,5 +15,5 @@ import ga.neerajdelima.themovieapp.model.Movie;
  * Created by Neeraj on 2/29/16.
  */
 public interface FetchTopMoviesResponse {
-    public void onTopMoviesResponse(ArrayList<Movie> results);
+    void onTopMoviesResponse(ArrayList<Movie> results);
 }
