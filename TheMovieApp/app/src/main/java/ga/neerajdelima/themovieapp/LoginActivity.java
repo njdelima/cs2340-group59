@@ -87,6 +87,7 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
      * @param view the register button
      */
     public void registerClick(View view) {
+        //Intent intent = new Intent(this, HomeActivity.class);
         Intent intent = new Intent(this, AdminHomeActivity.class);
         startActivity(intent);
     }
