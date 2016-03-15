@@ -12,7 +12,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.util.Log;
+
 import java.util.ArrayList;
 
 import ga.neerajdelima.themovieapp.model.User;
@@ -30,22 +30,16 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
     ListView uListView;
     MyCustomAdapter uCustomAdapter;
     ArrayList<String> userList;
+    ArrayList<User> user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
-
-        //userModel = new UserModel();
-        //userModel.getUserList(AdminHomeActivity.this);
-        //onFetchUserListComplete();
         userList = new ArrayList<>();
-        userList.add("Heelo");
-        userList.add("fefadf");
-        userList.add("asfewf");
-        userList.add("asfwef");
-        userList.add("dabva");
-        userList.add("asdfwef");
+        userModel = new UserModel();
+        userModel.getUserList(AdminHomeActivity.this);
+
         uCustomAdapter = new MyCustomAdapter(userList, this);
         uListView = (ListView) findViewById(R.id.userListView);
         uListView.setAdapter(uCustomAdapter);
@@ -53,19 +47,19 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 
     @Override
     public void onFetchUserListComplete(ArrayList<User> users) {
-        // for (User u : users) {
-        //     userList.add(u.getUsername() + "\n"
-        //             + u.getFirstName() + " " + u.getLastName() + "\n"
-        //             + u.getMajor());
-        // }
-        for (User user : users) {
-            Log.d("current user", user.toString());
+         for (User u : users) {
+             userList.add(u.getUsername() + "\n"
+                     + u.getFirstName() + " " + u.getLastName() + "\n"
+                     + u.getMajor());
+         }
+//        for (User user : users)
+//            Log.d("current user", user.toString());
     }
 
     /**
      * Customized Adapter for buttons in the listview
      */
-    public class MyCustomAdapter extends BaseAdapter implements ListAdapter {
+    private class MyCustomAdapter extends BaseAdapter implements ListAdapter {
         private ArrayList<String> list = new ArrayList<String>();
         private Context context;
 
