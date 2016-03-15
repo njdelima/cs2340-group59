@@ -12,7 +12,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.util.Log;
 import java.util.ArrayList;
 
 import ga.neerajdelima.themovieapp.model.User;
@@ -53,11 +53,13 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 
     @Override
     public void onFetchUserListComplete(ArrayList<User> users) {
-        for (User u : users) {
-            userList.add(u.getUsername() + "\n"
-                    + u.getFirstName() + " " + u.getLastName() + "\n"
-                    + u.getMajor());
-        }
+        // for (User u : users) {
+        //     userList.add(u.getUsername() + "\n"
+        //             + u.getFirstName() + " " + u.getLastName() + "\n"
+        //             + u.getMajor());
+        // }
+        for (User user : users) {
+            Log.d("current user", user.toString());
     }
 
     /**
