@@ -11,6 +11,7 @@ import org.json.JSONObject;
  * Created by komalhirani on 3/14/16.
  */
 public class LockTask extends FetchTask {
+    public LockResponse delegate;
     private String username;
     private int set;
 
@@ -25,7 +26,7 @@ public class LockTask extends FetchTask {
             connection.setConnectTimeout(0);
             JSONObject data = new JSONObject();
             data.put("username", username);
-            data.put("banned", set);
+            data.put("locked", set);
             Log.d("JSON data", data.toString());
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
@@ -39,6 +40,11 @@ public class LockTask extends FetchTask {
     @Override
     protected void onPostExecute(Object response) {
         boolean success = (boolean) response;
+        if (success) {
+            delegate.onProcessLockSuccess(this.username, this.set);
+        } else {
+            delegate.onProcessLockFailure();
+        }
 
 
     }

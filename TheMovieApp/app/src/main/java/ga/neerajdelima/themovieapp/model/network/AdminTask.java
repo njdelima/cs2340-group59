@@ -10,6 +10,7 @@ import org.json.JSONObject;
  * Created by komalhirani on 3/14/16.
  */
 public class AdminTask extends FetchTask{
+    public AdminResponse delegate;
     private String username;
     private int set;
 
@@ -25,7 +26,7 @@ public class AdminTask extends FetchTask{
             connection.setConnectTimeout(0);
             JSONObject data = new JSONObject();
             data.put("username", username);
-            data.put("banned", set);
+            data.put("admin", set);
             Log.d("JSON data", data.toString());
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
@@ -39,7 +40,10 @@ public class AdminTask extends FetchTask{
     @Override
     protected void onPostExecute(Object response) {
         boolean success = (boolean) response;
-
-
+        if (success) {
+            delegate.onProcessAdminSuccess(this.username, this.set);
+        } else {
+            delegate.onProcessAdminFailure();
+        }
     }
 }
