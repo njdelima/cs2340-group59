@@ -31,6 +31,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
     MyCustomAdapter uCustomAdapter;
     ArrayList<String> userList;
     ArrayList<User> user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,10 +40,17 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         userList = new ArrayList<>();
         userModel = new UserModel();
         userModel.getUserList(AdminHomeActivity.this);
-
+        user = new ArrayList<>();
         uCustomAdapter = new MyCustomAdapter(userList, this);
         uListView = (ListView) findViewById(R.id.userListView);
         uListView.setAdapter(uCustomAdapter);
+//        uListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position,
+//                                    long id) {
+//
+//            }
+//        });
     }
 
     @Override
@@ -51,6 +59,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
              userList.add(u.getUsername() + "\n"
                      + u.getFirstName() + " " + u.getLastName() + "\n"
                      + u.getMajor());
+             user.add(u);
          }
 //        for (User user : users)
 //            Log.d("current user", user.toString());
@@ -96,28 +105,54 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
             final Button banBtn = (Button)view.findViewById(R.id.ban_btn);
             final Button admBtn = (Button)view.findViewById(R.id.admin_btn);
             final Button lockBtn = (Button)view.findViewById(R.id.lock_btn);
-            banBtn.setOnClickListener(new View.OnClickListener(){
+            banBtn.setTag(position);
+            admBtn.setTag(position);
+            lockBtn.setTag(position);
+            banBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(AdminHomeActivity.this, "Banned", Toast.LENGTH_SHORT).show();
-                    banBtn.setText("Unban");
+                    int index = (Integer) v.getTag();
+                    if (user.get(index).isBanned()) {
+                        banBtn.setText("Ban");
+                        Toast.makeText(AdminHomeActivity.this, "Unbanned " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
+                        user.get(index).setBanned(false);
+                    } else {
+                        banBtn.setText("Unban");
+                        Toast.makeText(AdminHomeActivity.this, "Banned " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
+                        user.get(index).setBanned(true);
+                    }
                     notifyDataSetChanged();
                 }
             });
             admBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(AdminHomeActivity.this, "Made Admin", Toast.LENGTH_SHORT).show();
-                    admBtn.setText("Admin");
+                    int index = (Integer) v.getTag();
+                    if (user.get(index).isAdmin()) {
+                        admBtn.setText("Make Admin");
+                        Toast.makeText(AdminHomeActivity.this, "Demoted " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
+                        user.get(index).setAdmin(false);
+                    } else {
+                        admBtn.setText("Demote");
+                        Toast.makeText(AdminHomeActivity.this, "Made " + user.get(index).getUsername() + " to Admin", Toast.LENGTH_SHORT).show();
+                        user.get(index).setAdmin(true);
+                    }
                     notifyDataSetChanged();
                 }
             });
-            lockBtn.setOnClickListener(new View.OnClickListener(){
+            lockBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(AdminHomeActivity.this, "Locked", Toast.LENGTH_SHORT).show();
-                    lockBtn.setText("Unlock");
-                    notifyDataSetChanged();
+                    int index = (Integer) v.getTag();
+                    if (user.get(index).isBanned()) {
+                        lockBtn.setText("Lock");
+                        Toast.makeText(AdminHomeActivity.this, "Unlocked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
+                        user.get(index).setBanned(false);
+                    } else {
+                        lockBtn.setText("Unlock");
+                        Toast.makeText(AdminHomeActivity.this, "Locked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
+                        user.get(index).setBanned(true);
+                    }
                 }
             });
             return view;
