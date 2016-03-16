@@ -48,6 +48,9 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.major = major;
+        this.locked = locked;
+        this.banned = banned;
+        this.admin = admin;
     }
 
     public String getUsername() {
