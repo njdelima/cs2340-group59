@@ -21,7 +21,7 @@ public class BanTask extends FetchTask{
     }
 
     @Override
-    protected Boolean doInBackground(Object... args) {
+    protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
             JSONObject data = new JSONObject();
@@ -31,12 +31,12 @@ public class BanTask extends FetchTask{
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
             Log.d("response", getResponseMessage());
-            return true;
+
 
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }
-        return false;
+        return null;
     }
 
 }

@@ -53,6 +53,25 @@ public class User {
     public void setAdmin(boolean admin) {
         this.admin = admin;
     }
+<<<<<<< HEAD
+=======
+    /*public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }*/
+    public User(String username, String password, String firstName, String lastName, String major,
+                boolean locked, boolean banned, boolean admin) {
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.major = major;
+        this.locked = locked;
+        this.banned = banned;
+        this.admin = admin;
+    }
+
+>>>>>>> origin/master
     public String getUsername() {
         return this.username;
     }

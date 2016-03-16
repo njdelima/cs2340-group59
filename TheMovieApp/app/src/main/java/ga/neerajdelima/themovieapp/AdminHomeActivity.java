@@ -104,6 +104,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
             listItemText.setText(list.get(position));
             final Button banBtn = (Button)view.findViewById(R.id.ban_btn);
             final Button lockBtn = (Button)view.findViewById(R.id.lock_btn);
+<<<<<<< HEAD
             final Button admBtn = (Button)view.findViewById(R.id.admin_btn);
             //Need to make the buttons check whether or not they are banned, locked or an admin
 //            if (user.get(position).isBanned()) {
@@ -116,19 +117,46 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 //                admBtn.setText("Demote");
 //            }
             banBtn.setTag(position);
+=======
+
+
+>>>>>>> origin/master
             banBtn.setTag(position);
+
             admBtn.setTag(position);
             lockBtn.setTag(position);
+            //int idx = (Integer) view.getTag();
+            if (user.get(position).isBanned()) {
+                banBtn.setText("Unban");
+            } else {
+                banBtn.setText("Ban");
+            }
+            if (user.get(position).isLocked()) {
+                lockBtn.setText("Unlock");
+            } else {
+                lockBtn.setText("Lock");
+            }
             banBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int index = (Integer) v.getTag();
                     if (user.get(index).isBanned()) {
+<<<<<<< HEAD
+=======
+                        banBtn.setText("Ban");
+                        Toast.makeText(AdminHomeActivity.this, "Unbanned " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
+                        user.get(index).setBanned(false);
+                        userModel.unbanUser(user.get(index).getUsername());
+                    } else {
+>>>>>>> origin/master
                         banBtn.setText("Unban");
                         Toast.makeText(AdminHomeActivity.this, "Banned " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setBanned(true);
                         userModel.banUser(user.get(index).getUsername());
+<<<<<<< HEAD
                         Log.d("user info", user.get(index).toString());
+=======
+>>>>>>> origin/master
                     }
                     notifyDataSetChanged();
                 }
@@ -142,13 +170,19 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                         Toast.makeText(AdminHomeActivity.this, "Demoted " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setAdmin(false);
                         userModel.removeAdmin(user.get(index).getUsername());
+<<<<<<< HEAD
                         Log.d("user info", user.get(index).toString());
+=======
+>>>>>>> origin/master
                     } else {
                         admBtn.setText("Demote");
                         Toast.makeText(AdminHomeActivity.this, "Made " + user.get(index).getUsername() + " to Admin", Toast.LENGTH_SHORT).show();
                         user.get(index).setAdmin(true);
                         userModel.makeAdmin(user.get(index).getUsername());
+<<<<<<< HEAD
                         Log.d("user info", user.get(index).toString());
+=======
+>>>>>>> origin/master
                     }
                     notifyDataSetChanged();
                 }
@@ -162,13 +196,19 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                         Toast.makeText(AdminHomeActivity.this, "Unlocked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setLocked(false);
                         userModel.unlockUser(user.get(index).getUsername());
+<<<<<<< HEAD
                         Log.d("user info", user.get(index).toString());
+=======
+>>>>>>> origin/master
                     } else {
                         lockBtn.setText("Unlock");
                         Toast.makeText(AdminHomeActivity.this, "Locked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setLocked(true);
                         userModel.lockUser(user.get(index).getUsername());
+<<<<<<< HEAD
                         Log.d("user info", user.get(index).toString());
+=======
+>>>>>>> origin/master
                     }
                 }
             });
