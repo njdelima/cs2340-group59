@@ -10,7 +10,6 @@ import org.json.JSONObject;
  * Created by komalhirani on 3/14/16.
  */
 public class AdminTask extends FetchTask{
-    public AdminResponse delegate;
     private String username;
     private int set;
 
@@ -36,14 +35,5 @@ public class AdminTask extends FetchTask{
             Log.d("JsonException", e.getMessage());
         }
         return false;
-    }
-    @Override
-    protected void onPostExecute(Object response) {
-        boolean success = (boolean) response;
-        if (success) {
-            delegate.onProcessAdminSuccess(this.username, this.set);
-        } else {
-            delegate.onProcessAdminFailure();
-        }
     }
 }
