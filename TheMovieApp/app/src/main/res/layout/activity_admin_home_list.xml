@@ -47,5 +47,4 @@
         android:textSize="10sp"
         android:text="Make Admin" />
 
-
 </RelativeLayout>

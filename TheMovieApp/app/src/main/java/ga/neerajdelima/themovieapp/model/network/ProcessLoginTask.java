@@ -25,6 +25,9 @@ import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
 public class ProcessLoginTask extends FetchTask {
 
     public ProcessLoginResponse delegate;
+    private int isAdmin;
+    private int isBan;
+    private int isLocked;
     private String username;
     private String password;
 
@@ -35,7 +38,7 @@ public class ProcessLoginTask extends FetchTask {
     }
 
     @Override
-    protected Boolean doInBackground(Object... args) {
+    protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
             JSONObject data = new JSONObject();
@@ -45,19 +48,42 @@ public class ProcessLoginTask extends FetchTask {
             Log.d("Checkpoint", "made it past sendpostdata");
             JSONObject response = new JSONObject(getInputString()); // Get the returned password
             String retrievedPassword = response.getString("password"); // parse JSON
+            String retrievedIsAdmin = response.getString("admin");
+            String retrievedIsLocked = response.getString("locked");
+            String retrievedIsBan = response.getString("banned");
+            isBan = Integer.parseInt(retrievedIsBan);
+            isLocked = Integer.parseInt(retrievedIsLocked);
+            isAdmin = Integer.parseInt(retrievedIsAdmin);
             Log.d("RETRIEVED PASSWORD", retrievedPassword);
-            return retrievedPassword.equals(password); // CHECK THE PASSWORD
+            Log.d("RETRIEVED IS ADMIN", "" + isAdmin);
+            Log.d("RETRIEVED IS BANNED", "" + isBan);
+            Log.d("RETRIEVED IS LOCKED", "" + isLocked);
+            if (isAdmin == 1) {
+                return 4;
+            } else if (isBan == 1) {
+                return 3;
+            } else if (isLocked == 1) {
+                return 2;
+            } if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
+                return 1;
+            }
 
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }
-        return false;
+        return 0;
     }
 
     @Override
     protected void onPostExecute(Object response) {
-        boolean success = (boolean) response;
-        if (success) {
+        int success = (Integer) response;
+        if (success == 4) {
+            delegate.onProcessLoginAsAdmin(this.username);
+        } else if (success == 3) {
+            delegate.onProcessLoginBan();
+        } else if (success == 2) {
+            delegate.onProcessLoginLocked();
+        }else if (success == 1) {
             delegate.onProcessLoginSuccess(this.username);
         } else {
             delegate.onProcessLoginFailure();
