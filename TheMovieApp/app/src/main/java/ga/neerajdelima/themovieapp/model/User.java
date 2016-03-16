@@ -15,16 +15,32 @@ public class User {
     private boolean banned;
     private boolean admin;
 
+
+    /*public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }*/
+    public User(String username, String password, String firstName, String lastName, String major,
+                boolean locked, boolean banned, boolean admin) {
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.major = major;
+        this.locked = locked;
+        this.banned = banned;
+        this.admin = admin;
+    }
     public boolean isLocked() {
-        return this.locked;
+        return locked;
     }
 
     public boolean isBanned() {
-        return this.banned;
+        return banned;
     }
 
     public boolean isAdmin() {
-        return this.admin;
+        return admin;
     }
 
     public void setLocked(boolean locked) {
@@ -37,19 +53,6 @@ public class User {
     public void setAdmin(boolean admin) {
         this.admin = admin;
     }
-    /*public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }*/
-    public User(String username, String password, String firstName, String lastName, String major,
-                boolean locked, boolean banned, boolean admin) {
-        this.username = username;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.major = major;
-    }
-
     public String getUsername() {
         return this.username;
     }
@@ -99,7 +102,10 @@ public class User {
         s = s + "Password: " + this.password + ", ";
         s = s + "First Name: " + this.firstName + ", ";
         s = s + "Last Name: " + this.lastName + ", ";
-        s = s + "Major: " + this.major;
+        s = s + "Major: " + this.major + ", ";
+        s = s + "Banned: " + "" + this.banned + ", ";
+        s = s + "Locked: " + "" + this.locked + ", ";
+        s = s + "Admin?: " + "" + this.admin;
         return s;
     }
 }

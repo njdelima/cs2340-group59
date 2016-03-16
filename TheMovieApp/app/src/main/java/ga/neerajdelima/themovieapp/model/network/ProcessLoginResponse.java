@@ -11,5 +11,8 @@ package ga.neerajdelima.themovieapp.model.network;
  */
 public interface ProcessLoginResponse {
     void onProcessLoginSuccess(String username);
+    void onProcessLoginAsAdmin(String username);
+    void onProcessLoginBan();
+    void onProcessLoginLocked();
     void onProcessLoginFailure();
 }
