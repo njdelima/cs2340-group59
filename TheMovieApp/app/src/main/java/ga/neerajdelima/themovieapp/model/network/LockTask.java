@@ -12,9 +12,9 @@ import org.json.JSONObject;
  */
 public class LockTask extends FetchTask {
     private String username;
-    private int set;
+    private boolean set;
 
-    public LockTask(String username, int set) {
+    public LockTask(String username, boolean set) {
         super("http://128.61.104.207:2340/api/users/lock.php");
         this.username = username;
         this.set = set;
@@ -29,6 +29,7 @@ public class LockTask extends FetchTask {
             Log.d("JSON data", data.toString());
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
+            Log.d("response", getResponseMessage());
             return true;
 
         } catch (JSONException e) {

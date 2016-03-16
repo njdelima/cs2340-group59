@@ -116,22 +116,22 @@ public class UserModel {
         new updateProfileTask(username, newUsername, newPassword, newFirstName, newLastName, newMajor).execute();
     }
     public void lockUser(String username) {
-        new LockTask(username, 1).execute();
+        new LockTask(username, true).execute();
     }
     public void unlockUser(String username) {
-        new LockTask(username, 0).execute();
+        new LockTask(username, false).execute();
     }
     public void makeAdmin(String username) {
-        new AdminTask(username, 1).execute();
+        new AdminTask(username, true).execute();
     }
     public void removeAdmin(String username) {
-        new AdminTask(username, 0).execute();
+        new AdminTask(username, false).execute();
     }
     public void banUser(String username) {
-        new BanTask(username, 1).execute();
+        new BanTask(username, true).execute();
     }
     public void unbanUser(String username) {
-        new BanTask(username, 0).execute();
+        new BanTask(username, false).execute();
     }
 
     /*
