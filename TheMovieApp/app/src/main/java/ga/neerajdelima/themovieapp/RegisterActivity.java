@@ -121,16 +121,17 @@ public class RegisterActivity extends AppCompatActivity {
                 data.put("username", username);
                 data.put("password", password);
                 sendPostData(data);
-                Log.d("Checkpoint", "made it past sendpostdata");
-                if (!getInputString().equals("Success!")) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(RegisterActivity.this, "Something went wrong.", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    return false;
-                }
+                Log.d("Checkpoint", "made it past x sendpostdata");
+                Log.d("Response mess", getResponseMessage());
+                //if (!getInputString().equals("Success!")) {
+                 //   runOnUiThread(new Runnable() {
+                  //      @Override
+                   //     public void run() {
+                    //        Toast.makeText(RegisterActivity.this, "Something went wrong.", Toast.LENGTH_SHORT).show();
+                     //   }
+                 //   });
+                  //  return false;
+                //}
                 return true;
             } catch (JSONException e) {
                 Log.d("JsonException", e.getMessage());
