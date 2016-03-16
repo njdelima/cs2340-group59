@@ -55,6 +55,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                      + u.getFirstName() + " " + u.getLastName() + "\n"
                      + u.getMajor());
              user.add(u);
+             Log.d(String.valueOf(u.getUsername()), String.valueOf(u.isLocked()));
          }
 //        for (User user : users)
 //            Log.d("current user", user.toString());
@@ -113,7 +114,13 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 
             admBtn.setTag(position);
             lockBtn.setTag(position);
+            //Log.d("user", String.valueOf(user.get(position)));
             //int idx = (Integer) view.getTag();
+            if (user.get(position).isAdmin()) {
+                admBtn.setText("Demote");
+            } else {
+                admBtn.setText("Make Admin");
+            }
             if (user.get(position).isBanned()) {
                 banBtn.setText("Unban");
             } else {

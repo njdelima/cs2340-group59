@@ -43,14 +43,30 @@ public class FetchUserListTask extends FetchTask {
         ArrayList<User> userList = new ArrayList<User>();
 
         for (int i = 0; i < serverResponse.length(); i++) {
+            Log.d("logging", "USER LIST");
             String username = serverResponse.optJSONObject(i).optString("username");
+            Log.d("username", username);
             String password = serverResponse.optJSONObject(i).optString("password");
+            Log.d("password", password);
             String major = serverResponse.optJSONObject(i).optString("major");
+            Log.d("major", major);
             String firstName = serverResponse.optJSONObject(i).optString("first_name");
+            Log.d("firstname", firstName);
             String lastName = serverResponse.optJSONObject(i).optString("last_name");
-            boolean admin = serverResponse.optJSONObject(i).optBoolean("admin");
-            boolean locked = serverResponse.optJSONObject(i).optBoolean("locked");
-            boolean banned = serverResponse.optJSONObject(i).optBoolean("banned");
+            Log.d("lastname", lastName);
+
+            String adminstr = serverResponse.optJSONObject(i).optString("admin");
+            Log.d("admin", String.valueOf(adminstr));
+            boolean admin = adminstr.equals("1");
+
+            String lockedstr = serverResponse.optJSONObject(i).optString("locked");
+            Log.d("locked", String.valueOf(lockedstr));
+            Log.d("locked server resp", serverResponse.optJSONObject(i).optString("locked"));
+            boolean locked = lockedstr.equals("1");
+
+            String bannedstr = serverResponse.optJSONObject(i).optString("banned");
+            Log.d("banned", String.valueOf(bannedstr));
+            boolean banned = bannedstr.equals("1");
 
             User user = new User(username, password, firstName, lastName, major, locked, banned, admin);
 
