@@ -44,13 +44,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         uCustomAdapter = new MyCustomAdapter(userList, this);
         uListView = (ListView) findViewById(R.id.userListView);
         uListView.setAdapter(uCustomAdapter);
-//        uListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position,
-//                                    long id) {
-//
-//            }
-//        });
+        uListView.invalidateViews();
     }
 
     @Override
@@ -105,6 +99,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
             final Button banBtn = (Button)view.findViewById(R.id.ban_btn);
             final Button admBtn = (Button)view.findViewById(R.id.admin_btn);
             final Button lockBtn = (Button)view.findViewById(R.id.lock_btn);
+
             banBtn.setTag(position);
             admBtn.setTag(position);
             lockBtn.setTag(position);
@@ -130,7 +125,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                     int index = (Integer) v.getTag();
                     if (user.get(index).isAdmin()) {
                         admBtn.setText("Make Admin");
-                        Toast.makeText(AdminHomeActivity.this, "Demoted " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminHomeActivity.this, "Demoted " + user.get(index).getUsername() + " to User", Toast.LENGTH_SHORT).show();
                         user.get(index).setAdmin(false);
                     } else {
                         admBtn.setText("Demote");
@@ -153,6 +148,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                         Toast.makeText(AdminHomeActivity.this, "Locked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setBanned(true);
                     }
+                    notifyDataSetChanged();
                 }
             });
             return view;
