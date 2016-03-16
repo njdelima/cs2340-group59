@@ -27822,3 +27822,6627 @@ mysqli_result Object
 {"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
 Final JSON
 "{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+)
+
+Username = 
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+null
+Final JSON
+"null"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started update
+stdClass Object
+(
+    [username] => khirani
+    [new_username] => khirani
+    [new_password] => 1a1dc91c907325c69271ddf0c944bc72
+    [new_first_name] => Komal
+    [new_last_name] => Hirani
+    [new_major] => Aereospace Engineering
+)
+
+QUERY = UPDATE users SET username='khirani', password='1a1dc91c907325c69271ddf0c944bc72', first_name='Komal', last_name='Hirani', major='Aereospace Engineering' WHERE username='khirani'
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+)
+
+Username = 
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+null
+Final JSON
+"null"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started update
+stdClass Object
+(
+    [username] => edu
+    [new_username] => edu
+    [new_password] => 1a1dc91c907325c69271ddf0c944bc72
+    [new_first_name] => Eduardo
+    [new_last_name] => Mestanza
+    [new_major] => Industrial Engineering
+)
+
+QUERY = UPDATE users SET username='edu', password='1a1dc91c907325c69271ddf0c944bc72', first_name='Eduardo', last_name='Mestanza', major='Industrial Engineering' WHERE username='edu'
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Industrial Engineering","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Industrial Engineering\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started update
+stdClass Object
+(
+    [username] => edu
+    [new_username] => edu
+    [new_password] => 1a1dc91c907325c69271ddf0c944bc72
+    [new_first_name] => Eduardo
+    [new_last_name] => Mestanza
+    [new_major] => Computer Science
+)
+
+QUERY = UPDATE users SET username='edu', password='1a1dc91c907325c69271ddf0c944bc72', first_name='Eduardo', last_name='Mestanza', major='Computer Science' WHERE username='edu'
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+
+Username = 
+Password = 
+stdClass Object
+(
+    [username] => newuser
+    [password] => 5d41402abc4b2a76b9719d911017c592
+)
+
+Username = newuser
+Password = 5d41402abc4b2a76b9719d911017c592
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => newuser
+)
+
+Username = newuser
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"newuser\",\"password\":\"5d41402abc4b2a76b9719d911017c592\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => newuser
+)
+
+Username = newuser
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"newuser\",\"password\":\"5d41402abc4b2a76b9719d911017c592\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started update
+stdClass Object
+(
+    [username] => newuser
+    [new_username] => newuser
+    [new_password] => 5d41402abc4b2a76b9719d911017c592
+    [new_first_name] => Edu
+    [new_last_name] => Mestanza
+    [new_major] => Architecture
+)
+
+QUERY = UPDATE users SET username='newuser', password='5d41402abc4b2a76b9719d911017c592', first_name='Edu', last_name='Mestanza', major='Architecture' WHERE username='newuser'
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => newuser
+)
+
+Username = newuser
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"newuser\",\"password\":\"5d41402abc4b2a76b9719d911017c592\",\"major\":\"Architecture\",\"first_name\":\"Edu\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => 
+)
+
+Username = 
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+null
+Final JSON
+"null"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => edu
+)
+
+Username = edu
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza"}
+Final JSON
+"{\"username\":\"edu\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Eduardo\",\"last_name\":\"Mestanza\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Aereospace Engineering","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Aereospace Engineering\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started update
+stdClass Object
+(
+    [username] => khirani
+    [new_username] => khirani
+    [new_password] => 1a1dc91c907325c69271ddf0c944bc72
+    [new_first_name] => Komal
+    [new_last_name] => Hirani
+    [new_major] => Computer Science
+)
+
+QUERY = UPDATE users SET username='khirani', password='1a1dc91c907325c69271ddf0c944bc72', first_name='Komal', last_name='Hirani', major='Computer Science' WHERE username='khirani'
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => estaniforth
+)
+
+Username = estaniforth
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth"}
+Final JSON
+"{\"username\":\"estaniforth\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computational Media\",\"first_name\":\"Emma\",\"last_name\":\"Staniforth\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => leepogii
+)
+
+Username = leepogii
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"leepogii\",\"password\":\"d4bd9b71ac51131d08f12502fb00b931\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started fetch
+stdClass Object
+(
+    [username] => leepogii
+)
+
+Username = leepogii
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null}
+Final JSON
+"{\"username\":\"leepogii\",\"password\":\"d4bd9b71ac51131d08f12502fb00b931\",\"major\":null,\"first_name\":null,\"last_name\":null}"
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started update
+stdClass Object
+(
+    [username] => khirani
+    [new_username] => khirani
+    [new_password] => 1a1dc91c907325c69271ddf0c944bc72
+    [new_first_name] => Komal
+    [new_last_name] => Hirani
+    [new_major] => Computer Science
+)
+
+QUERY = UPDATE users SET username='khirani', password='1a1dc91c907325c69271ddf0c944bc72', first_name='Komal', last_name='Hirani', major='Computer Science' WHERE username='khirani'
+Got connection
+
+ran query!
+
+success
+1
+Started update
+stdClass Object
+(
+    [username] => khirani
+    [new_username] => khirani
+    [new_password] => 1a1dc91c907325c69271ddf0c944bc72
+    [new_first_name] => Komal
+    [new_last_name] => Hirani
+    [new_major] => Computer Science
+)
+
+QUERY = UPDATE users SET username='khirani', password='1a1dc91c907325c69271ddf0c944bc72', first_name='Komal', last_name='Hirani', major='Computer Science' WHERE username='khirani'
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => khirani
+)
+
+Username = khirani
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 5
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani"}
+Final JSON
+"{\"username\":\"khirani\",\"password\":\"1a1dc91c907325c69271ddf0c944bc72\",\"major\":\"Computer Science\",\"first_name\":\"Komal\",\"last_name\":\"Hirani\"}"
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+{"username":"bob","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"}
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Array
+(
+    [0] => Array
+        (
+            [username] => bob
+            [major] => Computer Science
+            [first_name] => Bob
+            [last_name] => Waters
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [1] => Array
+        (
+            [username] => edu
+            [major] => Computer Science
+            [first_name] => Eduardo
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [2] => Array
+        (
+            [username] => estaniforth
+            [major] => Computational Media
+            [first_name] => Emma
+            [last_name] => Staniforth
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [3] => Array
+        (
+            [username] => khirani
+            [major] => Computer Science
+            [first_name] => Komal
+            [last_name] => Hirani
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [4] => Array
+        (
+            [username] => leepogii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [5] => Array
+        (
+            [username] => leepogiii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [6] => Array
+        (
+            [username] => neeraj
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [7] => Array
+        (
+            [username] => newuser
+            [major] => Architecture
+            [first_name] => Edu
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Array
+(
+    [0] => Array
+        (
+            [username] => bob
+            [major] => Computer Science
+            [first_name] => Bob
+            [last_name] => Waters
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [1] => Array
+        (
+            [username] => edu
+            [major] => Computer Science
+            [first_name] => Eduardo
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [2] => Array
+        (
+            [username] => estaniforth
+            [major] => Computational Media
+            [first_name] => Emma
+            [last_name] => Staniforth
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [3] => Array
+        (
+            [username] => khirani
+            [major] => Computer Science
+            [first_name] => Komal
+            [last_name] => Hirani
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [4] => Array
+        (
+            [username] => leepogii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [5] => Array
+        (
+            [username] => leepogiii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [6] => Array
+        (
+            [username] => neeraj
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [7] => Array
+        (
+            [username] => newuser
+            [major] => Architecture
+            [first_name] => Edu
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Array
+(
+    [0] => Array
+        (
+            [username] => bob
+            [major] => Computer Science
+            [first_name] => Bob
+            [last_name] => Waters
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [1] => Array
+        (
+            [username] => edu
+            [major] => Computer Science
+            [first_name] => Eduardo
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [2] => Array
+        (
+            [username] => estaniforth
+            [major] => Computational Media
+            [first_name] => Emma
+            [last_name] => Staniforth
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [3] => Array
+        (
+            [username] => khirani
+            [major] => Computer Science
+            [first_name] => Komal
+            [last_name] => Hirani
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [4] => Array
+        (
+            [username] => leepogii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [5] => Array
+        (
+            [username] => leepogiii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [6] => Array
+        (
+            [username] => neeraj
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [7] => Array
+        (
+            [username] => newuser
+            [major] => Architecture
+            [first_name] => Edu
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+Array
+(
+    [0] => Array
+        (
+            [username] => bob
+            [major] => Computer Science
+            [first_name] => Bob
+            [last_name] => Waters
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [1] => Array
+        (
+            [username] => edu
+            [major] => Computer Science
+            [first_name] => Eduardo
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [2] => Array
+        (
+            [username] => estaniforth
+            [major] => Computational Media
+            [first_name] => Emma
+            [last_name] => Staniforth
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [3] => Array
+        (
+            [username] => khirani
+            [major] => Computer Science
+            [first_name] => Komal
+            [last_name] => Hirani
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [4] => Array
+        (
+            [username] => leepogii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [5] => Array
+        (
+            [username] => leepogiii
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [6] => Array
+        (
+            [username] => neeraj
+            [major] => 
+            [first_name] => 
+            [last_name] => 
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+    [7] => Array
+        (
+            [username] => newuser
+            [major] => Architecture
+            [first_name] => Edu
+            [last_name] => Mestanza
+            [banned] => 0
+            [locked] => 0
+            [admin] => 0
+        )
+
+)
+
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 7
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+************* Started admin task *************
+stdClass Object
+(
+    [admin] => 1
+    [username] => neeraj
+)
+
+username = neeraj ... adminset = 1
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+************* Started admin task *************
+stdClass Object
+(
+    [admin] => 1
+    [username] => neeraj
+)
+
+username = neeraj ... adminset = 1
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"1","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"1\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"1","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"1\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"1","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"1\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"1","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"1\",\"locked\":\"0\",\"banned\":\"0\"}"
+************* Started admin task *************
+stdClass Object
+(
+    [admin] => 
+    [username] => neeraj
+)
+
+username = neeraj ... adminset = 
+Got connection
+
+ran query!
+
+success
+1
+Started list
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 8
+    [type] => 0
+)
+
+[{"username":"bob","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Bob","last_name":"Waters","banned":"0","locked":"0","admin":"0"},{"username":"edu","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Eduardo","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"},{"username":"estaniforth","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computational Media","first_name":"Emma","last_name":"Staniforth","banned":"0","locked":"0","admin":"0"},{"username":"khirani","password":"1a1dc91c907325c69271ddf0c944bc72","major":"Computer Science","first_name":"Komal","last_name":"Hirani","banned":"0","locked":"0","admin":"0"},{"username":"leepogii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"leepogiii","password":"d4bd9b71ac51131d08f12502fb00b931","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"banned":"0","locked":"0","admin":"0"},{"username":"newuser","password":"5d41402abc4b2a76b9719d911017c592","major":"Architecture","first_name":"Edu","last_name":"Mestanza","banned":"0","locked":"0","admin":"0"}]
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+************* Started admin task *************
+stdClass Object
+(
+    [admin] => 1
+    [username] => bob
+)
+
+username = bob ... adminset = 1
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+************* Started admin task *************
+stdClass Object
+(
+    [admin] => 1
+    [username] => bob
+)
+
+username = bob ... adminset = 1
+Got connection
+
+ran query!
+
+success
+1
+************* Started ban task *************
+stdClass Object
+(
+    [banned] => 1
+    [username] => edu
+)
+
+username = edu ... bannedset = 1
+Got connection
+
+ran query!
+
+success
+1
+************* Started lock task *************
+stdClass Object
+(
+    [username] => khirani
+    [locked] => 1
+)
+
+username = khirani ... lockedset = 1
+Got connection
+
+ran query!
+
+success
+1
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+Started fetch
+stdClass Object
+(
+    [username] => neeraj
+)
+
+Username = neeraj
+Got connection
+
+ran query!
+
+success
+mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 8
+    [lengths] => 
+    [num_rows] => 1
+    [type] => 0
+)
+
+{"username":"neeraj","password":"24c798d682413e80b4e02b772deec2fa","major":null,"first_name":null,"last_name":null,"admin":"0","locked":"0","banned":"0"}
+Final JSON
+"{\"username\":\"neeraj\",\"password\":\"24c798d682413e80b4e02b772deec2fa\",\"major\":null,\"first_name\":null,\"last_name\":null,\"admin\":\"0\",\"locked\":\"0\",\"banned\":\"0\"}"
+************* Started admin task *************
+stdClass Object
+(
+    [admin] => 
+    [username] => bob
+)
+
+username = bob ... adminset = 
+Got connection
+
+ran query!
+
+success
+1
+************* Started ban task *************
+stdClass Object
+(
+    [banned] => 
+    [username] => edu
+)
+
+username = edu ... bannedset = 
+Got connection
+
+ran query!
+
+success
+1
+************* Started lock task *************
+stdClass Object
+(
+    [username] => khirani
+    [locked] => 
+)
+
+username = khirani ... lockedset = 
+Got connection
+
+ran query!
+
+success
+1

@@ -10,7 +10,7 @@
 
 	logger("Username = " . $username);
 
-	$result = queryMySQL("SELECT username, password, major, first_name, last_name FROM users WHERE username='$username'");
+	$result = queryMySQL("SELECT username, password, major, first_name, last_name, admin, locked, banned FROM users WHERE username='$username'");
 
 	logger(print_r($result,TRUE));
 
