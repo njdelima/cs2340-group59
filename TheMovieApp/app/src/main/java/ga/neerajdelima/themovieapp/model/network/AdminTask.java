@@ -20,7 +20,7 @@ public class AdminTask extends FetchTask{
     }
 
     @Override
-    protected Boolean doInBackground(Object... args) {
+    protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
             JSONObject data = new JSONObject();
@@ -30,11 +30,10 @@ public class AdminTask extends FetchTask{
             sendPostData(data); // POST the username to the URL.
             Log.d("Checkpoint", "made it past sendpostdata");
             Log.d("response", getResponseMessage());
-            return true;
 
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }
-        return false;
+        return null;
     }
 }

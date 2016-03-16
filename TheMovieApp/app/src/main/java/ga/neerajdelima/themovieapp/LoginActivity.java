@@ -69,6 +69,15 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
     }
 
     @Override
+    public void onProcessLoginAsAdmin(String username) {
+        Log.d("About to set logged in admin as: ", username);
+        userModel.setLoggedInUser(username);
+        Log.d("Finished setting logged in admin", username);
+        Intent intent = new Intent(getApplicationContext(), AdminHomeActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
     public void onProcessLoginSuccess(String username) {
         Log.d("About to set logged in user as", username);
         userModel.setLoggedInUser(username);
@@ -82,13 +91,23 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
         Toast.makeText(LoginActivity.this, "Incorrect Username/Password Combination", Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onProcessLoginBan() {
+        Toast.makeText(LoginActivity.this, "You have been BANNED by an Admin!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onProcessLoginLocked() {
+        Toast.makeText(LoginActivity.this, "You have been Locked by an Admin!", Toast.LENGTH_SHORT).show();
+    }
+
     /**
      * Method to navigate the user to the register screen.
      * @param view the register button
      */
     public void registerClick(View view) {
         //Intent intent = new Intent(this, HomeActivity.class);
-        Intent intent = new Intent(this, AdminHomeActivity.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 }
