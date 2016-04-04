@@ -21,7 +21,7 @@ import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
 
 /**
  * Class that handles HomeActivity.
- * @author
+ * @author Neeraj Delima
  * @version 1.0
  */
 

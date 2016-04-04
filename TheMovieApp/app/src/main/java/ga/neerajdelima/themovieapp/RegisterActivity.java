@@ -19,7 +19,7 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
 
 /**
  * Class that handles RegisterActivity.
- * @author
+ * @author Neeraj Delima
  * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
