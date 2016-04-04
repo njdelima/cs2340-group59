@@ -44,9 +44,15 @@ public class Movie implements Comparable<Movie> {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null) return false;
-        if (!(obj instanceof Movie)) return false;
-        if (obj == this) return true;
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof Movie)) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
 
         Movie that = (Movie) obj;
         return ( (this.getImdbID().equals(that.getImdbID()) ) &&
@@ -57,8 +63,12 @@ public class Movie implements Comparable<Movie> {
 
     @Override
     public int compareTo(Movie o) {
-        if (o == null) throw new NullPointerException("Specified object is null.");
-        if (o == this) return 0;
+        if (o == null) {
+            throw new NullPointerException("Specified object is null.");
+        }
+        if (o == this) {
+            return 0;
+        }
 
         double thisAverageRating = this.totalRating / this.ratingCount;
         double thatAverageRating = o.totalRating / o.ratingCount;
