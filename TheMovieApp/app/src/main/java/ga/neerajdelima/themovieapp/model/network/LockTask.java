@@ -21,8 +21,8 @@ public class LockTask extends FetchTask {
 
     public LockTask(String u, boolean s) {
         super("http://128.61.104.207:2340/api/users/lock.php");
-        this.username = username;
-        this.set = set;
+        this.username = u;
+        this.set = s;
     }
 
     @Override
