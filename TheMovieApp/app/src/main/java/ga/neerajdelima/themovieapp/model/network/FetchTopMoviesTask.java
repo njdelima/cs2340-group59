@@ -25,16 +25,11 @@ public class FetchTopMoviesTask extends FetchTask {
     public FetchTopMoviesResponse delegate;
     private String major;
     private List<Movie> results;
-<<<<<<< HEAD
     /**
      * Constructor of FetchTopMoviesTask
-     * @param major major of users
+     * @param m major of users
      */
-    public FetchTopMoviesTask(String major) {
-=======
-
     public FetchTopMoviesTask(String m) {
->>>>>>> origin/master
         super("http://128.61.104.207:2340/api/ratings/top.php");
         this.major = m;
     }

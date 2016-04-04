@@ -20,7 +20,7 @@ public class FetchMovieInfoTask extends FetchTask {
     private String params;
     /**
      * Constructor of FetchMovieInfoTask
-     * @param params name of the movie fetched
+     * @param p name of the movie fetched
      */
     public FetchMovieInfoTask(String p) {
         super();
