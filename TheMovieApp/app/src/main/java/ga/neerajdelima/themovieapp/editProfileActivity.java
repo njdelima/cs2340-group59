@@ -18,7 +18,7 @@ import ga.neerajdelima.themovieapp.model.UserModel;
  * @version 1.0
  */
 
-public class editProfileActivity extends AppCompatActivity {
+public class EditProfileActivity extends AppCompatActivity {
     private UserModel userModel;
     private User currentUser;
     private EditText userNameText;
@@ -89,7 +89,7 @@ public class editProfileActivity extends AppCompatActivity {
 
         if ("".equals(firstName) || "".equals(userName) || "".equals(lastName)
                 || "".equals(password) || "".equals(major)) {
-            Toast.makeText(editProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
             Intent intent = new Intent(this, ProfileActivity.class);

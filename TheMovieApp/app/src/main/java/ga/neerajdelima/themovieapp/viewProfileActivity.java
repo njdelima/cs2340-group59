@@ -16,7 +16,7 @@ import ga.neerajdelima.themovieapp.model.User;
  * @author Komal Hirani
  * @version 1.0
  */
-public class viewProfileActivity extends AppCompatActivity {
+public class ViewProfileActivity extends AppCompatActivity {
     private UserModel userModel;
     private User currentUser;
     private ListView mDrawerList;
@@ -102,7 +102,7 @@ public class viewProfileActivity extends AppCompatActivity {
      * @param view the current view of the view profile screen
      */
     public void editProfile(View view) {
-        Intent intent = new Intent(this, editProfileActivity.class);
+        Intent intent = new Intent(this, EditProfileActivity.class);
         startActivity(intent);
     }
 }
