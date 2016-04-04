@@ -2,6 +2,10 @@ package ga.neerajdelima.themovieapp.model;
 
 import android.app.Activity;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 import ga.neerajdelima.themovieapp.model.network.NetworkCheckResponse;
 import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
 

@@ -21,7 +21,7 @@ import ga.neerajdelima.themovieapp.model.UserModel;
 public class ProfileActivity extends AppCompatActivity {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    UserModel userModel;
+    private UserModel userModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

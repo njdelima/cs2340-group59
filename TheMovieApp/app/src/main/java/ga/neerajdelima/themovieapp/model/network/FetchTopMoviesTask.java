@@ -8,9 +8,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
-import ga.neerajdelima.themovieapp.model.RatingsModel;
+
 
 /**
  * This class fetches the Top Movies by rating filtered by major
@@ -22,8 +23,8 @@ import ga.neerajdelima.themovieapp.model.RatingsModel;
  */
 public class FetchTopMoviesTask extends FetchTask {
     public FetchTopMoviesResponse delegate;
-    String major;
-    ArrayList<Movie> results;
+    private String major;
+    private List<Movie> results;
 
     /**
      * Constructor of FetchTopMoviesTask
@@ -44,9 +45,8 @@ public class FetchTopMoviesTask extends FetchTask {
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
             Log.d("Response message", getResponseMessage());
+            return new JSONObject(getInputString()); // Get the returned JSON;
 
-            JSONObject response = new JSONObject(getInputString()); // Get the returned JSON
-            return response;
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }

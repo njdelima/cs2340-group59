@@ -12,6 +12,7 @@ import android.widget.Toast;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
 import ga.neerajdelima.themovieapp.model.RatingsModel;
@@ -25,10 +26,11 @@ import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
  */
 
 public class HomeActivity extends AppCompatActivity implements FetchTopMoviesResponse {
-
+    private List<Movie> results;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private ArrayAdapter<String> ad;
+<<<<<<< HEAD
     UserModel userModel;
     RatingsModel ratingsModel;
     ArrayList<Movie> results;
@@ -36,6 +38,14 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     String major;
     String[] majors;
     int spPosition;
+=======
+    private UserModel userModel;
+    private RatingsModel ratingsModel;
+    private Spinner spinner;
+    private String major;
+    private String[] majors;
+    private int spPosition;
+>>>>>>> master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,8 +117,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         finish();
     }
     @Override
-    public void onTopMoviesResponse(ArrayList<Movie> results) {
-        this.results = results; //results is a sorted arraylist
+    public void onTopMoviesResponse(List<Movie> results) {
         ArrayList<String> actualResults = new ArrayList<String>();
         ArrayList<String> movieTitles = new ArrayList<String>();
         if (results == null) {

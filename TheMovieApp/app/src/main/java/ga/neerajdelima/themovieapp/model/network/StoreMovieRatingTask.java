@@ -13,9 +13,9 @@ import org.json.JSONObject;
  * Created by Joshua on 2/29/16.
  */
 public class StoreMovieRatingTask extends FetchTask {
-    String username;
-    String imdbId;
-    int rating;
+    private String username;
+    private String imdbId;
+    private int rating;
 
     /**
      * Constructor of StoreMovieRatingTask

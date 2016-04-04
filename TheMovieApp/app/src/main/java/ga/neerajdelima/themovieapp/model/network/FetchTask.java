@@ -18,6 +18,7 @@ import java.util.Scanner;
  */
 public abstract class FetchTask extends AsyncTask {
     protected HttpURLConnection connection;
+    private String newrequestURL;
 
     /**
      * Constructor for POST requests.
@@ -38,9 +39,11 @@ public abstract class FetchTask extends AsyncTask {
             URL url = new URL(requestURL);
             connection = (HttpURLConnection) url.openConnection();
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            //Log.d("MalformedURLException", e.getStackTrace().toString());
+            return;
         } catch (IOException e) {
-            e.printStackTrace();
+            //Log.d("IOException", e.getStackTrace().toString());
+            return;
         }
     }
 
@@ -66,13 +69,15 @@ public abstract class FetchTask extends AsyncTask {
      */
     protected void sendGetData(String requestURL, String params) {
         try {
-            requestURL = requestURL + "?" + params;
-            URL url = new URL(requestURL);
+            newrequestURL = requestURL + "?" + params;
+            URL url = new URL(newrequestURL);
             connection = (HttpURLConnection) url.openConnection();
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            //Log.d("MalformedURLException", e.getStackTrace().toString());
+            return;
         } catch (IOException e) {
-            e.printStackTrace();
+            //Log.d("IOException", e.getStackTrace().toString());
+            return;
         }
     }
     /**
@@ -91,8 +96,9 @@ public abstract class FetchTask extends AsyncTask {
 
             connection.getOutputStream().write(postData);
         } catch (IOException e) {
-            Log.d("te real ioexception", "Test");
-            Log.d("IOException", e.getStackTrace().toString());
+            //Log.d("te real ioexception", "Test");
+            //Log.d("IOException", e.getStackTrace().toString());
+            return;
         }
     }
 
@@ -144,7 +150,7 @@ public abstract class FetchTask extends AsyncTask {
         try {
             return convertStreamToString(connection.getInputStream());
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.d("IOException", e.getStackTrace().toString());
         }
         return null;
     }
@@ -157,9 +163,9 @@ public abstract class FetchTask extends AsyncTask {
         try {
             return new JSONObject(convertStreamToString(connection.getInputStream()));
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.d("IOException", e.getStackTrace().toString());
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.d("JSONException", e.getStackTrace().toString());
         }
         return null;
     }

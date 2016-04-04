@@ -5,6 +5,10 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 /**
  * This class fetches the totalRating and ratingCount for a movie
  * and passes them to FetchMovieRatingResponse.onMovieRatingResponse()
@@ -15,7 +19,7 @@ import org.json.JSONObject;
  */
 public class FetchMovieRatingTask extends FetchTask {
     public FetchMovieRatingResponse delegate;
-    String imdbId;
+    private String imdbId;
 
     /**
      * Constructor of FetchMovieRatingTask
@@ -36,9 +40,8 @@ public class FetchMovieRatingTask extends FetchTask {
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
             Log.d("Response message", getResponseMessage());
+            return new JSONObject(getInputString()); // Get the returned JSON;
 
-            JSONObject response = new JSONObject(getInputString()); // Get the returned JSON
-            return response;
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }
@@ -52,7 +55,7 @@ public class FetchMovieRatingTask extends FetchTask {
             int ratingCount = Integer.parseInt(jsonResponse.getString("ratings_count"));
             delegate.onMovieRatingResponse(totalRating, ratingCount);
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.d("JSONException", e.getStackTrace().toString());
         }
     }
 }

@@ -16,24 +16,30 @@ import ga.neerajdelima.themovieapp.model.User;
  * @author Komal Hirani
  * @version 1.0
  */
+<<<<<<< HEAD
 public class ViewProfileActivity extends AppCompatActivity {
     Intent intent;
     UserModel userModel;
     User currentUser;
+=======
+public class viewProfileActivity extends AppCompatActivity {
+    private Intent intent;
+    private UserModel userModel;
+    private User currentUser;
+>>>>>>> master
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    TextView userName;
-    TextView firstName;
-    TextView lastName;
-    TextView passWord;
-    TextView major;
+    private TextView userName;
+    private TextView firstName;
+    private TextView lastName;
+    private TextView passWord;
+    private TextView major;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
-        intent = this.getIntent();
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         mDrawerList = (ListView) findViewById(R.id.navList);

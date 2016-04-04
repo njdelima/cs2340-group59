@@ -76,27 +76,34 @@ public class Movie implements Comparable<Movie> {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
+    public int hashCode() {return imdbID.hashCode() + title.hashCode();}
+
     @Override
     public boolean equals(Object obj) {
-        if (obj == null) return false;
-        if (!(obj instanceof Movie)) return false;
-        if (obj == this) return true;
-
-        Movie that = (Movie) obj;
-        if ( (this.getImdbID().equals(that.getImdbID()) ) &&
-                ( this.getTotalRating() == that.getTotalRating() &&
-                  this.getRatingCount() == that.getRatingCount() &&
-                  this.getTitle() == that.getTitle()) ) {
-            return true;
-        } else {
+        if (obj == null) {
             return false;
         }
+        if (!(obj instanceof Movie)) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+
+        Movie that = (Movie) obj;
+        return ( (this.getImdbID().equals(that.getImdbID()) ) &&
+                ( this.getTotalRating() == that.getTotalRating() &&
+                  this.getRatingCount() == that.getRatingCount() &&
+                  this.getTitle() == that.getTitle()) );
     }
 
     @Override
     public int compareTo(Movie o) {
-        if (o == null) throw new NullPointerException("Specified object is null.");
-        if (o == this) return 0;
+        if (o == this) {
+            return 0;
+        }
 
         double thisAverageRating = this.totalRating / this.ratingCount;
         double thatAverageRating = o.totalRating / o.ratingCount;
@@ -105,10 +112,8 @@ public class Movie implements Comparable<Movie> {
             return -1;
         } else if (thisAverageRating > thatAverageRating) {
             return 1;
-        } else if (thisAverageRating == thatAverageRating) {
-            return 0;
         }
-        return -10;
+        return 0;
     }
 
     @Override

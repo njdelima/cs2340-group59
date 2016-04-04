@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
 import java.util.ArrayList;
 
 import ga.neerajdelima.themovieapp.model.User;
@@ -27,11 +28,11 @@ import ga.neerajdelima.themovieapp.model.network.FetchUserListResponse;
  */
 public class AdminHomeActivity extends AppCompatActivity implements FetchUserListResponse {
 
-    UserModel userModel;
-    ListView uListView;
-    MyCustomAdapter uCustomAdapter;
-    ArrayList<String> userList;
-    ArrayList<User> user;
+    private UserModel userModel;
+    private ListView uListView;
+    private MyCustomAdapter uCustomAdapter;
+    private List<String> userList;
+    private List<User> user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
     }
 
     @Override
-    public void onFetchUserListComplete(ArrayList<User> users) {
+    public void onFetchUserListComplete(List<User> users) {
          for (User u : users) {
              userList.add(u.getUsername() + "\n"
                      + u.getFirstName() + " " + u.getLastName() + "\n"
@@ -65,15 +66,19 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
      * Customized Adapter for buttons in the listview
      */
     private class MyCustomAdapter extends BaseAdapter implements ListAdapter {
-        private ArrayList<String> list = new ArrayList<String>();
+        private List<String> list = new ArrayList<String>();
         private Context context;
 
+<<<<<<< HEAD
         /**
          * Constructor of MyCustomAdapter
          * @param list list of items
          * @param context context
          */
         public MyCustomAdapter(ArrayList<String> list, Context context) {
+=======
+        public MyCustomAdapter(List<String> list, Context context) {
+>>>>>>> master
             this.list = list;
             this.context = context;
         }
@@ -151,7 +156,6 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                         Toast.makeText(AdminHomeActivity.this, "Banned " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setBanned(true);
                         userModel.banUser(user.get(index).getUsername());
-                        Log.d("user info", user.get(index).toString());
                     }
                     notifyDataSetChanged();
                 }
@@ -165,13 +169,11 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                         Toast.makeText(AdminHomeActivity.this, "Demoted " + user.get(index).getUsername() + " to User", Toast.LENGTH_SHORT).show();
                         user.get(index).setAdmin(false);
                         userModel.removeAdmin(user.get(index).getUsername());
-                        Log.d("user info", user.get(index).toString());
                     } else {
                         admBtn.setText("Demote");
                         Toast.makeText(AdminHomeActivity.this, "Made " + user.get(index).getUsername() + " to Admin", Toast.LENGTH_SHORT).show();
                         user.get(index).setAdmin(true);
                         userModel.makeAdmin(user.get(index).getUsername());
-                        Log.d("user info", user.get(index).toString());
                     }
                     notifyDataSetChanged();
                 }
@@ -185,13 +187,11 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
                         Toast.makeText(AdminHomeActivity.this, "Unlocked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setLocked(false);
                         userModel.unlockUser(user.get(index).getUsername());
-                        Log.d("user info", user.get(index).toString());
                     } else {
                         lockBtn.setText("Unlock");
                         Toast.makeText(AdminHomeActivity.this, "Locked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
                         user.get(index).setLocked(true);
                         userModel.lockUser(user.get(index).getUsername());
-                        Log.d("user info", user.get(index).toString());
                     }
                     notifyDataSetChanged();
                 }

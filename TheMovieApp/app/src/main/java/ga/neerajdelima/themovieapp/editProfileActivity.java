@@ -18,6 +18,7 @@ import ga.neerajdelima.themovieapp.model.UserModel;
  * @version 1.0
  */
 
+<<<<<<< HEAD
 public class EditProfileActivity extends AppCompatActivity {
 
     Intent intent;
@@ -36,12 +37,30 @@ public class EditProfileActivity extends AppCompatActivity {
     Spinner spinner;
     String[] majors;
     int spPosition;
+=======
+public class editProfileActivity extends AppCompatActivity {
+    private Intent intent;
+    private UserModel userModel;
+    private User currentUser;
+    private EditText userNameText;
+    private EditText firstNameText;
+    private EditText lastNameText;
+    private EditText passwordText;
+    private String firstName;
+    private String userName;
+    private String lastName;
+    private String password;
+    private String major;
+    private String oldPassword;
+    private Spinner spinner;
+    private String[] majors;
+    private int spPosition;
+>>>>>>> master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-        intent = this.getIntent();
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
@@ -90,9 +109,15 @@ public class EditProfileActivity extends AppCompatActivity {
         password = password.equals(oldPassword) ? password : userModel.md5(password);
 
 
+<<<<<<< HEAD
         if (firstName.equals("") | userName.equals("") | lastName.equals("")
                 | password.equals("") | major.equals("")) {
             Toast.makeText(EditProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+=======
+        if (firstName.equals("") || userName.equals("") || lastName.equals("")
+                || password.equals("") || major.equals("")) {
+            Toast.makeText(editProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+>>>>>>> master
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
             Intent intent = new Intent(this, ProfileActivity.class);

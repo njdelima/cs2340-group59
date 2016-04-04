@@ -11,6 +11,10 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 import ga.neerajdelima.themovieapp.model.UserModel;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
 import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
@@ -21,14 +25,13 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
  * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
-    Intent intent;
-    UserModel userModel;
+    private Intent intent;
+    private UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        intent = this.getIntent();
         userModel = new UserModel();
     }
     /**
@@ -79,9 +82,9 @@ public class RegisterActivity extends AppCompatActivity {
      */
     private class ProcessRegisterTask extends FetchTask {
 
-        String username;
-        String password;
-        String confirmPassword;
+        private String username;
+        private String password;
+        private String confirmPassword;
 
         /**
          * Constructor of ProcessRegisterTask
@@ -118,16 +121,17 @@ public class RegisterActivity extends AppCompatActivity {
                 data.put("username", username);
                 data.put("password", password);
                 sendPostData(data);
-                Log.d("Checkpoint", "made it past sendpostdata");
-                if (!getInputString().equals("Success!")) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(RegisterActivity.this, "Something went wrong.", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    return false;
-                }
+                Log.d("Checkpoint", "made it past x sendpostdata");
+                Log.d("Response mess", getResponseMessage());
+                //if (!getInputString().equals("Success!")) {
+                 //   runOnUiThread(new Runnable() {
+                  //      @Override
+                   //     public void run() {
+                    //        Toast.makeText(RegisterActivity.this, "Something went wrong.", Toast.LENGTH_SHORT).show();
+                     //   }
+                 //   });
+                  //  return false;
+                //}
                 return true;
             } catch (JSONException e) {
                 Log.d("JsonException", e.getMessage());
