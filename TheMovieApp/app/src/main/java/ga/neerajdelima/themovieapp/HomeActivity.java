@@ -35,7 +35,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     private Spinner spinner;
     private String major;
     private String[] majors;
-    private int sp_position;
+    private int spPosition;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +51,10 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         spinner = (Spinner) findViewById(R.id.major_spinner);
         ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
         major = "all";
-        sp_position = ad.getPosition(major);
+        spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setSelection(sp_position);
+        spinner.setSelection(spPosition);
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

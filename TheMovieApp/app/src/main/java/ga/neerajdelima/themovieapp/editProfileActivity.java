@@ -34,7 +34,7 @@ public class editProfileActivity extends AppCompatActivity {
     private String oldPassword;
     private Spinner spinner;
     private String[] majors;
-    private int sp_position;
+    private int spPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +47,10 @@ public class editProfileActivity extends AppCompatActivity {
         major = currentUser.getMajor();
         majors = getResources().getStringArray(R.array.majors_array);
         ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
-        sp_position = ad.getPosition(major);
+        spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setSelection(sp_position);
+        spinner.setSelection(spPosition);
 
 //      ArrayAdapter arr = (ArrayAdapter) spinner.getAdapter();
 //        int spinnerPos = arr.getPosition(major);
