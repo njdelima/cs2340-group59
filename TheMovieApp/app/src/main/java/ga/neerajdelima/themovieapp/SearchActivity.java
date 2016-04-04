@@ -70,6 +70,7 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
             }
         } catch (JSONException e) {
             //Log.d("JSONException", e.getStackTrace().toString());
+            return;
         }
         updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }

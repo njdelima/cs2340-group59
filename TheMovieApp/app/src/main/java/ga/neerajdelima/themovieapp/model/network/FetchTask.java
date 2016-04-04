@@ -38,8 +38,10 @@ public abstract class FetchTask extends AsyncTask {
             connection = (HttpURLConnection) url.openConnection();
         } catch (MalformedURLException e) {
             //Log.d("MalformedURLException", e.getStackTrace().toString());
+            return;
         } catch (IOException e) {
             //Log.d("IOException", e.getStackTrace().toString());
+            return;
         }
     }
 
