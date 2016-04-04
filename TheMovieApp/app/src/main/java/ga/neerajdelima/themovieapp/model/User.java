@@ -97,6 +97,11 @@ public class User {
         this.major = major;
     }
     @Override
+
+    public int hashCode() {
+        return username.hashCode() + password.hashCode() + major.hashCode();
+    }
+
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(obj instanceof User)) return false;
