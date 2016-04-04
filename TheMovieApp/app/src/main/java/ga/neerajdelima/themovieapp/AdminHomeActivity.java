@@ -67,9 +67,9 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         private List<String> list = new ArrayList<String>();
         private Context context;
 
-        public MyCustomAdapter(List<String> list, Context context) {
-            this.list = list;
-            this.context = context;
+        public MyCustomAdapter(List<String> l, Context c) {
+            this.list = l;
+            this.context = c;
         }
         @Override
         public long getItemId(int pos) {

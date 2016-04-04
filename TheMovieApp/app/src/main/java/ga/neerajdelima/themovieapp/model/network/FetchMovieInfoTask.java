@@ -19,9 +19,9 @@ public class FetchMovieInfoTask extends FetchTask {
     public FetchMovieInfoResponse delegate;
     private String params;
 
-    public FetchMovieInfoTask(String params) {
+    public FetchMovieInfoTask(String p) {
         super();
-        this.params = params;
+        this.params = p;
     }
 
     @Override

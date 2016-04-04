@@ -26,9 +26,9 @@ public class FetchTopMoviesTask extends FetchTask {
     private String major;
     private List<Movie> results;
 
-    public FetchTopMoviesTask(String major) {
+    public FetchTopMoviesTask(String m) {
         super("http://128.61.104.207:2340/api/ratings/top.php");
-        this.major = major;
+        this.major = m;
     }
 
     @Override

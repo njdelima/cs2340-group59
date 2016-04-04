@@ -14,10 +14,10 @@ public class BanTask extends FetchTask{
     private String username;
     private boolean set;
 
-    public BanTask(String username, boolean set) {
+    public BanTask(String u, boolean s) {
         super("http://128.61.104.207:2340/api/users/ban.php");
-        this.username = username;
-        this.set = set;
+        this.username = u;
+        this.set = s;
     }
 
     @Override
