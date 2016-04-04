@@ -51,13 +51,13 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 
     @Override
     public void onFetchUserListComplete(List<User> users) {
-         for (User u : users) {
-             userList.add(u.getUsername() + "\n"
-                     + u.getFirstName() + " " + u.getLastName() + "\n"
-                     + u.getMajor());
-             user.add(u);
-             Log.d(String.valueOf(u.getUsername()), String.valueOf(u.isLocked()));
-         }
+        for (User u : users) {
+            userList.add(u.getUsername() + "\n"
+                    + u.getFirstName() + " " + u.getLastName() + "\n"
+                    + u.getMajor());
+            user.add(u);
+            Log.d(String.valueOf(u.getUsername()), String.valueOf(u.isLocked()));
+        }
 //        for (User user : users)
 //            Log.d("current user", user.toString());
     }
@@ -69,15 +69,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         private List<String> list = new ArrayList<String>();
         private Context context;
 
-
-        /**
-         * Constructor of MyCustomAdapter
-         * @param list list of items
-         * @param context context
-         */
-
         public MyCustomAdapter(List<String> list, Context context) {
-
             this.list = list;
             this.context = context;
         }
