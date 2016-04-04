@@ -1,7 +1,6 @@
 package ga.neerajdelima.themovieapp.model.network;
 
 import android.os.AsyncTask;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
 
 import org.json.JSONException;

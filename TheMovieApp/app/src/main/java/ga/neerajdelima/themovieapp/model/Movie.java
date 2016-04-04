@@ -38,6 +38,10 @@ public class Movie implements Comparable<Movie> {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
+    public int hashCode() {return imdbID.hashCode() + title.hashCode();}
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
@@ -45,10 +49,10 @@ public class Movie implements Comparable<Movie> {
         if (obj == this) return true;
 
         Movie that = (Movie) obj;
-        return (this.getImdbID().equals(that.getImdbID()) ) &&
+        return ( (this.getImdbID().equals(that.getImdbID()) ) &&
                 ( this.getTotalRating() == that.getTotalRating() &&
                   this.getRatingCount() == that.getRatingCount() &&
-                  this.getTitle() == that.getTitle());
+                  this.getTitle() == that.getTitle()) );
     }
 
     @Override
@@ -63,10 +67,8 @@ public class Movie implements Comparable<Movie> {
             return -1;
         } else if (thisAverageRating > thatAverageRating) {
             return 1;
-        } else if (thisAverageRating == thatAverageRating) {
-            return 0;
         }
-        return -10;
+        return 0;
     }
 
     @Override

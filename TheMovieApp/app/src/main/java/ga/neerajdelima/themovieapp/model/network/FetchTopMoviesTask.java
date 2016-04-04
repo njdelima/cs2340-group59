@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
-import ga.neerajdelima.themovieapp.model.RatingsModel;
+
 
 /**
  * This class fetches the Top Movies by rating filtered by major

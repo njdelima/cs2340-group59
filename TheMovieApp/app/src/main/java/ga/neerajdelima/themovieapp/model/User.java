@@ -97,16 +97,20 @@ public class User {
         this.major = major;
     }
     @Override
+
+    public int hashCode() {
+        return username.hashCode() + password.hashCode() + major.hashCode();
+    }
+
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(obj instanceof User)) return false;
         if (obj == this) return true;
 
         User that = (User) obj;
-        return (this.getUsername().equals(that.getUsername()) ) &&
-                ( this.getPassword().equals(that.getPassword()) );
+        return ( (this.getUsername().equals(that.getUsername()) ) &&
+                ( this.getPassword().equals(that.getPassword()) ) );
     }
-
     @Override
     public String toString() {
         String s = "";
@@ -115,9 +119,9 @@ public class User {
         s = s + "First Name: " + this.firstName + ", ";
         s = s + "Last Name: " + this.lastName + ", ";
         s = s + "Major: " + this.major + ", ";
-        s = s + "Banned: " + String.valueOf(this.banned) + ", ";
-        s = s + "Locked: " + String.valueOf(this.locked) + ", ";
-        s = s + "Admin?: " + String.valueOf(this.admin);
+        s = s + "Banned: " + "" + this.banned + ", ";
+        s = s + "Locked: " + "" + this.locked + ", ";
+        s = s + "Admin?: " + "" + this.admin;
         return s;
     }
 }

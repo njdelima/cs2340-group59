@@ -1,7 +1,6 @@
 package ga.neerajdelima.themovieapp.model;
 
 import android.app.Activity;
-import android.content.Context;
 
 import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoResponse;
 import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoTask;
