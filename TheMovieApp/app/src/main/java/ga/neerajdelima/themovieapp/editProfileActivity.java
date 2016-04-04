@@ -25,15 +25,9 @@ public class EditProfileActivity extends AppCompatActivity {
     private EditText firstNameText;
     private EditText lastNameText;
     private EditText passwordText;
-    private String firstName;
-    private String userName;
-    private String lastName;
-    private String password;
     private String major;
     private String oldPassword;
     private Spinner spinner;
-    private String[] majors;
-    private int spPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +37,9 @@ public class EditProfileActivity extends AppCompatActivity {
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
         major = currentUser.getMajor();
-        majors = getResources().getStringArray(R.array.majors_array);
+        String[] majors = getResources().getStringArray(R.array.majors_array);
         ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
-        spPosition = ad.getPosition(major);
+        int spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setSelection(spPosition);
@@ -78,10 +72,10 @@ public class EditProfileActivity extends AppCompatActivity {
         lastNameText.setText(lastNameText.getText());
         passwordText.setText(passwordText.getText());
 
-        firstName = firstNameText.getText().toString();
-        userName = userNameText.getText().toString();
-        lastName = lastNameText.getText().toString();
-        password = passwordText.getText().toString();
+        String firstName = firstNameText.getText().toString();
+        String userName = userNameText.getText().toString();
+        String lastName = lastNameText.getText().toString();
+        String password = passwordText.getText().toString();
         major = String.valueOf(spinner.getSelectedItem());
 
         password = password.equals(oldPassword) ? password : userModel.md5(password);

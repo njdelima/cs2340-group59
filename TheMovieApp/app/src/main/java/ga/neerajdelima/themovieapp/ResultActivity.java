@@ -27,8 +27,6 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
     private Spinner spinner;
     private int rating;
     private String imdbID;
-    private UserModel userModel;
-    private ArrayAdapter<CharSequence> adapter;
     private TextView textView;
     private RatingsModel ratingsModel;
     private TextView totalRatingText;
@@ -38,7 +36,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        userModel = new UserModel();
+        UserModel userModel = new UserModel();
         final String loggedInUser = userModel.getLoggedInUsername();
         totalRatingText = (TextView) findViewById(R.id.totalRatings);
         textView = (TextView)findViewById(R.id.resultView);
@@ -47,7 +45,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
         ratingsModel = new RatingsModel();
         ratingsModel.getMovieInfoByTitle(this, movieTitle);
         spinner = (Spinner) findViewById(R.id.rating_spinner);
-        adapter = ArrayAdapter.createFromResource(this,R.array.rating_score, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.rating_score, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

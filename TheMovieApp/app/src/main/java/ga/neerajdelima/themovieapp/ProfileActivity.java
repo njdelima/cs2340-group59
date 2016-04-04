@@ -20,7 +20,6 @@ import ga.neerajdelima.themovieapp.model.UserModel;
 
 public class ProfileActivity extends AppCompatActivity {
     private ListView mDrawerList;
-    private ArrayAdapter<String> mAdapter;
     private UserModel userModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
      * @param optsArray the array that lists all of the options presented in the navigation bar
      */
     private void addDrawerItems(String[] optsArray) {
-        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
+        ArrayAdapter<String> mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
 
