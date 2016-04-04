@@ -11,10 +11,6 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 import ga.neerajdelima.themovieapp.model.UserModel;
 import ga.neerajdelima.themovieapp.model.network.FetchTask;
 import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;

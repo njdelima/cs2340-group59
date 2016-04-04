@@ -79,38 +79,6 @@ public class UserModel {
         fetchUserListTask.execute();
     }
 
-    public User getLoggedInUser() {
-        return UserModel.loggedInUser;
-    }
-
-    public String getLoggedInUsername() {
-        return loggedInUser.getUsername();
-    }
-
-
-    public void updateProfile(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
-        Log.d("Checkpoint", "about to start updateprofileTask");
-        new updateProfileTask(username, newUsername, newPassword, newFirstName, newLastName, newMajor).execute();
-    }
-    public void lockUser(String username) {
-        new LockTask(username, true).execute();
-    }
-    public void unlockUser(String username) {
-        new LockTask(username, false).execute();
-    }
-    public void makeAdmin(String username) {
-        new AdminTask(username, true).execute();
-    }
-    public void removeAdmin(String username) {
-        new AdminTask(username, false).execute();
-    }
-    public void banUser(String username) {
-        new BanTask(username, true).execute();
-    }
-    public void unbanUser(String username) {
-        new BanTask(username, false).execute();
-    }
-
     /*
      * this task queries the database for the @param username
      * and gets the rest of the information about the user.
@@ -154,7 +122,6 @@ public class UserModel {
             return null;
         }
     }
-<<<<<<< HEAD
 
     /**
      * @return logged in user's UserModel
@@ -226,9 +193,6 @@ public class UserModel {
         new BanTask(username, false).execute();
     }
 
-=======
-    
->>>>>>> master
     /*
      * This task updates the user in the database with the new information
      *
