@@ -55,7 +55,8 @@ public class ProcessLoginTask extends FetchTask {
                 return 3;
             } else if (isLocked == 1) {
                 return 2;
-            } if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
+            }
+            if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
                 return 1;
             }
 
