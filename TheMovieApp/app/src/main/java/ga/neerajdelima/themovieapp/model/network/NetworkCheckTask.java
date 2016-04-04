@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class NetworkCheckTask extends FetchTask {
 
-    private NetworkCheckResponse delegate;
+    public NetworkCheckResponse delegate;
     /**
      * Constructor of NetworkCheckTask
      * @param requestURL URL
@@ -27,8 +27,8 @@ public class NetworkCheckTask extends FetchTask {
     @Override
     protected Boolean doInBackground(Object... args) {
         try {
-            getConnection().setConnectTimeout(3000);
-            getConnection().connect();
+            connection.setConnectTimeout(3000);
+            connection.connect();
             if (getResponseCode() == 200) {
                 return true;
             }

@@ -16,7 +16,7 @@ import java.net.URLEncoder;
  */
 public class MovieSearcherTask extends FetchTask {
 
-    private MovieSearcherResponse delegate;
+    public MovieSearcherResponse delegate;
     private String params;
     /**
      * Constructor of MovieSearcherTask

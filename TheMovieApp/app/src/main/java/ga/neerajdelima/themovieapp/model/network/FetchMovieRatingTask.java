@@ -15,7 +15,7 @@ import org.json.JSONObject;
  * Created by Joshua on 2/29/16.
  */
 public class FetchMovieRatingTask extends FetchTask {
-    private FetchMovieRatingResponse delegate;
+    public FetchMovieRatingResponse delegate;
     private String imdbId;
     /**
      * Constructor of FetchMovieRatingTask

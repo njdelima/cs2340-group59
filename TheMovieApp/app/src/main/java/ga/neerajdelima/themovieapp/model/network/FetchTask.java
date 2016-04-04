@@ -17,7 +17,7 @@ import java.util.Scanner;
  * Created by Neeraj on 2/21/16.
  */
 public abstract class FetchTask extends AsyncTask {
-    private HttpURLConnection connection;
+    protected HttpURLConnection connection;
 
     /**
      * Constructor for POST requests.
@@ -177,9 +177,5 @@ public abstract class FetchTask extends AsyncTask {
     private String convertStreamToString(InputStream is) {
         Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
-    }
-
-    public HttpURLConnection getConnection() {
-        return connection;
     }
 }
