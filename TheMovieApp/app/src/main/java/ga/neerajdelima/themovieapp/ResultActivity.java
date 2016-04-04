@@ -24,17 +24,15 @@ import ga.neerajdelima.themovieapp.model.network.FetchMovieRatingResponse;
  */
 public class ResultActivity extends AppCompatActivity implements FetchMovieInfoResponse, FetchMovieRatingResponse {
     private String result;
-    Spinner spinner;
-    int rating;
+    private Spinner spinner;
+    private int rating;
     private String imdbID;
-    UserModel userModel;
-    ArrayAdapter<CharSequence> adapter;
-//    private String imgUrl;
+    private UserModel userModel;
+    private ArrayAdapter<CharSequence> adapter;
     private TextView textView;
-//    private ImageView imgView;
-    RatingsModel ratingsModel;
-    TextView totalRatingText;
-    int actualTotalRating;
+    private RatingsModel ratingsModel;
+    private TextView totalRatingText;
+    private int actualTotalRating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

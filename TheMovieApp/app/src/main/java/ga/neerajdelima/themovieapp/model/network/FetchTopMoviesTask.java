@@ -23,8 +23,8 @@ import ga.neerajdelima.themovieapp.model.Movie;
  */
 public class FetchTopMoviesTask extends FetchTask {
     public FetchTopMoviesResponse delegate;
-    String major;
-    List<Movie> results;
+    private String major;
+    private List<Movie> results;
 
     public FetchTopMoviesTask(String major) {
         super("http://128.61.104.207:2340/api/ratings/top.php");

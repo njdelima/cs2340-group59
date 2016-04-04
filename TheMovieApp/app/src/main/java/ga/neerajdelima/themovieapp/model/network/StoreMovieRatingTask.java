@@ -13,9 +13,9 @@ import org.json.JSONObject;
  * Created by Joshua on 2/29/16.
  */
 public class StoreMovieRatingTask extends FetchTask {
-    String username;
-    String imdbId;
-    int rating;
+    private String username;
+    private String imdbId;
+    private int rating;
 
     public StoreMovieRatingTask(String username, String imdbId, int rating) {
         super("http://128.61.104.207:2340/api/ratings/add.php");

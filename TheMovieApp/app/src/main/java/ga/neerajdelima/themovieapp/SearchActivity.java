@@ -24,8 +24,8 @@ import ga.neerajdelima.themovieapp.model.network.MovieSearcherResponse;
 
 public class SearchActivity extends AppCompatActivity implements MovieSearcherResponse {
 
-    EditText searchBox;
-    RatingsModel ratingsModel;
+    private EditText searchBox;
+    private RatingsModel ratingsModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,7 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
                 resultsArray.add(searchResults.getJSONObject(i).get("Title").toString());
             }
         } catch (JSONException e) {
-            Log.d("JSONException", e.getStackTrace().toString());
+            //Log.d("JSONException", e.getStackTrace().toString());
         }
         updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }

@@ -21,8 +21,8 @@ import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
  */
 public class LoginActivity extends AppCompatActivity implements NetworkCheckResponse, ProcessLoginResponse {
 
-    UserModel userModel;
-    UtilitiesModel utilitiesModel;
+    private UserModel userModel;
+    private UtilitiesModel utilitiesModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

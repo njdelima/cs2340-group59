@@ -30,13 +30,13 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private ArrayAdapter<String> ad;
-    UserModel userModel;
-    RatingsModel ratingsModel;
-    List<Movie> results;
-    Spinner spinner;
-    String major;
-    String[] majors;
-    int sp_position;
+    private UserModel userModel;
+    private RatingsModel ratingsModel;
+    private List<Movie> results;
+    private Spinner spinner;
+    private String major;
+    private String[] majors;
+    private int sp_position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,7 +108,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         finish();
     }
     @Override
-    public void onTopMoviesResponse(ArrayList<Movie> results) {
+    public void onTopMoviesResponse(List<Movie> results) {
         this.results = results; //results is a sorted arraylist
         ArrayList<String> actualResults = new ArrayList<String>();
         ArrayList<String> movieTitles = new ArrayList<String>();

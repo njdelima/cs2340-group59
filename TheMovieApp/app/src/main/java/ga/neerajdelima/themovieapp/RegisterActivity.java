@@ -23,8 +23,8 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
  * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
-    Intent intent;
-    UserModel userModel;
+    private Intent intent;
+    private UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,9 +79,9 @@ public class RegisterActivity extends AppCompatActivity {
      */
     private class ProcessRegisterTask extends FetchTask {
 
-        String username;
-        String password;
-        String confirmPassword;
+        private String username;
+        private String password;
+        private String confirmPassword;
 
         public ProcessRegisterTask() {
             super("http://128.61.104.207:2340/api/users/add.php");

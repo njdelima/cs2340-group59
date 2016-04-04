@@ -28,7 +28,7 @@ public class UserModel {
      * Keeps track of the currently logged in user.
      * If no one's logged in it should be null.
      */
-    static User loggedInUser = null;
+    private static User loggedInUser = null;
 
     /*
      * For hashing passwords.
@@ -70,7 +70,7 @@ public class UserModel {
      */
     private class setLoggedInUserTask extends FetchTask {
 
-        JSONObject data;
+        private JSONObject data;
 
         public setLoggedInUserTask(String username) {
             super("http://128.61.104.207:2340/api/users/fetch.php"); //Make a FetchTask
@@ -140,7 +140,7 @@ public class UserModel {
      */
     private class updateProfileTask extends FetchTask {
 
-        JSONObject data;
+        private JSONObject data;
 
         public updateProfileTask(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
             super("http://128.61.104.207:2340/api/users/update.php"); // Create a FetchTask

@@ -17,16 +17,16 @@ import ga.neerajdelima.themovieapp.model.User;
  * @version 1.0
  */
 public class viewProfileActivity extends AppCompatActivity {
-    Intent intent;
-    UserModel userModel;
-    User currentUser;
+    private Intent intent;
+    private UserModel userModel;
+    private User currentUser;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
-    TextView userName;
-    TextView firstName;
-    TextView lastName;
-    TextView passWord;
-    TextView major;
+    private TextView userName;
+    private TextView firstName;
+    private TextView lastName;
+    private TextView passWord;
+    private TextView major;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
