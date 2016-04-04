@@ -14,7 +14,7 @@ import ga.neerajdelima.themovieapp.model.User;
  * Created by Joshua on 3/14/16.
  */
 public class FetchUserListTask extends FetchTask {
-    public FetchUserListResponse delegate;
+    private FetchUserListResponse delegate;
     /**
      * Constructor of FetchUserListTask
      */
@@ -25,7 +25,7 @@ public class FetchUserListTask extends FetchTask {
     @Override
     protected JSONArray doInBackground(Object... args) {
         try {
-            connection.setConnectTimeout(0);
+            getConnection().setConnectTimeout(0);
             sendPostData(new JSONObject());
 
             Log.d("response", getResponseMessage());

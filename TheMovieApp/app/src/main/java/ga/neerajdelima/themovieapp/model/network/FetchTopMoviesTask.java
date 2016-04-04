@@ -22,7 +22,7 @@ import ga.neerajdelima.themovieapp.model.Movie;
  * Created by Joshua on 2/29/16.
  */
 public class FetchTopMoviesTask extends FetchTask {
-    public FetchTopMoviesResponse delegate;
+    private FetchTopMoviesResponse delegate;
     private String major;
     private List<Movie> results;
     /**
@@ -37,7 +37,7 @@ public class FetchTopMoviesTask extends FetchTask {
     @Override
     protected Object doInBackground(Object... args) {
         try {
-            connection.setConnectTimeout(0);
+            getConnection().setConnectTimeout(0);
             JSONObject data = new JSONObject();
             data.put("major", major);
             Log.d("JSON data", data.toString());

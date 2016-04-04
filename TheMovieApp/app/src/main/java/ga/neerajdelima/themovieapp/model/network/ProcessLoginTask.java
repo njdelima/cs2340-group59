@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 public class ProcessLoginTask extends FetchTask {
 
-    public ProcessLoginResponse delegate;
+    private ProcessLoginResponse delegate;
     private String username;
     private String password;
     /**
