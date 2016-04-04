@@ -40,7 +40,6 @@ public class editProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-        intent = this.getIntent();
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);

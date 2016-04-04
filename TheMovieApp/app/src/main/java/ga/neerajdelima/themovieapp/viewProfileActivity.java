@@ -32,7 +32,6 @@ public class viewProfileActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
-        intent = this.getIntent();
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         mDrawerList = (ListView) findViewById(R.id.navList);

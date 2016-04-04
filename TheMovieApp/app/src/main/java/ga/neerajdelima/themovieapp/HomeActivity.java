@@ -108,7 +108,6 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     }
     @Override
     public void onTopMoviesResponse(List<Movie> results) {
-        this.results = results; //results is a sorted arraylist
         ArrayList<String> actualResults = new ArrayList<String>();
         ArrayList<String> movieTitles = new ArrayList<String>();
         if (results == null) {

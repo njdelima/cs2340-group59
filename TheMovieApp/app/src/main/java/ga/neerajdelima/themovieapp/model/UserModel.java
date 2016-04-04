@@ -110,7 +110,8 @@ public class UserModel {
             try {
                 data.put("username", username);
             } catch (JSONException e) {
-                Log.d("JSONException", e.getStackTrace().toString());
+                //Log.d("JSONException", e.getStackTrace().toString());
+                return;
             }
         }
 

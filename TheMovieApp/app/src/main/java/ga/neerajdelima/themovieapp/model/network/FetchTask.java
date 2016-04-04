@@ -92,8 +92,9 @@ public abstract class FetchTask extends AsyncTask {
 
             connection.getOutputStream().write(postData);
         } catch (IOException e) {
-            Log.d("te real ioexception", "Test");
-            Log.d("IOException", e.getStackTrace().toString());
+            //Log.d("te real ioexception", "Test");
+            //Log.d("IOException", e.getStackTrace().toString());
+            return;
         }
     }
 
