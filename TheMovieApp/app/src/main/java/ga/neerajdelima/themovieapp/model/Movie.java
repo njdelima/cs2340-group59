@@ -38,6 +38,10 @@ public class Movie implements Comparable<Movie> {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
+    public int hashCode() {return imdbID.hashCode() + title.hashCode();}
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
