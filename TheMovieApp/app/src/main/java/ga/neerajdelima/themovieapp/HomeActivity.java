@@ -26,26 +26,17 @@ import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
  */
 
 public class HomeActivity extends AppCompatActivity implements FetchTopMoviesResponse {
-    private List<Movie> results;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private ArrayAdapter<String> ad;
-<<<<<<< HEAD
-    UserModel userModel;
-    RatingsModel ratingsModel;
-    ArrayList<Movie> results;
-    Spinner spinner;
-    String major;
-    String[] majors;
-    int spPosition;
-=======
+
     private UserModel userModel;
     private RatingsModel ratingsModel;
     private Spinner spinner;
     private String major;
     private String[] majors;
     private int spPosition;
->>>>>>> master
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,18 +74,18 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
      */
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
-        if (label.equals("Logout")) {
+        if ("Logout".equals(label)) {
             logout();
         }
-        if (label.equals("Profile")) {
+        if ("Profile".equals(label)) {
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Search")){
+        if ("Search".equals(label)){
             Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Home")) {
+        if ("Home".equals(label)) {
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }

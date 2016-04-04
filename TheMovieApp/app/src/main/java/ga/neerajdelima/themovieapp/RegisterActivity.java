@@ -21,7 +21,6 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
  * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
-    private Intent intent;
     private UserModel userModel;
 
     @Override

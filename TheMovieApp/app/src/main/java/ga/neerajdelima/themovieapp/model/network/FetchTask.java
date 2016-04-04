@@ -111,9 +111,9 @@ public abstract class FetchTask extends AsyncTask {
         try {
             return connection.getResponseCode();
         } catch (IOException e) {
-            Log.d("IOException", e.getMessage());
+            //Log.d("IOException", e.getMessage());
+            return -1;
         }
-        return -1;
     }
     /**
      * Gets the response message i.e. a 200 would be "OK"
@@ -124,9 +124,9 @@ public abstract class FetchTask extends AsyncTask {
         try {
             return connection.getResponseMessage();
         } catch (IOException e) {
-            Log.d("IOException", e.getMessage());
+            //Log.d("IOException", e.getMessage());
+            return null;
         }
-        return null;
     }
     /**
      * Gets the response from the server as an InputStream

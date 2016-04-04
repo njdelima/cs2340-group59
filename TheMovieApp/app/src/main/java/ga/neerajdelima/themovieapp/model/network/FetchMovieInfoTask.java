@@ -33,7 +33,8 @@ public class FetchMovieInfoTask extends FetchTask {
         try {
             params = URLEncoder.encode(params, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            Log.d("UnsupportedEncodingException", e.getStackTrace().toString());
+            //Log.d("UnsupportedEncodingException", e.getStackTrace().toString());
+            return;
         }
     }
 
