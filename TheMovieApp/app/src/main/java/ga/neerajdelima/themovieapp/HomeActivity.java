@@ -26,7 +26,6 @@ import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
  */
 
 public class HomeActivity extends AppCompatActivity implements FetchTopMoviesResponse {
-    private List<Movie> results;
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private ArrayAdapter<String> ad;

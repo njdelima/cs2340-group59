@@ -19,7 +19,6 @@ import ga.neerajdelima.themovieapp.model.UserModel;
  */
 
 public class editProfileActivity extends AppCompatActivity {
-    private Intent intent;
     private UserModel userModel;
     private User currentUser;
     private EditText userNameText;
