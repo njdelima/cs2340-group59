@@ -82,7 +82,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
 
         if ("".equals(firstName) || "".equals(userName) || "".equals(lastName)
-                || "".equals(password) || "".equals(major)) {
+                || "".equals(password)) {
             Toast.makeText(EditProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
