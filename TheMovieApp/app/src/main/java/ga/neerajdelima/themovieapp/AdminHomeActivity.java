@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
@@ -27,11 +28,11 @@ import ga.neerajdelima.themovieapp.model.network.FetchUserListResponse;
  */
 public class AdminHomeActivity extends AppCompatActivity implements FetchUserListResponse {
 
-    UserModel userModel;
-    ListView uListView;
-    MyCustomAdapter uCustomAdapter;
-    ArrayList<String> userList;
-    ArrayList<User> user;
+    private UserModel userModel;
+    private ListView uListView;
+    private MyCustomAdapter uCustomAdapter;
+    private ArrayList<String> userList;
+    private ArrayList<User> user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
