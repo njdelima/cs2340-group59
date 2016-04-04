@@ -30,8 +30,8 @@
             android:name=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".viewProfileActivity" />
-        <activity android:name=".editProfileActivity" />
+        <activity android:name=".ViewProfileActivity" />
+        <activity android:name=".EditProfileActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".AdminHomeActivity"></activity>

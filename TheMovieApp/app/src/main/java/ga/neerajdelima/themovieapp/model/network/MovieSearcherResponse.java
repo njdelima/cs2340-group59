@@ -12,5 +12,9 @@ import org.json.JSONObject;
  * Created by Neeraj on 2/29/16.
  */
 public interface MovieSearcherResponse {
+    /**
+     * Send JSON data to onMovieSearchComplete
+     * @param results result of fetched movie
+     */
     void onMovieSearchComplete(JSONObject results);
 }

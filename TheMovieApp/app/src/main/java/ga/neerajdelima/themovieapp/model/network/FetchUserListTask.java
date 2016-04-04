@@ -16,6 +16,9 @@ import ga.neerajdelima.themovieapp.model.User;
 public class FetchUserListTask extends FetchTask {
     public FetchUserListResponse delegate;
 
+    /**
+     * Constructor of FetchUserListTask
+     */
     public FetchUserListTask() {
         super("http://128.61.104.207:2340/api/users/list.php");
     }

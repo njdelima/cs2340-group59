@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -89,7 +87,7 @@ public class ProfileActivity extends AppCompatActivity {
      */
     public void viewProfile(View view) {
         if (userModel.getLoggedInUser().getFirstName() != null) {
-            Intent intent = new Intent(this, viewProfileActivity.class);
+            Intent intent = new Intent(this, ViewProfileActivity.class);
             startActivity(intent);
         } else {
             Toast.makeText(ProfileActivity.this, "Profile has not been created", Toast.LENGTH_SHORT).show();
@@ -101,7 +99,7 @@ public class ProfileActivity extends AppCompatActivity {
      * @param view the current view of the main profile screen
      */
     public void editProfile(View view) {
-        Intent intent = new Intent(this, editProfileActivity.class);
+        Intent intent = new Intent(this, EditProfileActivity.class);
         startActivity(intent);
     }
 }

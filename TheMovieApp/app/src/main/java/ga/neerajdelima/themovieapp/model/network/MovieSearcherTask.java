@@ -1,18 +1,11 @@
 package ga.neerajdelima.themovieapp.model.network;
 
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-
-import ga.neerajdelima.themovieapp.R;
 
 /**
  * This class searches the omdb API and passes a JSONObject of the results
@@ -27,6 +20,10 @@ public class MovieSearcherTask extends FetchTask {
     public MovieSearcherResponse delegate;
     private String params;
 
+    /**
+     * Constructor of MovieSearcherTask
+     * @param params movie name
+     */
     public MovieSearcherTask(String params) {
         super();
         this.params = params;

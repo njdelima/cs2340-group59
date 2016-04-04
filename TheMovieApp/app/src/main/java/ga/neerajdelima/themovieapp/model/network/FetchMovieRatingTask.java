@@ -5,8 +5,6 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Objects;
-
 /**
  * This class fetches the totalRating and ratingCount for a movie
  * and passes them to FetchMovieRatingResponse.onMovieRatingResponse()
@@ -19,6 +17,10 @@ public class FetchMovieRatingTask extends FetchTask {
     public FetchMovieRatingResponse delegate;
     String imdbId;
 
+    /**
+     * Constructor of FetchMovieRatingTask
+     * @param imdbId imdbID
+     */
     public FetchMovieRatingTask(String imdbId) {
         super("http://128.61.104.207:2340/api/ratings/fetch.php");
         this.imdbId = imdbId;

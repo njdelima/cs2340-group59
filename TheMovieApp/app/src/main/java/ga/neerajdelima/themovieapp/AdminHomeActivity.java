@@ -68,6 +68,11 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         private ArrayList<String> list = new ArrayList<String>();
         private Context context;
 
+        /**
+         * Constructor of MyCustomAdapter
+         * @param list list of items
+         * @param context context
+         */
         public MyCustomAdapter(ArrayList<String> list, Context context) {
             this.list = list;
             this.context = context;

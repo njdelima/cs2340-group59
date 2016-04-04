@@ -1,18 +1,9 @@
 package ga.neerajdelima.themovieapp.model.network;
 
-import android.content.Intent;
 import android.util.Log;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import ga.neerajdelima.themovieapp.HomeActivity;
-import ga.neerajdelima.themovieapp.R;
-import ga.neerajdelima.themovieapp.model.UserModel;
-import ga.neerajdelima.themovieapp.model.network.FetchTask;
-import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
 
 /**
  * This class processes a login attempt
@@ -31,6 +22,11 @@ public class ProcessLoginTask extends FetchTask {
     private String username;
     private String password;
 
+    /**
+     * Constructor of ProcessLoginTask
+     * @param username username
+     * @param password password
+     */
     public ProcessLoginTask(String username, String password) {
         super("http://128.61.104.207:2340/api/users/fetch.php");
         this.username = username;

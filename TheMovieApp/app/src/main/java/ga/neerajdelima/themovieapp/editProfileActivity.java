@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,7 +18,7 @@ import ga.neerajdelima.themovieapp.model.UserModel;
  * @version 1.0
  */
 
-public class editProfileActivity extends AppCompatActivity {
+public class EditProfileActivity extends AppCompatActivity {
 
     Intent intent;
     UserModel userModel;
@@ -36,7 +35,7 @@ public class editProfileActivity extends AppCompatActivity {
     String oldPassword;
     Spinner spinner;
     String[] majors;
-    int sp_position;
+    int spPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +48,10 @@ public class editProfileActivity extends AppCompatActivity {
         major = currentUser.getMajor();
         majors = getResources().getStringArray(R.array.majors_array);
         ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
-        sp_position = ad.getPosition(major);
+        spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setSelection(sp_position);
+        spinner.setSelection(spPosition);
 
 //      ArrayAdapter arr = (ArrayAdapter) spinner.getAdapter();
 //        int spinnerPos = arr.getPosition(major);
@@ -93,7 +92,7 @@ public class editProfileActivity extends AppCompatActivity {
 
         if (firstName.equals("") | userName.equals("") | lastName.equals("")
                 | password.equals("") | major.equals("")) {
-            Toast.makeText(editProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
             Intent intent = new Intent(this, ProfileActivity.class);

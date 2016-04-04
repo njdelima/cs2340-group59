@@ -1,11 +1,10 @@
 package ga.neerajdelima.themovieapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,20 +17,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.RatingsModel;
-import ga.neerajdelima.themovieapp.model.network.FetchTask;
 import ga.neerajdelima.themovieapp.model.network.MovieSearcherResponse;
 
 public class SearchActivity extends AppCompatActivity implements MovieSearcherResponse {
@@ -86,6 +74,10 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
         updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }
 
+    /**
+     * Update list of fetched movie
+     * @param results list of fetched movies
+     */
     private void updateListView(String[] results) {
         final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
         ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
