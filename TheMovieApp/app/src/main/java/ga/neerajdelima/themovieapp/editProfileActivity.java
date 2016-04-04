@@ -20,22 +20,22 @@ import ga.neerajdelima.themovieapp.model.UserModel;
 
 public class editProfileActivity extends AppCompatActivity {
 
-    Intent intent;
-    UserModel userModel;
-    User currentUser;
-    EditText userNameText;
-    EditText firstNameText;
-    EditText lastNameText;
-    EditText passwordText;
-    String firstName;
-    String userName;
-    String lastName;
-    String password;
-    String major;
-    String oldPassword;
-    Spinner spinner;
-    String[] majors;
-    int sp_position;
+    private Intent intent;
+    private UserModel userModel;
+    private User currentUser;
+    private EditText userNameText;
+    private EditText firstNameText;
+    private EditText lastNameText;
+    private EditText passwordText;
+    private String firstName;
+    private String userName;
+    private String lastName;
+    private String password;
+    private String major;
+    private String oldPassword;
+    private Spinner spinner;
+    private String[] majors;
+    private int sp_position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,8 +90,8 @@ public class editProfileActivity extends AppCompatActivity {
         password = password.equals(oldPassword) ? password : userModel.md5(password);
 
 
-        if (firstName.equals("") | userName.equals("") | lastName.equals("")
-                | password.equals("") | major.equals("")) {
+        if (firstName.equals("") || userName.equals("") || lastName.equals("")
+                || password.equals("") || major.equals("")) {
             Toast.makeText(editProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);

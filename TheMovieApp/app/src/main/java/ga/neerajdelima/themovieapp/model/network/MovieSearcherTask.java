@@ -29,7 +29,7 @@ public class MovieSearcherTask extends FetchTask {
         try {
             params = URLEncoder.encode(params, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            Log.d("UnsupportedEncodingException", e.getStackTrace().toString());
         }
         params = "s=" + params;
     }
@@ -39,7 +39,8 @@ public class MovieSearcherTask extends FetchTask {
         Log.d("SENDING REQ", "http://www.omdbapi.com/?" + params);
         sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
         Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-        return getInputJSON();; // gives it to onPostExecute // Gets the response from the API
+
+        return getInputJSON(); // Gets the response from the API
     }
 
     @Override

@@ -69,7 +69,7 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
                 resultsArray.add(searchResults.getJSONObject(i).get("Title").toString());
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.d("JSONException", e.getStackTrace().toString());
         }
         updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }

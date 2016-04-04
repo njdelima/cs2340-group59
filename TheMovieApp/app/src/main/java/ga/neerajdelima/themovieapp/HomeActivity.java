@@ -12,6 +12,7 @@ import android.widget.Toast;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
 import ga.neerajdelima.themovieapp.model.RatingsModel;
@@ -31,7 +32,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     private ArrayAdapter<String> ad;
     UserModel userModel;
     RatingsModel ratingsModel;
-    ArrayList<Movie> results;
+    List<Movie> results;
     Spinner spinner;
     String major;
     String[] majors;
