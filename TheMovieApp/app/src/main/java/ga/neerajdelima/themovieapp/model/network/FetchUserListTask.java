@@ -29,7 +29,7 @@ public class FetchUserListTask extends FetchTask {
             sendPostData(new JSONObject());
 
             Log.d("response", getResponseMessage());
-            JSONArray response = new JSONArray(getInputString());
+            final JSONArray response = new JSONArray(getInputString());
             Log.d("userlist", response.toString());
             return response;
         } catch (JSONException e) {
@@ -40,37 +40,37 @@ public class FetchUserListTask extends FetchTask {
 
     @Override
     protected void onPostExecute(Object response) {
-        JSONArray serverResponse = (JSONArray) response;
+        final JSONArray serverResponse = (JSONArray) response;
 
-        ArrayList<User> userList = new ArrayList<User>();
+        final ArrayList<User> userList = new ArrayList<User>();
 
         for (int i = 0; i < serverResponse.length(); i++) {
             Log.d("logging", "USER LIST");
-            String username = serverResponse.optJSONObject(i).optString("username");
+            final String username = serverResponse.optJSONObject(i).optString("username");
             Log.d("username", username);
-            String password = serverResponse.optJSONObject(i).optString("password");
+            final String password = serverResponse.optJSONObject(i).optString("password");
             Log.d("password", password);
-            String major = serverResponse.optJSONObject(i).optString("major");
+            final String major = serverResponse.optJSONObject(i).optString("major");
             Log.d("major", major);
-            String firstName = serverResponse.optJSONObject(i).optString("first_name");
+            final String firstName = serverResponse.optJSONObject(i).optString("first_name");
             Log.d("firstname", firstName);
-            String lastName = serverResponse.optJSONObject(i).optString("last_name");
+            final String lastName = serverResponse.optJSONObject(i).optString("last_name");
             Log.d("lastname", lastName);
 
-            String adminstr = serverResponse.optJSONObject(i).optString("admin");
+            final String adminstr = serverResponse.optJSONObject(i).optString("admin");
             Log.d("admin", String.valueOf(adminstr));
-            boolean admin = "1".equals(adminstr);
+            final boolean admin = "1".equals(adminstr);
 
-            String lockedstr = serverResponse.optJSONObject(i).optString("locked");
+            final String lockedstr = serverResponse.optJSONObject(i).optString("locked");
             Log.d("locked", String.valueOf(lockedstr));
             Log.d("locked server resp", serverResponse.optJSONObject(i).optString("locked"));
-            boolean locked = "1".equals(lockedstr);
+            final boolean locked = "1".equals(lockedstr);
 
-            String bannedstr = serverResponse.optJSONObject(i).optString("banned");
+            final String bannedstr = serverResponse.optJSONObject(i).optString("banned");
             Log.d("banned", String.valueOf(bannedstr));
-            boolean banned = "1".equals(bannedstr);
+            final boolean banned = "1".equals(bannedstr);
 
-            User user = new User(username, password, firstName, lastName, major, locked, banned, admin);
+            final User user = new User(username, password, firstName, lastName, major, locked, banned, admin);
 
             userList.add(user);
         }

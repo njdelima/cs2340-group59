@@ -15,7 +15,7 @@ public class UtilitiesModel {
      * @param activity activity to be executed
      */
     public void checkNetworkConnection(Activity activity) {
-        NetworkCheckTask networkCheckTask = new NetworkCheckTask("https://google.com");
+        final NetworkCheckTask networkCheckTask = new NetworkCheckTask("https://google.com");
         networkCheckTask.delegate = (NetworkCheckResponse) activity;
         networkCheckTask.execute();
     }

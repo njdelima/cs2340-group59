@@ -149,7 +149,7 @@ public class User {
             return true;
         }
 
-        User that = (User) obj;
+        final User that = (User) obj;
         return ( (this.getUsername().equals(that.getUsername()) ) &&
                 ( this.getPassword().equals(that.getPassword()) ) );
     }

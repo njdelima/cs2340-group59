@@ -22,9 +22,9 @@ public class FetchMovieInfoTask extends FetchTask {
      * Constructor of FetchMovieInfoTask
      * @param params name of the movie fetched
      */
-    public FetchMovieInfoTask(String params) {
+    public FetchMovieInfoTask(String p) {
         super();
-        this.params = params;
+        this.params = p;
     }
 
     @Override
@@ -42,31 +42,31 @@ public class FetchMovieInfoTask extends FetchTask {
         Log.d("SENDING REQ", "http://www.omdbapi.com/?t=" + params);
         sendGetData("http://www.omdbapi.com/?t=", params); // get request i.e. http://www.omdbapi.com/?params
         Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-        JSONObject response = getInputJSON(); // Gets the response from the API
+        final JSONObject response = getInputJSON(); // Gets the response from the API
         Log.d("Imm json response", response.toString());
         return response; // gives it to onPostExecute
     }
 
     @Override
     protected void onPostExecute(Object response) {
-        JSONObject jsonObject = (JSONObject) response;
+        final JSONObject jsonObject = (JSONObject) response;
 
         Log.d("movie info response", jsonObject.toString());
 
-        String title = jsonObject.optString("Title");
-        String year = jsonObject.optString("Year");
-        String rated = jsonObject.optString("Rated");
-        String released = jsonObject.optString("Released");
-        String runtime = jsonObject.optString("Runtime");
-        String genre = jsonObject.optString("Genre");
-        String director = jsonObject.optString("Director");
-        String writer = jsonObject.optString("Writer");
-        String actors = jsonObject.optString("Actors");
-        String plot = jsonObject.optString("Plot");
-        String language = jsonObject.optString("Language");
-        String country = jsonObject.optString("Country");
-        String awards = jsonObject.optString("Awards");
-        String imdbID = jsonObject.optString("imdbID");
+        final String title = jsonObject.optString("Title");
+        final String year = jsonObject.optString("Year");
+        final String rated = jsonObject.optString("Rated");
+        final String released = jsonObject.optString("Released");
+        final String runtime = jsonObject.optString("Runtime");
+        final String genre = jsonObject.optString("Genre");
+        final String director = jsonObject.optString("Director");
+        final String writer = jsonObject.optString("Writer");
+        final String actors = jsonObject.optString("Actors");
+        final String plot = jsonObject.optString("Plot");
+        final String language = jsonObject.optString("Language");
+        final String country = jsonObject.optString("Country");
+        final String awards = jsonObject.optString("Awards");
+        final String imdbID = jsonObject.optString("imdbID");
         //                imgUrl = jsonObject.optString("Poster");
 
         delegate.onFetchMovieInfoResponse(title, year, rated, released, runtime, genre,

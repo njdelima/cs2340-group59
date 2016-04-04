@@ -27,7 +27,7 @@ public class RatingsModel {
      * @param searchText the text to search
      */
     public void searchForMovie(Activity activity, String searchText) {
-        MovieSearcherTask movieSearcherTask = new MovieSearcherTask(searchText);
+        final MovieSearcherTask movieSearcherTask = new MovieSearcherTask(searchText);
         movieSearcherTask.delegate = (MovieSearcherResponse) activity;
         movieSearcherTask.execute();
     }
@@ -59,7 +59,7 @@ public class RatingsModel {
      * @param imdbID the 9 digit imdbId of the movie in question
      */
     public void getMovieRating(Activity activity, String imdbID) {
-        FetchMovieRatingTask fetchMovieRatingTask = new FetchMovieRatingTask(imdbID);
+        final FetchMovieRatingTask fetchMovieRatingTask = new FetchMovieRatingTask(imdbID);
         fetchMovieRatingTask.delegate = (FetchMovieRatingResponse) activity;
         fetchMovieRatingTask.execute();
     }
@@ -76,7 +76,7 @@ public class RatingsModel {
      * @param title movie title
      */
     public void getMovieInfoByTitle(Activity activity, String title) {
-        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
+        final FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
         fetchMovieInfoTask.delegate = (FetchMovieInfoResponse) activity;
         fetchMovieInfoTask.execute();
     }
@@ -94,7 +94,7 @@ public class RatingsModel {
      * @param major user's major
      */
     public void getTopMovies(Activity activity, String major) {
-        FetchTopMoviesTask fetchTopMoviesTask = new FetchTopMoviesTask(major);
+        final FetchTopMoviesTask fetchTopMoviesTask = new FetchTopMoviesTask(major);
         fetchTopMoviesTask.delegate = (FetchTopMoviesResponse) activity;
         fetchTopMoviesTask.execute();
     }

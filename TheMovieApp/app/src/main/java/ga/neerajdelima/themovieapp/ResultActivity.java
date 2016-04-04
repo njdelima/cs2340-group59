@@ -36,16 +36,16 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        UserModel userModel = new UserModel();
+        final UserModel userModel = new UserModel();
         final String loggedInUser = userModel.getLoggedInUsername();
         totalRatingText = (TextView) findViewById(R.id.totalRatings);
         textView = (TextView)findViewById(R.id.resultView);
-        Intent intent = getIntent();
-        String movieTitle = intent.getStringExtra("result");
+        final Intent intent = getIntent();
+        final String movieTitle = intent.getStringExtra("result");
         ratingsModel = new RatingsModel();
         ratingsModel.getMovieInfoByTitle(this, movieTitle);
         spinner = (Spinner) findViewById(R.id.rating_spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.rating_score, android.R.layout.simple_spinner_item);
+        final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.rating_score, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -59,7 +59,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
 
             }
         });
-        Button button = (Button) findViewById(R.id.button);
+        final Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 ratingsModel.rateMovie(loggedInUser, imdbID, rating);
@@ -95,7 +95,7 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
                                          String genre, String director, String writer,
                                          String actors, String plot, String language,
                                          String country, String awards, String imdbID) {
-        String finalOutput = "Title : " + title + "\nYear : "+ year +"\nRated : "+ rated + "\nReleased : "+ released
+        final String finalOutput = "Title : " + title + "\nYear : "+ year +"\nRated : "+ rated + "\nReleased : "+ released
                 + "\nRuntime : " + runtime + "\nGenre : " + genre + "\nDirector : " + director + "\nWriter : "
                 + writer + "\nActors : " + actors + "\nPlot : " + plot + "\nLanguage " + language + "\nCountry : "
                 + country + "\nAwards : " + awards;

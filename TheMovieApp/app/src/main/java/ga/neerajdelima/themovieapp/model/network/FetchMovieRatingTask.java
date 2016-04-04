@@ -17,20 +17,25 @@ import org.json.JSONObject;
 public class FetchMovieRatingTask extends FetchTask {
     public FetchMovieRatingResponse delegate;
     private String imdbId;
+<<<<<<< HEAD
     /**
      * Constructor of FetchMovieRatingTask
      * @param imdbId imdbID
      */
     public FetchMovieRatingTask(String imdbId) {
+=======
+
+    public FetchMovieRatingTask(String id) {
+>>>>>>> origin/master
         super("http://128.61.104.207:2340/api/ratings/fetch.php");
-        this.imdbId = imdbId;
+        this.imdbId = id;
     }
 
     @Override
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("id", imdbId);
             Log.d("JSON data", data.toString());
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
@@ -45,10 +50,10 @@ public class FetchMovieRatingTask extends FetchTask {
     }
     @Override
     protected void onPostExecute(Object response) {
-        JSONObject jsonResponse = (JSONObject) response;
+        final JSONObject jsonResponse = (JSONObject) response;
         try {
-            int totalRating = Integer.parseInt(jsonResponse.getString("total_rating"));
-            int ratingCount = Integer.parseInt(jsonResponse.getString("ratings_count"));
+            final int totalRating = Integer.parseInt(jsonResponse.getString("total_rating"));
+            final int ratingCount = Integer.parseInt(jsonResponse.getString("ratings_count"));
             delegate.onMovieRatingResponse(totalRating, ratingCount);
         } catch (JSONException e) {
             Log.d("JSONException", e.getStackTrace().toString());

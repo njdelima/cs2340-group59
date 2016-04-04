@@ -45,11 +45,11 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
 
     @Override
     public void onNetworkCheckSuccess() {
-        EditText usernameText = (EditText) findViewById(R.id.username_text);
-        EditText passwordText = (EditText) findViewById(R.id.password_text);
+        final EditText usernameText = (EditText) findViewById(R.id.username_text);
+        final EditText passwordText = (EditText) findViewById(R.id.password_text);
 
-        String username = usernameText.getText().toString();
-        String password = userModel.md5(passwordText.getText().toString());
+        final String username = usernameText.getText().toString();
+        final String password = userModel.md5(passwordText.getText().toString());
         userModel.processLogin(this, username, password);
     }
 
@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
         Log.d("About to set logged in admin as: ", username);
         userModel.setLoggedInUser(username);
         Log.d("Finished setting logged in admin", username);
-        Intent intent = new Intent(getApplicationContext(), AdminHomeActivity.class);
+        final Intent intent = new Intent(getApplicationContext(), AdminHomeActivity.class);
         startActivity(intent);
     }
 
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
         Log.d("About to set logged in user as", username);
         userModel.setLoggedInUser(username);
         Log.d("Finished setting logged in user", username);
-        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        final Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(intent);
     }
 
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
      */
     public void registerClick(View view) {
         //Intent intent = new Intent(this, HomeActivity.class);
-        Intent intent = new Intent(this, RegisterActivity.class);
+        final Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 }
