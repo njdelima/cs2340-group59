@@ -22,9 +22,9 @@ public class FetchMovieInfoTask extends FetchTask {
      * Constructor of FetchMovieInfoTask
      * @param params name of the movie fetched
      */
-    public FetchMovieInfoTask(String p) {
+    public FetchMovieInfoTask(String params) {
         super();
-        this.params = p;
+        this.params = params;
     }
 
     @Override

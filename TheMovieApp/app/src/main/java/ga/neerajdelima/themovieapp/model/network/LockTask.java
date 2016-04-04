@@ -13,21 +13,18 @@ import org.json.JSONObject;
 public class LockTask extends FetchTask {
     private String username;
     private boolean set;
-<<<<<<< HEAD
+
     /**
      * Constructor of LockTask
      * @param username username
      * @param set whether the user is locked
      */
     public LockTask(String username, boolean set) {
-=======
-
-    public LockTask(String u, boolean s) {
->>>>>>> origin/master
         super("http://128.61.104.207:2340/api/users/lock.php");
-        this.username = u;
-        this.set = s;
+        this.username = username;
+        this.set = set;
     }
+
     @Override
     protected Object doInBackground(Object... args) {
         try {

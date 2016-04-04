@@ -17,18 +17,13 @@ import org.json.JSONObject;
 public class FetchMovieRatingTask extends FetchTask {
     public FetchMovieRatingResponse delegate;
     private String imdbId;
-<<<<<<< HEAD
     /**
      * Constructor of FetchMovieRatingTask
      * @param imdbId imdbID
      */
     public FetchMovieRatingTask(String imdbId) {
-=======
-
-    public FetchMovieRatingTask(String id) {
->>>>>>> origin/master
         super("http://128.61.104.207:2340/api/ratings/fetch.php");
-        this.imdbId = id;
+        this.imdbId = imdbId;
     }
 
     @Override
