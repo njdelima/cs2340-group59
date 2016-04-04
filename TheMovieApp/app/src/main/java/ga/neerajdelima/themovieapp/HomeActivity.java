@@ -1,31 +1,21 @@
 package ga.neerajdelima.themovieapp;
 
 import android.content.Intent;
-import android.media.Rating;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.Spinner;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 import ga.neerajdelima.themovieapp.model.Movie;
 import ga.neerajdelima.themovieapp.model.RatingsModel;
-import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
-import ga.neerajdelima.themovieapp.model.network.FetchMovieInfoResponse;
-import ga.neerajdelima.themovieapp.model.network.FetchTask;
 import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
 
 /**

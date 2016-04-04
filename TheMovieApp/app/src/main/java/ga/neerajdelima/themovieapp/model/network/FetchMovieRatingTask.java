@@ -5,7 +5,6 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Objects;
 
 /**
  * This class fetches the totalRating and ratingCount for a movie

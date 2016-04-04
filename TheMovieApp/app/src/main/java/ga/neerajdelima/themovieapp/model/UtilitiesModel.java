@@ -1,9 +1,8 @@
 package ga.neerajdelima.themovieapp.model;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 
-import ga.neerajdelima.themovieapp.LoginActivity;
+
 import ga.neerajdelima.themovieapp.model.network.NetworkCheckResponse;
 import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
 

@@ -66,7 +66,7 @@ public class Movie implements Comparable<Movie> {
         } else if (thisAverageRating == thatAverageRating) {
             return 0;
         }
-        return -10;
+        return 0;
     }
 
     @Override
