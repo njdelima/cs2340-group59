@@ -25,7 +25,10 @@ public class FetchTopMoviesTask extends FetchTask {
     public FetchTopMoviesResponse delegate;
     private String major;
     private List<Movie> results;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of FetchTopMoviesTask
      * @param major major of users

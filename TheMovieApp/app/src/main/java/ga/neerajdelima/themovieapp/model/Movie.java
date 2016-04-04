@@ -8,7 +8,10 @@ public class Movie implements Comparable<Movie> {
     private String title;
     private int totalRating;
     private int ratingCount;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of Movie
      * @param imdbID imdbID
@@ -23,6 +26,10 @@ public class Movie implements Comparable<Movie> {
         this.ratingCount = ratingCount;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     /**
      * @return imdbID
      */

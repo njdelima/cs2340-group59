@@ -80,7 +80,10 @@ public class RegisterActivity extends AppCompatActivity {
         private String username;
         private String password;
         private String confirmPassword;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         /**
          * Constructor of ProcessRegisterTask
          */

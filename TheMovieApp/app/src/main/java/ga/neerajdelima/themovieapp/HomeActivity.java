@@ -121,10 +121,13 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
             }
         }
 
-        updateListView(actualResults.toArray(new String[actualResults.size()]),movieTitles.toArray(new String[movieTitles.size()]));
+        updateListView(actualResults.toArray(new String[actualResults.size()]), movieTitles.toArray(new String[movieTitles.size()]));
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Filter list
      * @param view view
@@ -133,7 +136,10 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         major = String.valueOf(spinner.getSelectedItem());
         ratingsModel.getTopMovies(HomeActivity.this,major);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Update the list
      * @param results result of the fetch

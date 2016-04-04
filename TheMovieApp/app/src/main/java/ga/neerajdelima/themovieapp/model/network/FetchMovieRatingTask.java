@@ -20,7 +20,10 @@ import org.json.JSONObject;
 public class FetchMovieRatingTask extends FetchTask {
     public FetchMovieRatingResponse delegate;
     private String imdbId;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of FetchMovieRatingTask
      * @param imdbId imdbID

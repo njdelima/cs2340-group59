@@ -16,7 +16,10 @@ import java.io.IOException;
 public class NetworkCheckTask extends FetchTask {
 
     public NetworkCheckResponse delegate;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of NetworkCheckTask
      * @param requestURL URL

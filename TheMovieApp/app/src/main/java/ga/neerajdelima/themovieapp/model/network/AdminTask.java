@@ -12,7 +12,10 @@ import org.json.JSONObject;
 public class AdminTask extends FetchTask{
     private String username;
     private boolean set;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of AdminTask
      * @param username username

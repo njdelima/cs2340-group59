@@ -16,7 +16,10 @@ public class StoreMovieRatingTask extends FetchTask {
     private String username;
     private String imdbId;
     private int rating;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of StoreMovieRatingTask
      * @param username username

@@ -15,7 +15,10 @@ import ga.neerajdelima.themovieapp.model.User;
  */
 public class FetchUserListTask extends FetchTask {
     public FetchUserListResponse delegate;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of FetchUserListTask
      */

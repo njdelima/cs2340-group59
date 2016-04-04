@@ -16,12 +16,18 @@ import ga.neerajdelima.themovieapp.model.Movie;
  */
 public interface FetchTopMoviesResponse {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
     /**
      * Send result to onTopMoviesResponse
      * @param results list of top rated movies
      */
+<<<<<<< HEAD
     void onTopMoviesResponse(ArrayList<Movie> results);
 =======
+=======
+>>>>>>> master
     void onTopMoviesResponse(List<Movie> results);
 >>>>>>> master
 }

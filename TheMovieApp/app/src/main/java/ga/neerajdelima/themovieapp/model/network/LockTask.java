@@ -13,7 +13,10 @@ import org.json.JSONObject;
 public class LockTask extends FetchTask {
     private String username;
     private boolean set;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of LockTask
      * @param username username

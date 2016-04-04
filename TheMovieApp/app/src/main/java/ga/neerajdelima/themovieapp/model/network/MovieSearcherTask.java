@@ -22,6 +22,10 @@ public class MovieSearcherTask extends FetchTask {
 
     public MovieSearcherResponse delegate;
     private String params;
+    /**
+     * Constructor of MovieSearcherTask
+     * @param params movie name
+     */
 
     /**
      * Constructor of MovieSearcherTask

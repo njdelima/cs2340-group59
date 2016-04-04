@@ -74,7 +74,10 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
         }
         updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Update list of fetched movie
      * @param results list of fetched movies

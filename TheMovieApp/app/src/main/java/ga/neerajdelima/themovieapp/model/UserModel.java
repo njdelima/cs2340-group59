@@ -48,7 +48,10 @@ public class UserModel {
         }
         return hashedString;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Process login activity
      * @param activity activity to be executed
@@ -60,7 +63,10 @@ public class UserModel {
         processLoginTask.delegate = (ProcessLoginResponse) activity;
         processLoginTask.execute();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Sets the currently logged in user to be username
      * @param username logged in user's username
@@ -68,7 +74,10 @@ public class UserModel {
     public void setLoggedInUser(String username) {
         new setLoggedInUserTask(username).execute();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Get list of user
      * @param activity activity to be executed
@@ -79,6 +88,77 @@ public class UserModel {
         fetchUserListTask.execute();
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return logged in user's UserModel
+     */
+    public User getLoggedInUser() {
+        return UserModel.loggedInUser;
+    }
+    /**
+     * @return logged in user's username
+     */
+    public String getLoggedInUsername() {
+        return loggedInUser.getUsername();
+    }
+    /**
+     * Update user's profile
+     * @param username username
+     * @param newUsername new username
+     * @param newPassword new password
+     * @param newFirstName new first name
+     * @param newLastName new last name
+     * @param newMajor new major
+     */
+    public void updateProfile(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
+        Log.d("Checkpoint", "about to start updateprofileTask");
+        new updateProfileTask(username, newUsername, newPassword, newFirstName, newLastName, newMajor).execute();
+    }
+    /**
+     * Lock user
+     * @param username username to be locked
+     */
+    public void lockUser(String username) {
+        new LockTask(username, true).execute();
+    }
+    /**
+     * Unlock user
+     * @param username username to be unlocked
+     */
+    public void unlockUser(String username) {
+        new LockTask(username, false).execute();
+    }
+    /**
+     * Make user admin
+     * @param username username to be admin
+     */
+    public void makeAdmin(String username) {
+        new AdminTask(username, true).execute();
+    }
+    /**
+     * Demote admin to user
+     * @param username username to be demoted
+     */
+    public void removeAdmin(String username) {
+        new AdminTask(username, false).execute();
+    }
+    /**
+     * Ban user
+     * @param username username to be banned
+     */
+    public void banUser(String username) {
+        new BanTask(username, true).execute();
+    }
+    /**
+     * Unban user
+     * @param username username to be unbanned
+     */
+    public void unbanUser(String username) {
+        new BanTask(username, false).execute();
+    }
+
+>>>>>>> master
     /*
      * this task queries the database for the @param username
      * and gets the rest of the information about the user.
@@ -87,7 +167,10 @@ public class UserModel {
     private class setLoggedInUserTask extends FetchTask {
 
         private JSONObject data;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         /**
          * Constructor of setLoggedInUserTask
          * @param username username
@@ -200,9 +283,14 @@ public class UserModel {
     private class updateProfileTask extends FetchTask {
 
         private JSONObject data;
+<<<<<<< HEAD
 
         /**
          * Constructor of updateProfileTask
+=======
+        /**
+         * Update user's profile
+>>>>>>> master
          * @param username username
          * @param newUsername new username
          * @param newPassword new password

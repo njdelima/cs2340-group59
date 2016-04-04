@@ -28,7 +28,10 @@ public class ProcessLoginTask extends FetchTask {
     public ProcessLoginResponse delegate;
     private String username;
     private String password;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of ProcessLoginTask
      * @param username username

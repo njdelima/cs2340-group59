@@ -9,12 +9,18 @@ import ga.neerajdelima.themovieapp.model.User;
  */
 public interface FetchUserListResponse {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
     /**
      * Send userList to onFetchUserListComplete
      * @param userList list of users
      */
+<<<<<<< HEAD
     void onFetchUserListComplete(ArrayList<User> userList);
 =======
+=======
+>>>>>>> master
     void onFetchUserListComplete(List<User> userList);
 >>>>>>> master
 }

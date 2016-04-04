@@ -13,7 +13,10 @@ import org.json.JSONObject;
 public class BanTask extends FetchTask{
     private String username;
     private boolean set;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of BanTask
      * @param username username

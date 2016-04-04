@@ -15,7 +15,10 @@ public class User {
     private boolean banned;
     private boolean admin;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * Constructor of User
      * @param username username
@@ -38,7 +41,10 @@ public class User {
         this.banned = banned;
         this.admin = admin;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     /**
      * @return whether user is locked
      */
@@ -139,7 +145,7 @@ public class User {
     public int hashCode() {
         return username.hashCode() + password.hashCode() + major.hashCode();
     }
-
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
