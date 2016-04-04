@@ -3,7 +3,6 @@ package ga.neerajdelima.themovieapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.EditText;
 import android.view.View;
 import android.widget.Toast;
@@ -16,7 +15,7 @@ import ga.neerajdelima.themovieapp.model.network.ProcessLoginResponse;
 
 /**
  * Class that handles LoginActivity.
- * @author
+ * @author Neeraj Delima
  * @version 1.0
  */
 public class LoginActivity extends AppCompatActivity implements NetworkCheckResponse, ProcessLoginResponse {
@@ -60,18 +59,18 @@ public class LoginActivity extends AppCompatActivity implements NetworkCheckResp
 
     @Override
     public void onProcessLoginAsAdmin(String username) {
-        Log.d("About to set logged in admin as: ", username);
+        //Log.d("About to set logged in admin as: ", username);
         userModel.setLoggedInUser(username);
-        Log.d("Finished setting logged in admin", username);
+        //Log.d("Finished setting logged in admin", username);
         final Intent intent = new Intent(getApplicationContext(), AdminHomeActivity.class);
         startActivity(intent);
     }
 
     @Override
     public void onProcessLoginSuccess(String username) {
-        Log.d("About to set logged in user as", username);
+        //Log.d("About to set logged in user as", username);
         userModel.setLoggedInUser(username);
-        Log.d("Finished setting logged in user", username);
+        //Log.d("Finished setting logged in user", username);
         final Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(intent);
     }

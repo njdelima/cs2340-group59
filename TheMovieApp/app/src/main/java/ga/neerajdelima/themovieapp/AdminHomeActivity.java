@@ -68,8 +68,8 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 
         /**
          * Constructor for MycustomAdapter
-         * @param list list of movie
-         * @param context context
+         * @param l list of movie
+         * @param c context
          */
 
         public MyCustomAdapter(List<String> list, Context context) {

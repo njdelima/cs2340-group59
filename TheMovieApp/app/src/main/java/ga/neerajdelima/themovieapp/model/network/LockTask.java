@@ -13,13 +13,13 @@ import org.json.JSONObject;
 public class LockTask extends FetchTask {
     private String username;
     private boolean set;
-
     /**
      * Constructor of LockTask
-     * @param username username
-     * @param set whether the user is locked
+     * @param u username
+     * @param s whether the user is locked
      */
-    public LockTask(String username, boolean set) {
+
+    public LockTask(String u, boolean s) {
         super("http://128.61.104.207:2340/api/users/lock.php");
         this.username = username;
         this.set = set;

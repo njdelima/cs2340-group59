@@ -19,9 +19,10 @@ public class FetchMovieRatingTask extends FetchTask {
     private String imdbId;
     /**
      * Constructor of FetchMovieRatingTask
-     * @param imdbId imdbID
+     * @param id imdbID
      */
-    public FetchMovieRatingTask(String imdbId) {
+
+    public FetchMovieRatingTask(String id) {
         super("http://128.61.104.207:2340/api/ratings/fetch.php");
         this.imdbId = imdbId;
     }
