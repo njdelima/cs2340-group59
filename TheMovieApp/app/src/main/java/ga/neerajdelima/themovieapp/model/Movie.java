@@ -45,14 +45,10 @@ public class Movie implements Comparable<Movie> {
         if (obj == this) return true;
 
         Movie that = (Movie) obj;
-        if ( (this.getImdbID().equals(that.getImdbID()) ) &&
+        return (this.getImdbID().equals(that.getImdbID()) ) &&
                 ( this.getTotalRating() == that.getTotalRating() &&
                   this.getRatingCount() == that.getRatingCount() &&
-                  this.getTitle() == that.getTitle()) ) {
-            return true;
-        } else {
-            return false;
-        }
+                  this.getTitle() == that.getTitle());
     }
 
     @Override

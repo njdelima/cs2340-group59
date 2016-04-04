@@ -103,13 +103,10 @@ public class User {
         if (obj == this) return true;
 
         User that = (User) obj;
-        if ( (this.getUsername().equals(that.getUsername()) ) &&
-                ( this.getPassword().equals(that.getPassword()) ) ) {
-            return true;
-        } else {
-            return false;
-        }
+        return (this.getUsername().equals(that.getUsername()) ) &&
+                ( this.getPassword().equals(that.getPassword()) );
     }
+
     @Override
     public String toString() {
         String s = "";
@@ -118,9 +115,9 @@ public class User {
         s = s + "First Name: " + this.firstName + ", ";
         s = s + "Last Name: " + this.lastName + ", ";
         s = s + "Major: " + this.major + ", ";
-        s = s + "Banned: " + "" + this.banned + ", ";
-        s = s + "Locked: " + "" + this.locked + ", ";
-        s = s + "Admin?: " + "" + this.admin;
+        s = s + "Banned: " + String.valueOf(this.banned) + ", ";
+        s = s + "Locked: " + String.valueOf(this.locked) + ", ";
+        s = s + "Admin?: " + String.valueOf(this.admin);
         return s;
     }
 }

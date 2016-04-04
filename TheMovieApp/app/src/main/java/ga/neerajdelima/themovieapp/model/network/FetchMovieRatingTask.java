@@ -35,8 +35,7 @@ public class FetchMovieRatingTask extends FetchTask {
             Log.d("Checkpoint", "made it past sendpostdata");
             Log.d("Response message", getResponseMessage());
 
-            JSONObject response = new JSONObject(getInputString()); // Get the returned JSON
-            return response;
+            return new JSONObject(getInputString()); // Get the returned JSON
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }
@@ -50,7 +49,7 @@ public class FetchMovieRatingTask extends FetchTask {
             int ratingCount = Integer.parseInt(jsonResponse.getString("ratings_count"));
             delegate.onMovieRatingResponse(totalRating, ratingCount);
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.d("JSONException", e.getStackTrace().toString());
         }
     }
 }

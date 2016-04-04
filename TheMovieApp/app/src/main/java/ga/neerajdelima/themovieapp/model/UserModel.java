@@ -78,7 +78,7 @@ public class UserModel {
             try {
                 data.put("username", username);
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.d("JSONException", e.getStackTrace().toString());
             }
         }
 
@@ -155,7 +155,7 @@ public class UserModel {
                 data.put("new_last_name",newLastName);
                 data.put("new_major", newMajor);
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.d("JSONException", e.getStackTrace().toString());
             }
         }
         @Override
@@ -166,7 +166,7 @@ public class UserModel {
             try {
                 setLoggedInUser(data.getString("username")); //update the loggedInUser's information
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.d("JSONException", e.getStackTrace().toString());
             }
             return null;
         }

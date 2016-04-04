@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
 import ga.neerajdelima.themovieapp.model.RatingsModel;
@@ -23,7 +24,7 @@ import ga.neerajdelima.themovieapp.model.RatingsModel;
 public class FetchTopMoviesTask extends FetchTask {
     public FetchTopMoviesResponse delegate;
     String major;
-    ArrayList<Movie> results;
+    List<Movie> results;
 
     public FetchTopMoviesTask(String major) {
         super("http://128.61.104.207:2340/api/ratings/top.php");
@@ -41,8 +42,7 @@ public class FetchTopMoviesTask extends FetchTask {
             Log.d("Checkpoint", "made it past sendpostdata");
             Log.d("Response message", getResponseMessage());
 
-            JSONObject response = new JSONObject(getInputString()); // Get the returned JSON
-            return response;
+            return new JSONObject(getInputString()); // Get the returned JSON
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }

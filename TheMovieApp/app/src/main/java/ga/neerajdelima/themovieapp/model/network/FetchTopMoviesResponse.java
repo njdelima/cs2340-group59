@@ -1,6 +1,7 @@
 package ga.neerajdelima.themovieapp.model.network;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
 
@@ -15,5 +16,5 @@ import ga.neerajdelima.themovieapp.model.Movie;
  * Created by Neeraj on 2/29/16.
  */
 public interface FetchTopMoviesResponse {
-    void onTopMoviesResponse(ArrayList<Movie> results);
+    void onTopMoviesResponse(List<Movie> results);
 }
