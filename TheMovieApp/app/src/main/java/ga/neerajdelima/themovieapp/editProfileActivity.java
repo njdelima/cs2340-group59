@@ -37,9 +37,9 @@ public class EditProfileActivity extends AppCompatActivity {
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
         major = currentUser.getMajor();
-        String[] majors = getResources().getStringArray(R.array.majors_array);
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
-        int spPosition = ad.getPosition(major);
+        final String[] majors = getResources().getStringArray(R.array.majors_array);
+        final ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
+        final int spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setSelection(spPosition);
@@ -72,9 +72,9 @@ public class EditProfileActivity extends AppCompatActivity {
         lastNameText.setText(lastNameText.getText());
         passwordText.setText(passwordText.getText());
 
-        String firstName = firstNameText.getText().toString();
-        String userName = userNameText.getText().toString();
-        String lastName = lastNameText.getText().toString();
+        final String firstName = firstNameText.getText().toString();
+        final String userName = userNameText.getText().toString();
+        final String lastName = lastNameText.getText().toString();
         String password = passwordText.getText().toString();
         major = String.valueOf(spinner.getSelectedItem());
 
@@ -86,7 +86,7 @@ public class EditProfileActivity extends AppCompatActivity {
             Toast.makeText(EditProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
-            Intent intent = new Intent(this, ProfileActivity.class);
+            final Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
     }
