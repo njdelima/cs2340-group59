@@ -29,8 +29,6 @@ import ga.neerajdelima.themovieapp.model.network.FetchUserListResponse;
 public class AdminHomeActivity extends AppCompatActivity implements FetchUserListResponse {
 
     private UserModel userModel;
-    private ListView uListView;
-    private MyCustomAdapter uCustomAdapter;
     private List<String> userList;
     private List<User> user;
 
@@ -43,8 +41,8 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         userModel = new UserModel();
         userModel.getUserList(AdminHomeActivity.this);
         user = new ArrayList<>();
-        uCustomAdapter = new MyCustomAdapter(userList, this);
-        uListView = (ListView) findViewById(R.id.userListView);
+        MyCustomAdapter uCustomAdapter = new MyCustomAdapter(userList, this);
+        ListView uListView = (ListView) findViewById(R.id.userListView);
         uListView.setAdapter(uCustomAdapter);
         uListView.invalidateViews();
     }

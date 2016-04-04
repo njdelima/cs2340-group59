@@ -26,9 +26,6 @@ import org.json.JSONObject;
 public class ProcessLoginTask extends FetchTask {
 
     public ProcessLoginResponse delegate;
-    private int isAdmin;
-    private int isBan;
-    private int isLocked;
     private String username;
     private String password;
 
@@ -57,9 +54,9 @@ public class ProcessLoginTask extends FetchTask {
             String retrievedIsAdmin = response.getString("admin");
             String retrievedIsLocked = response.getString("locked");
             String retrievedIsBan = response.getString("banned");
-            isBan = Integer.parseInt(retrievedIsBan);
-            isLocked = Integer.parseInt(retrievedIsLocked);
-            isAdmin = Integer.parseInt(retrievedIsAdmin);
+            int isBan = Integer.parseInt(retrievedIsBan);
+            int isLocked = Integer.parseInt(retrievedIsLocked);
+            int isAdmin = Integer.parseInt(retrievedIsAdmin);
             Log.d("RETRIEVED PASSWORD", retrievedPassword);
             if (isAdmin == 1) {
                 return 4;
@@ -67,7 +64,8 @@ public class ProcessLoginTask extends FetchTask {
                 return 3;
             } else if (isLocked == 1) {
                 return 2;
-            } if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
+            }
+            if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
                 return 1;
             }
 

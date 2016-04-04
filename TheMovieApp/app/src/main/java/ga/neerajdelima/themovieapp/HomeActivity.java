@@ -29,7 +29,6 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private ArrayAdapter<String> ad;
-
     private UserModel userModel;
     private RatingsModel ratingsModel;
     private Spinner spinner;
@@ -48,11 +47,11 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
-        majors = getResources().getStringArray(R.array.majorsfilter_array);
+        String[] majors = getResources().getStringArray(R.array.majorsfilter_array);
         spinner = (Spinner) findViewById(R.id.major_spinner);
-        ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
+        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
         major = "all";
-        spPosition = ad.getPosition(major);
+        int spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setSelection(spPosition);
@@ -95,7 +94,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
      * @param optsArray the array that lists all of the options presented in the navigation bar
      */
     private void addDrawerItems(String[] optsArray) {
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optsArray);
+        ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
     /**

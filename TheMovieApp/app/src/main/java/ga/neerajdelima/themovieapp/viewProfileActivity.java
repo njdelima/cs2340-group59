@@ -19,14 +19,7 @@ import ga.neerajdelima.themovieapp.model.User;
 public class ViewProfileActivity extends AppCompatActivity {
 
     private UserModel userModel;
-    private User currentUser;
     private ListView mDrawerList;
-    private ArrayAdapter<String> mAdapter;
-    private TextView userName;
-    private TextView firstName;
-    private TextView lastName;
-    private TextView passWord;
-    private TextView major;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +27,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
         userModel = new UserModel();
-        currentUser = userModel.getLoggedInUser();
+        User currentUser = userModel.getLoggedInUser();
         mDrawerList = (ListView) findViewById(R.id.navList);
         String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -45,15 +38,15 @@ public class ViewProfileActivity extends AppCompatActivity {
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
-        userName = (TextView) findViewById(R.id.view_profile_userName);
+        TextView userName = (TextView) findViewById(R.id.view_profile_userName);
         userName.setText(currentUser.getUsername());
-        firstName = (TextView) findViewById(R.id.view_profile_firstName);
+        TextView firstName = (TextView) findViewById(R.id.view_profile_firstName);
         firstName.setText(currentUser.getFirstName());
-        lastName = (TextView) findViewById(R.id.view_profile_lastName);
+        TextView lastName = (TextView) findViewById(R.id.view_profile_lastName);
         lastName.setText(currentUser.getLastName());
-        passWord = (TextView) findViewById(R.id.view_profile_password);
+        TextView passWord = (TextView) findViewById(R.id.view_profile_password);
         passWord.setText(currentUser.getPassword());
-        major = (TextView) findViewById(R.id.view_profile_major);
+        TextView major = (TextView) findViewById(R.id.view_profile_major);
         major.setText(currentUser.getMajor());
     }
 
@@ -85,7 +78,7 @@ public class ViewProfileActivity extends AppCompatActivity {
      * @param optsArray the array that lists all of the options presented in the navigation bar
      */
     private void addDrawerItems(String[] optsArray) {
-        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
+        ArrayAdapter<String> mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
 
