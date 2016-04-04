@@ -33,9 +33,7 @@ public class FetchMovieRatingTask extends FetchTask {
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
             Log.d("Response message", getResponseMessage());
-
-            JSONObject response = new JSONObject(getInputString()); // Get the returned JSON
-            return response;
+            return new JSONObject(getInputString()); // Get the returned JSON;
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }

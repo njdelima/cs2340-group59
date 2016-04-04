@@ -49,9 +49,6 @@ public class ProcessLoginTask extends FetchTask {
             isLocked = Integer.parseInt(retrievedIsLocked);
             isAdmin = Integer.parseInt(retrievedIsAdmin);
             Log.d("RETRIEVED PASSWORD", retrievedPassword);
-            Log.d("RETRIEVED IS ADMIN", "" + isAdmin);
-            Log.d("RETRIEVED IS BANNED", "" + isBan);
-            Log.d("RETRIEVED IS LOCKED", "" + isLocked);
             if (isAdmin == 1) {
                 return 4;
             } else if (isBan == 1) {

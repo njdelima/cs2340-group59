@@ -39,8 +39,7 @@ public class MovieSearcherTask extends FetchTask {
         Log.d("SENDING REQ", "http://www.omdbapi.com/?" + params);
         sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
         Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
-        JSONObject response = getInputJSON(); // Gets the response from the API
-        return response; // gives it to onPostExecute
+        return getInputJSON();; // gives it to onPostExecute // Gets the response from the API
     }
 
     @Override

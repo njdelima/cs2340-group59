@@ -119,9 +119,9 @@ public class User {
         s = s + "First Name: " + this.firstName + ", ";
         s = s + "Last Name: " + this.lastName + ", ";
         s = s + "Major: " + this.major + ", ";
-        s = s + "Banned: " + "" + this.banned + ", ";
-        s = s + "Locked: " + "" + this.locked + ", ";
-        s = s + "Admin?: " + "" + this.admin;
+        s = s + "Banned: " + Boolean.toString(this.banned) + ", ";
+        s = s + "Locked: " + Boolean.toString(this.locked) + ", ";
+        s = s + "Admin?: " + Boolean.toString(this.admin);
         return s;
     }
 }
