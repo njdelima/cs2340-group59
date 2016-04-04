@@ -17,15 +17,9 @@ import ga.neerajdelima.themovieapp.model.User;
  * @version 1.0
  */
 public class ViewProfileActivity extends AppCompatActivity {
-<<<<<<< HEAD
-    Intent intent;
-    UserModel userModel;
-    User currentUser;
 
-=======
     private UserModel userModel;
     private User currentUser;
->>>>>>> master
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private TextView userName;
