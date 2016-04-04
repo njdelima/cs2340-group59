@@ -103,12 +103,8 @@ public class User {
         if (obj == this) return true;
 
         User that = (User) obj;
-        if ( (this.getUsername().equals(that.getUsername()) ) &&
-                ( this.getPassword().equals(that.getPassword()) ) ) {
-            return true;
-        } else {
-            return false;
-        }
+        return ( (this.getUsername().equals(that.getUsername()) ) &&
+                ( this.getPassword().equals(that.getPassword()) ) );
     }
     @Override
     public String toString() {
