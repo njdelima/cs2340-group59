@@ -11,7 +11,7 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
  */
 public class UtilitiesModel {
     public void checkNetworkConnection(Activity activity) {
-        NetworkCheckTask networkCheckTask = new NetworkCheckTask("https://google.com");
+        final NetworkCheckTask networkCheckTask = new NetworkCheckTask("https://google.com");
         networkCheckTask.delegate = (NetworkCheckResponse) activity;
         networkCheckTask.execute();
     }

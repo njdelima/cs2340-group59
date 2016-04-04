@@ -54,7 +54,7 @@ public class Movie implements Comparable<Movie> {
             return true;
         }
 
-        Movie that = (Movie) obj;
+        final Movie that = (Movie) obj;
         return ( (this.getImdbID().equals(that.getImdbID()) ) &&
                 ( this.getTotalRating() == that.getTotalRating() &&
                   this.getRatingCount() == that.getRatingCount() &&
@@ -67,8 +67,8 @@ public class Movie implements Comparable<Movie> {
             return 0;
         }
 
-        double thisAverageRating = this.totalRating / this.ratingCount;
-        double thatAverageRating = o.totalRating / o.ratingCount;
+        final double thisAverageRating = this.totalRating / this.ratingCount;
+        final double thatAverageRating = o.totalRating / o.ratingCount;
 
         if (thisAverageRating < thatAverageRating) {
             return -1;

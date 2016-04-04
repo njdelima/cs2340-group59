@@ -45,7 +45,7 @@ public class MovieSearcherTask extends FetchTask {
 
     @Override
     protected void onPostExecute(Object response) {
-        JSONObject serverResponse = (JSONObject) response;
+        final JSONObject serverResponse = (JSONObject) response;
         Log.d("Server response", serverResponse.toString()); // Look through this in the logs
         delegate.onMovieSearchComplete(serverResponse);
     }

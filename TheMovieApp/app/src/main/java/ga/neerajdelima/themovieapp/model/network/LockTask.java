@@ -23,7 +23,7 @@ public class LockTask extends FetchTask {
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("username", username);
             data.put("locked", set);
             Log.d("JSON data", data.toString());

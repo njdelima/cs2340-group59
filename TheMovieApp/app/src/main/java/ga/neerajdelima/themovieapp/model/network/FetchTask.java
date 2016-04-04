@@ -33,7 +33,7 @@ public abstract class FetchTask extends AsyncTask {
      */
     public FetchTask(String requestURL) {
         try {
-            URL url = new URL(requestURL);
+            final URL url = new URL(requestURL);
             connection = (HttpURLConnection) url.openConnection();
         } catch (MalformedURLException e) {
             //Log.d("MalformedURLException", e.getStackTrace().toString());
@@ -65,8 +65,8 @@ public abstract class FetchTask extends AsyncTask {
      */
     protected void sendGetData(String requestURL, String params) {
         try {
-            String newrequestURL = requestURL + "?" + params;
-            URL url = new URL(newrequestURL);
+            final String newrequestURL = requestURL + "?" + params;
+            final URL url = new URL(newrequestURL);
             connection = (HttpURLConnection) url.openConnection();
         } catch (MalformedURLException e) {
             //Log.d("MalformedURLException", e.getStackTrace().toString());
@@ -87,7 +87,7 @@ public abstract class FetchTask extends AsyncTask {
             connection.setDoOutput(true);
             connection.setRequestMethod("POST");
 
-            byte[] postData = jsonData.toString().getBytes();
+            final byte[] postData = jsonData.toString().getBytes();
 
             connection.getOutputStream().write(postData);
         } catch (IOException e) {
@@ -162,7 +162,7 @@ public abstract class FetchTask extends AsyncTask {
 
 
     private String convertStreamToString(InputStream is) {
-        Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+        final Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
     }
 }

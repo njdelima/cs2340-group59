@@ -36,7 +36,7 @@ public class NetworkCheckTask extends FetchTask {
     }
 
     protected void onPostExecute(Object response) {
-        boolean success = (boolean) response;
+        final boolean success = (boolean) response;
         if (success) {
             delegate.onNetworkCheckSuccess();
         } else {

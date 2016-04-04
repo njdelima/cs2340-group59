@@ -35,7 +35,7 @@ public class FetchTopMoviesTask extends FetchTask {
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("major", major);
             Log.d("JSON data", data.toString());
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
@@ -50,23 +50,23 @@ public class FetchTopMoviesTask extends FetchTask {
     }
     @Override
     protected void onPostExecute(Object response) {
-        JSONObject jsonResponse = (JSONObject) response;
+        final JSONObject jsonResponse = (JSONObject) response;
         if (jsonResponse == null) {
             delegate.onTopMoviesResponse(null);
         } else {
             Log.d("Topmovies response", jsonResponse.toString());
 
-            Iterator<String> keys = jsonResponse.keys();
+            final Iterator<String> keys = jsonResponse.keys();
 
             results = new ArrayList<Movie>();
 
             while (keys.hasNext()) {
-                String key = (String) keys.next();
+                final String key = (String) keys.next();
                 Log.d("Current key", key);
 
-                JSONObject curRating = (JSONObject) jsonResponse.opt(key);
+                final JSONObject curRating = (JSONObject) jsonResponse.opt(key);
 
-                Movie movie = new Movie(key, curRating.optString("title"), curRating.optInt("total_rating"), curRating.optInt("rating_count"));
+                final Movie movie = new Movie(key, curRating.optString("title"), curRating.optInt("total_rating"), curRating.optInt("rating_count"));
 
                 results.add(movie);
             }

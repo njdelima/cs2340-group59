@@ -38,7 +38,7 @@ public class UserModel {
     public String md5(String stringToHash) {
         String hashedString = null;
         try {
-            MessageDigest digest = MessageDigest.getInstance("MD5");
+            final MessageDigest digest = MessageDigest.getInstance("MD5");
             digest.update(stringToHash.getBytes());
             hashedString = new BigInteger(1, digest.digest()).toString(16);
         } catch (NoSuchAlgorithmException e) {
@@ -48,7 +48,7 @@ public class UserModel {
     }
 
     public void processLogin(Activity activity, String username, String password) {
-        ProcessLoginTask processLoginTask = new ProcessLoginTask(username, password);
+        final ProcessLoginTask processLoginTask = new ProcessLoginTask(username, password);
         processLoginTask.delegate = (ProcessLoginResponse) activity;
         processLoginTask.execute();
     }
@@ -58,7 +58,7 @@ public class UserModel {
     }
 
     public void getUserList(Activity activity) {
-        FetchUserListTask fetchUserListTask = new FetchUserListTask();
+        final FetchUserListTask fetchUserListTask = new FetchUserListTask();
         fetchUserListTask.delegate = (FetchUserListResponse) activity;
         fetchUserListTask.execute();
     }
@@ -120,10 +120,10 @@ public class UserModel {
             try {
                 Log.d("json to send", data.toString());
                 sendPostData(data); //Sends a POST request with the JSON containing the username
-                JSONObject response = new JSONObject(getInputString()); // get the server response
+                final JSONObject response = new JSONObject(getInputString()); // get the server response
                 Log.d("Json received", response.toString());
                 //Create a new User from the received data
-                User user = new User(response.getString("username"), response.getString("password"),
+                final User user = new User(response.getString("username"), response.getString("password"),
                                         response.getString("first_name"), response.getString("last_name"),
                                         response.getString("major"), response.optBoolean("locked"),
                                         response.optBoolean("banned"), response.optBoolean("admin"));

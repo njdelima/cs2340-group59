@@ -32,19 +32,19 @@ public class ProcessLoginTask extends FetchTask {
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("username", username);
             Log.d("JSON data", data.toString());
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
-            JSONObject response = new JSONObject(getInputString()); // Get the returned password
-            String retrievedPassword = response.getString("password"); // parse JSON
-            String retrievedIsAdmin = response.getString("admin");
-            String retrievedIsLocked = response.getString("locked");
-            String retrievedIsBan = response.getString("banned");
-            int isBan = Integer.parseInt(retrievedIsBan);
-            int isLocked = Integer.parseInt(retrievedIsLocked);
-            int isAdmin = Integer.parseInt(retrievedIsAdmin);
+            final JSONObject response = new JSONObject(getInputString()); // Get the returned password
+            final String retrievedPassword = response.getString("password"); // parse JSON
+            final String retrievedIsAdmin = response.getString("admin");
+            final String retrievedIsLocked = response.getString("locked");
+            final String retrievedIsBan = response.getString("banned");
+            final int isBan = Integer.parseInt(retrievedIsBan);
+            final int isLocked = Integer.parseInt(retrievedIsLocked);
+            final int isAdmin = Integer.parseInt(retrievedIsAdmin);
             Log.d("RETRIEVED PASSWORD", retrievedPassword);
             if (isAdmin == 1) {
                 return 4;
@@ -65,7 +65,7 @@ public class ProcessLoginTask extends FetchTask {
 
     @Override
     protected void onPostExecute(Object response) {
-        int success = (Integer) response;
+        final int success = (Integer) response;
         if (success == 4) {
             delegate.onProcessLoginAsAdmin(this.username);
         } else if (success == 3) {
