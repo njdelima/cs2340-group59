@@ -21,7 +21,11 @@ public class ProcessLoginTask extends FetchTask {
     public ProcessLoginResponse delegate;
     private String username;
     private String password;
-
+    /**
+     * Constructor of ProcessLoginTask
+     * @param username username
+     * @param password password
+     */
     public ProcessLoginTask(String username, String password) {
         super("http://128.61.104.207:2340/api/users/fetch.php");
         this.username = username;

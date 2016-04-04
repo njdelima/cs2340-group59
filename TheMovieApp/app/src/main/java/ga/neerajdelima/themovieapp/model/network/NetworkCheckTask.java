@@ -16,7 +16,10 @@ import java.io.IOException;
 public class NetworkCheckTask extends FetchTask {
 
     public NetworkCheckResponse delegate;
-
+    /**
+     * Constructor of NetworkCheckTask
+     * @param requestURL URL
+     */
     public NetworkCheckTask(String requestURL) {
         super(requestURL);
     }
@@ -34,7 +37,7 @@ public class NetworkCheckTask extends FetchTask {
         }
         return false;
     }
-
+    @Override
     protected void onPostExecute(Object response) {
         boolean success = (boolean) response;
         if (success) {

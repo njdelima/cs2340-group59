@@ -74,7 +74,10 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
         }
         updateListView(resultsArray.toArray(new String[resultsArray.size()]));
     }
-
+    /**
+     * Update list of fetched movie
+     * @param results list of fetched movies
+     */
     private void updateListView(String[] results) {
         final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
         ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);

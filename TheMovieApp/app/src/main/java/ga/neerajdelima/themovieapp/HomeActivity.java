@@ -116,13 +116,22 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
             }
         }
 
-        updateListView(actualResults.toArray(new String[actualResults.size()]),movieTitles.toArray(new String[movieTitles.size()]));
+        updateListView(actualResults.toArray(new String[actualResults.size()]), movieTitles.toArray(new String[movieTitles.size()]));
 
     }
+    /**
+     * Filter list
+     * @param view view
+     */
     public void filter(View view) {
         major = String.valueOf(spinner.getSelectedItem());
         ratingsModel.getTopMovies(HomeActivity.this,major);
     }
+    /**
+     * Update the list
+     * @param results result of the fetch
+     * @param movieResults movie result
+     */
     private void updateListView(String[] results, final String[] movieResults) {
         final ListView mListView = (ListView) findViewById(R.id.recommend_list);
         ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results);

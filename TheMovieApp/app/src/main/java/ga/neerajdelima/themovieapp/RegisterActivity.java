@@ -55,7 +55,9 @@ public class RegisterActivity extends AppCompatActivity {
      * Same as login, checks the network connection before attempting registration
      */
     private class RegisterNetworkCheckTask extends NetworkCheckTask {
-
+        /**
+         * Constructor of RegisterNetworkCheckTask.
+         */
         public RegisterNetworkCheckTask() {
             super("http://128.61.104.207:2340/api/users/add.php");
         }
@@ -80,7 +82,9 @@ public class RegisterActivity extends AppCompatActivity {
         private String username;
         private String password;
         private String confirmPassword;
-
+        /**
+         * Constructor of ProcessRegisterTask
+         */
         public ProcessRegisterTask() {
             super("http://128.61.104.207:2340/api/users/add.php");
         }

@@ -11,6 +11,10 @@ package ga.neerajdelima.themovieapp.model.network;
  * Created by Neeraj on 2/29/16.
  */
 public interface FetchMovieRatingResponse {
-
+    /**
+     * send rating info to onMovieRatingResponse.
+     * @param totalRating the rating of the movie
+     * @param ratingCount number of ratings
+     */
     void onMovieRatingResponse(int totalRating, int ratingCount);
 }

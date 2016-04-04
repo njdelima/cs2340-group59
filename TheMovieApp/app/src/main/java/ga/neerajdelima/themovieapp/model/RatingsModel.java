@@ -72,8 +72,8 @@ public class RatingsModel {
      * onMovieInfoResponse() method
      * All the returned information about the movie will be passed as params
      * to onMovieInfoResponse() method.
-     * @param activity
-     * @param title
+     * @param activity activity is to be executed
+     * @param title movie title
      */
     public void getMovieInfoByTitle(Activity activity, String title) {
         FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
@@ -90,8 +90,8 @@ public class RatingsModel {
      * onTopMoviesResponse() method
      * The returned movies are passed as an arraylist to the onTopMoviesResponse()
      * method
-     * @param activity
-     * @param major
+     * @param activity activity is to be executed
+     * @param major user's major
      */
     public void getTopMovies(Activity activity, String major) {
         FetchTopMoviesTask fetchTopMoviesTask = new FetchTopMoviesTask(major);

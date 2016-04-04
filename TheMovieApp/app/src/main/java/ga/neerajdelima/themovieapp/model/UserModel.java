@@ -1,14 +1,14 @@
 package ga.neerajdelima.themovieapp.model;
 
-import java.math.BigInteger;
-import java.security.NoSuchAlgorithmException;
-
-import java.security.MessageDigest;
-
 import android.app.Activity;
 import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import ga.neerajdelima.themovieapp.model.network.AdminTask;
 import ga.neerajdelima.themovieapp.model.network.BanTask;
@@ -30,10 +30,12 @@ public class UserModel {
      */
     private static User loggedInUser = null;
 
-    /*
+    /**
      * For hashing passwords.
      * Don't move plain text passwords around. hash it
      * as soon as you read from the text box.
+     * @param stringToHash string to be converted to hashcode
+     * @return hased password
      */
     public String md5(String stringToHash) {
         String hashedString = null;
@@ -46,51 +48,98 @@ public class UserModel {
         }
         return hashedString;
     }
-
+    /**
+     * Process login activity
+     * @param activity activity to be executed
+     * @param username username
+     * @param password password
+     */
     public void processLogin(Activity activity, String username, String password) {
         ProcessLoginTask processLoginTask = new ProcessLoginTask(username, password);
         processLoginTask.delegate = (ProcessLoginResponse) activity;
         processLoginTask.execute();
     }
-    // Sets the currently logged in user to be @param username
+    /**
+     * Sets the currently logged in user to be username
+     * @param username logged in user's username
+     */
     public void setLoggedInUser(String username) {
         new setLoggedInUserTask(username).execute();
     }
-
+    /**
+     * Get list of user
+     * @param activity activity to be executed
+     */
     public void getUserList(Activity activity) {
         FetchUserListTask fetchUserListTask = new FetchUserListTask();
         fetchUserListTask.delegate = (FetchUserListResponse) activity;
         fetchUserListTask.execute();
     }
 
+    /**
+     * @return logged in user's UserModel
+     */
     public User getLoggedInUser() {
         return UserModel.loggedInUser;
     }
-
+    /**
+     * @return logged in user's username
+     */
     public String getLoggedInUsername() {
         return loggedInUser.getUsername();
     }
-
-
+    /**
+     * Update user's profile
+     * @param username username
+     * @param newUsername new username
+     * @param newPassword new password
+     * @param newFirstName new first name
+     * @param newLastName new last name
+     * @param newMajor new major
+     */
     public void updateProfile(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
         Log.d("Checkpoint", "about to start updateprofileTask");
         new updateProfileTask(username, newUsername, newPassword, newFirstName, newLastName, newMajor).execute();
     }
+    /**
+     * Lock user
+     * @param username username to be locked
+     */
     public void lockUser(String username) {
         new LockTask(username, true).execute();
     }
+    /**
+     * Unlock user
+     * @param username username to be unlocked
+     */
     public void unlockUser(String username) {
         new LockTask(username, false).execute();
     }
+    /**
+     * Make user admin
+     * @param username username to be admin
+     */
     public void makeAdmin(String username) {
         new AdminTask(username, true).execute();
     }
+    /**
+     * Demote admin to user
+     * @param username username to be demoted
+     */
     public void removeAdmin(String username) {
         new AdminTask(username, false).execute();
     }
+    /**
+     * Ban user
+     * @param username username to be banned
+     */
     public void banUser(String username) {
         new BanTask(username, true).execute();
     }
+    /**
+     * Unban user
+     * @param username username to be unbanned
+     */
     public void unbanUser(String username) {
         new BanTask(username, false).execute();
     }
@@ -103,7 +152,10 @@ public class UserModel {
     private class setLoggedInUserTask extends FetchTask {
 
         private JSONObject data;
-
+        /**
+         * Constructor of setLoggedInUserTask
+         * @param username username
+         */
         public setLoggedInUserTask(String username) {
             super("http://128.61.104.207:2340/api/users/fetch.php"); //Make a FetchTask
             data = new JSONObject();
@@ -142,7 +194,15 @@ public class UserModel {
     private class updateProfileTask extends FetchTask {
 
         private JSONObject data;
-
+        /**
+         * Update user's profile
+         * @param username username
+         * @param newUsername new username
+         * @param newPassword new password
+         * @param newFirstName new first name
+         * @param newLastName new last name
+         * @param newMajor new major
+         */
         public updateProfileTask(String username, String newUsername, String newPassword, String newFirstName, String newLastName, String newMajor) {
             super("http://128.61.104.207:2340/api/users/update.php"); // Create a FetchTask
             Log.d("Checkpoint", "inside updateProfileTask constructor");

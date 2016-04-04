@@ -8,7 +8,13 @@ public class Movie implements Comparable<Movie> {
     private String title;
     private int totalRating;
     private int ratingCount;
-
+    /**
+     * Constructor of Movie
+     * @param imdbID imdbID
+     * @param title movie title
+     * @param totalRating total rating
+     * @param ratingCount number of rating
+     */
     public Movie(String imdbID, String title, int totalRating, int ratingCount) {
         this.imdbID = imdbID;
         this.title = title;
@@ -16,25 +22,57 @@ public class Movie implements Comparable<Movie> {
         this.ratingCount = ratingCount;
     }
 
+
+    /**
+     * @return imdbID
+     */
     public String getImdbID() {
         return this.imdbID;
     }
+
+    /**
+     * @return total rating
+     */
     public int getTotalRating() {
         return this.totalRating;
     }
+
+    /**
+     * @return number of ratings
+     */
     public int getRatingCount() {
         return this.ratingCount;
     }
+
+    /**
+     * @return movie title
+     */
     public String getTitle() {
         return this.title;
     }
+
+    /**
+     * @param imdbID imdbID to be set.
+     */
     public void setImdbID(String imdbID) {
         this.imdbID = imdbID;
     }
+
+    /**
+     * @param totalRating total rating is to be set.
+     */
     public void setTotalRating(int totalRating) {
         this.totalRating = totalRating;
     }
+
+    /**
+     * @param ratingCount number of ratings to be set.
+     */
     public void setRatingCount(int ratingCount) { this.ratingCount = ratingCount; }
+
+    /**
+     * @param title movie title to be set
+     */
     public void setTitle(String title) {
         this.title = title;
     }
