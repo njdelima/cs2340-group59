@@ -57,16 +57,16 @@ public class FetchUserListTask extends FetchTask {
 
             String adminstr = serverResponse.optJSONObject(i).optString("admin");
             Log.d("admin", String.valueOf(adminstr));
-            boolean admin = adminstr.equals("1");
+            boolean admin = "1".equals(adminstr);
 
             String lockedstr = serverResponse.optJSONObject(i).optString("locked");
             Log.d("locked", String.valueOf(lockedstr));
             Log.d("locked server resp", serverResponse.optJSONObject(i).optString("locked"));
-            boolean locked = lockedstr.equals("1");
+            boolean locked = "1".equals(lockedstr);
 
             String bannedstr = serverResponse.optJSONObject(i).optString("banned");
             Log.d("banned", String.valueOf(bannedstr));
-            boolean banned = bannedstr.equals("1");
+            boolean banned = "1".equals(bannedstr);
 
             User user = new User(username, password, firstName, lastName, major, locked, banned, admin);
 

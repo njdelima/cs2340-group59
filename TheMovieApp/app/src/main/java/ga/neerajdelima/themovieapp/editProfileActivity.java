@@ -87,8 +87,8 @@ public class editProfileActivity extends AppCompatActivity {
         password = password.equals(oldPassword) ? password : userModel.md5(password);
 
 
-        if (firstName.equals("") || userName.equals("") || lastName.equals("")
-                || password.equals("") || major.equals("")) {
+        if ("".equals(firstName) || "".equals(userName) || "".equals(lastName)
+                || "".equals(password) || "".equals(major)) {
             Toast.makeText(editProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);

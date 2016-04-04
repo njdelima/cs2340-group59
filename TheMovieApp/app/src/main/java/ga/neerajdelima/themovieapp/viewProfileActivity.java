@@ -62,18 +62,18 @@ public class viewProfileActivity extends AppCompatActivity {
      */
     private void handleNavClick(View view) {
         String label = ((TextView) view).getText().toString();
-        if (label.equals("Logout")) {
+        if ("Logout".equals(label)) {
             logout();
         }
-        if (label.equals("Profile")) {
+        if ("Profile".equals(label)) {
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Search")){
+        if ("Search".equals(label)){
             Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Home")) {
+        if ("Home".equals(label)) {
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }
