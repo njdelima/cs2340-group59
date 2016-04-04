@@ -1,6 +1,5 @@
 package ga.neerajdelima.themovieapp.model.network;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
