@@ -35,7 +35,6 @@ public class FetchMovieRatingTask extends FetchTask {
             Log.d("Response message", getResponseMessage());
             return new JSONObject(getInputString()); // Get the returned JSON;
 
-            return new JSONObject(getInputString()); // Get the returned JSON
         } catch (JSONException e) {
             Log.d("JsonException", e.getMessage());
         }
