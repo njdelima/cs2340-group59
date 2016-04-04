@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.UserModel;
@@ -32,8 +31,8 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
     private UserModel userModel;
     private ListView uListView;
     private MyCustomAdapter uCustomAdapter;
-    private ArrayList<String> userList;
-    private ArrayList<User> user;
+    private List<String> userList;
+    private List<User> user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,10 +66,10 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
      * Customized Adapter for buttons in the listview
      */
     private class MyCustomAdapter extends BaseAdapter implements ListAdapter {
-        private ArrayList<String> list = new ArrayList<String>();
+        private List<String> list = new ArrayList<String>();
         private Context context;
 
-        public MyCustomAdapter(ArrayList<String> list, Context context) {
+        public MyCustomAdapter(List<String> list, Context context) {
             this.list = list;
             this.context = context;
         }

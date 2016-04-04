@@ -32,7 +32,6 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     private ArrayAdapter<String> ad;
     private UserModel userModel;
     private RatingsModel ratingsModel;
-    private List<Movie> results;
     private Spinner spinner;
     private String major;
     private String[] majors;
