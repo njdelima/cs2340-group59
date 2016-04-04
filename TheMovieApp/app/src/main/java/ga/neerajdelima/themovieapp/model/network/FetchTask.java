@@ -18,7 +18,6 @@ import java.util.Scanner;
  */
 public abstract class FetchTask extends AsyncTask {
     protected HttpURLConnection connection;
-    private String newrequestURL;
 
     /*
      * Constructor for POST requests.
@@ -66,7 +65,7 @@ public abstract class FetchTask extends AsyncTask {
      */
     protected void sendGetData(String requestURL, String params) {
         try {
-            newrequestURL = requestURL + "?" + params;
+            String newrequestURL = requestURL + "?" + params;
             URL url = new URL(newrequestURL);
             connection = (HttpURLConnection) url.openConnection();
         } catch (MalformedURLException e) {
