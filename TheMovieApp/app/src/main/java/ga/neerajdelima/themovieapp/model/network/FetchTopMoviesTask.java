@@ -30,7 +30,6 @@ public class FetchTopMoviesTask extends FetchTask {
      * @param m major of users
      */
     public FetchTopMoviesTask(String m) {
-
         super("http://128.61.104.207:2340/api/ratings/top.php");
         this.major = m;
     }
