@@ -27,7 +27,6 @@ import ga.neerajdelima.themovieapp.model.network.FetchUserListResponse;
  * @version 1.0
  */
 public class AdminHomeActivity extends AppCompatActivity implements FetchUserListResponse {
-
     private UserModel userModel;
     private List<String> userList;
     private List<User> user;
@@ -41,8 +40,8 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         userModel = new UserModel();
         userModel.getUserList(AdminHomeActivity.this);
         user = new ArrayList<>();
-        MyCustomAdapter uCustomAdapter = new MyCustomAdapter(userList, this);
-        ListView uListView = (ListView) findViewById(R.id.userListView);
+        final MyCustomAdapter uCustomAdapter = new MyCustomAdapter(userList, this);
+        final ListView uListView = (ListView) findViewById(R.id.userListView);
         uListView.setAdapter(uCustomAdapter);
         uListView.invalidateViews();
     }
@@ -69,12 +68,13 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
 
         /**
          * Constructor for MycustomAdapter
-         * @param list list of movie
-         * @param context context
+         * @param l list of movie
+         * @param c context
          */
-        public MyCustomAdapter(List<String> list, Context context) {
-            this.list = list;
-            this.context = context;
+
+        public MyCustomAdapter(List<String> l, Context c) {
+            this.list = l;
+            this.context = c;
         }
         @Override
         public long getItemId(int pos) {
@@ -95,11 +95,11 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
         public View getView(final int position, View convertView, ViewGroup parent) {
             View view = convertView;
             if (view == null) {
-                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                final LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 view = inflater.inflate(R.layout.activity_admin_home_list, null);
             }
 
-            TextView listItemText = (TextView)view.findViewById(R.id.user_list);
+            final TextView listItemText = (TextView)view.findViewById(R.id.user_list);
             listItemText.setText(list.get(position));
             final Button banBtn = (Button)view.findViewById(R.id.ban_btn);
             final Button lockBtn = (Button)view.findViewById(R.id.lock_btn);
@@ -138,7 +138,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
             banBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int index = (Integer) v.getTag();
+                    final int index = (Integer) v.getTag();
                     if (user.get(index).isBanned()) {
                         banBtn.setText("Ban");
                         Toast.makeText(AdminHomeActivity.this, "Unbanned " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();
@@ -157,7 +157,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
             admBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int index = (Integer) v.getTag();
+                    final int index = (Integer) v.getTag();
                     if (user.get(index).isAdmin()) {
                         admBtn.setText("Make Admin");
                         Toast.makeText(AdminHomeActivity.this, "Demoted " + user.get(index).getUsername() + " to User", Toast.LENGTH_SHORT).show();
@@ -175,7 +175,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
             lockBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int index = (Integer) v.getTag();
+                    final int index = (Integer) v.getTag();
                     if (user.get(index).isLocked()) {
                         lockBtn.setText("Lock");
                         Toast.makeText(AdminHomeActivity.this, "Unlocked " + user.get(index).getUsername(), Toast.LENGTH_SHORT).show();

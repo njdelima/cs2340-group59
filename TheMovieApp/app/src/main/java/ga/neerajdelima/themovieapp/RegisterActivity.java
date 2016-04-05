@@ -19,7 +19,7 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
 
 /**
  * Class that handles RegisterActivity.
- * @author
+ * @author Neeraj Delima
  * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
      * @param view the cancel button
      */
     public void cancelRegistration(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
+        final Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Object response) {
-            boolean success = (boolean) response;
+            final boolean success = (boolean) response;
             if (success) {
                 new ProcessRegisterTask().execute();
             } else {
@@ -91,9 +91,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            EditText usernameText = (EditText) findViewById(R.id.register_username_text);
-            EditText passwordText = (EditText) findViewById(R.id.register_password_text);
-            EditText confirmPasswordText = (EditText) findViewById(R.id.register_password_confirm);
+            final EditText usernameText = (EditText) findViewById(R.id.register_username_text);
+            final EditText passwordText = (EditText) findViewById(R.id.register_password_text);
+            final EditText confirmPasswordText = (EditText) findViewById(R.id.register_password_confirm);
 
             username = usernameText.getText().toString();
             password = userModel.md5(passwordText.getText().toString());
@@ -113,7 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
                     return false;
                 }
                 connection.setConnectTimeout(0);
-                JSONObject data = new JSONObject();
+                final JSONObject data = new JSONObject();
                 data.put("username", username);
                 data.put("password", password);
                 sendPostData(data);
@@ -137,9 +137,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Object response) {
-            boolean success = (boolean) response;
+            final boolean success = (boolean) response;
             if (success) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                final Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         }

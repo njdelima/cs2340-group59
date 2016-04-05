@@ -27,7 +27,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         userModel = new UserModel();
         mDrawerList = (ListView) findViewById(R.id.navList);
-        String[] optsArray = getResources().getStringArray(R.array.navigation_array);
+        final String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -43,20 +43,20 @@ public class ProfileActivity extends AppCompatActivity {
      * @param view the current view of the navigation bar
      */
     private void handleNavClick(View view) {
-        String label = ((TextView) view).getText().toString();
+        final String label = ((TextView) view).getText().toString();
         if ("Logout".equals(label)) {
             logout();
         }
         if ("Profile".equals(label)) {
-            Intent intent = new Intent(this, ProfileActivity.class);
+            final Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
         if ("Search".equals(label)){
-            Intent intent = new Intent(this, SearchActivity.class);
+            final Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         }
         if ("Home".equals(label)) {
-            Intent intent = new Intent(this, HomeActivity.class);
+            final Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }
     }
@@ -66,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
      * @param optsArray the array that lists all of the options presented in the navigation bar
      */
     private void addDrawerItems(String[] optsArray) {
-        ArrayAdapter<String> mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
+        final ArrayAdapter<String> mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
 
@@ -75,7 +75,7 @@ public class ProfileActivity extends AppCompatActivity {
      */
     private void logout() {
         userModel.setLoggedInUser(null);
-        Intent intent = new Intent(this, LoginActivity.class);
+        final Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -86,7 +86,7 @@ public class ProfileActivity extends AppCompatActivity {
      */
     public void viewProfile(View view) {
         if (userModel.getLoggedInUser().getFirstName() != null) {
-            Intent intent = new Intent(this, ViewProfileActivity.class);
+            final Intent intent = new Intent(this, ViewProfileActivity.class);
             startActivity(intent);
         } else {
             Toast.makeText(ProfileActivity.this, "Profile has not been created", Toast.LENGTH_SHORT).show();
@@ -98,7 +98,7 @@ public class ProfileActivity extends AppCompatActivity {
      * @param view the current view of the main profile screen
      */
     public void editProfile(View view) {
-        Intent intent = new Intent(this, EditProfileActivity.class);
+        final Intent intent = new Intent(this, EditProfileActivity.class);
         startActivity(intent);
     }
 }

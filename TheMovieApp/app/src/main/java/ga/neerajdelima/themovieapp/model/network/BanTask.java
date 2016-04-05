@@ -18,17 +18,17 @@ public class BanTask extends FetchTask{
      * @param username username
      * @param set whether the user is banned
      */
-    public BanTask(String username, boolean set) {
+    public BanTask(String u, boolean s) {
         super("http://128.61.104.207:2340/api/users/ban.php");
-        this.username = username;
-        this.set = set;
+        this.username = u;
+        this.set = s;
     }
 
     @Override
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("username", username);
             data.put("banned", set);
             Log.d("JSON data", data.toString());

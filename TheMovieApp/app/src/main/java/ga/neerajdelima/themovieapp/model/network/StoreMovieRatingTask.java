@@ -33,7 +33,7 @@ public class StoreMovieRatingTask extends FetchTask {
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("username", username);
             data.put("id", imdbId);
             data.put("rating", rating);

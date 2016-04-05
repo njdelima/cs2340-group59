@@ -58,7 +58,7 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
 
     @Override
     public void onMovieSearchComplete(JSONObject results) {
-        ArrayList<String> resultsArray = new ArrayList<String>();
+        final ArrayList<String> resultsArray = new ArrayList<String>();
 
         //Parsing the JSON example
         JSONArray searchResults = null;
@@ -80,7 +80,7 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
      */
     private void updateListView(String[] results) {
         final ListView mListView = (ListView) findViewById(R.id.search_results_list_view);
-        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
+        final ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, results);
         mListView.setAdapter(mArrayAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -88,8 +88,8 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
 
-                String item = ((TextView) view).getText().toString();
-                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                final String item = ((TextView) view).getText().toString();
+                final Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                 Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
                 intent.putExtra("result", item);
                 startActivity(intent);
