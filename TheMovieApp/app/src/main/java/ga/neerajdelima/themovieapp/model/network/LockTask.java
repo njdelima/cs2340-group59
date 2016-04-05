@@ -18,11 +18,13 @@ public class LockTask extends FetchTask {
      * @param u username
      * @param s whether the user is locked
      */
+
     public LockTask(String u, boolean s) {
         super("http://128.61.104.207:2340/api/users/lock.php");
         this.username = u;
         this.set = s;
     }
+
     @Override
     protected Object doInBackground(Object... args) {
         try {

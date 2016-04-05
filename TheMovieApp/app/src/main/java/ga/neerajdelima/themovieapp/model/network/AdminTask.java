@@ -18,10 +18,10 @@ public class AdminTask extends FetchTask{
      * @param set whether the user is admin
      */
 
-    public AdminTask(String u, boolean s) {
+    public AdminTask(String username, boolean set) {
         super("http://128.61.104.207:2340/api/users/admin.php");
-        this.username = u;
-        this.set = s;
+        this.username = username;
+        this.set = set;
     }
 
     @Override

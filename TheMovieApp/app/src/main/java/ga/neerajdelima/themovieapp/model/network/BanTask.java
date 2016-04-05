@@ -18,10 +18,10 @@ public class BanTask extends FetchTask{
      * @param username username
      * @param set whether the user is banned
      */
-    public BanTask(String u, boolean s) {
+    public BanTask(String username, boolean set) {
         super("http://128.61.104.207:2340/api/users/ban.php");
-        this.username = u;
-        this.set = s;
+        this.username = username;
+        this.set = set;
     }
 
     @Override
