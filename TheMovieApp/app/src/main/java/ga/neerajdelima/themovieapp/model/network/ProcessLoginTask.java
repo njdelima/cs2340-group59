@@ -59,6 +59,8 @@ public class ProcessLoginTask extends FetchTask {
             }
             if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
                 return 1;
+            } else {
+
             }
 
         } catch (JSONException e) {
@@ -79,6 +81,7 @@ public class ProcessLoginTask extends FetchTask {
         }else if (success == 1) {
             delegate.onProcessLoginSuccess(this.username);
         } else {
+
             delegate.onProcessLoginFailure();
         }
     }

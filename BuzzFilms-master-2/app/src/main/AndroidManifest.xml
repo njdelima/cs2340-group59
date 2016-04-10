@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nullpointexecutioners.buzzfilms">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".BuzzFilms"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup, android:fullBackupContent">
+        <activity
+            android:name=".activities.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/dashboard"
+            android:theme="@style/DrawerTheme_Dark">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".activities.SearchMovieResultsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SearchMovieResultsActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="@string/profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.RecentReleasesActivity"
+            android:label="@string/recent_releases"
+            android:theme="@style/DrawerTheme_Dark" />
+        <activity
+            android:name=".activities.MovieDetailActivity"
+            android:label="@string/movie_details"
+            android:theme="@style/AppTheme" />
+
+        <provider
+            android:name=".helpers.RecentSuggestionsProvider"
+            android:authorities="com.nullpointexecutioners.buzzfilms.helpers.RecentSuggestionsProvider" />
+
+        <activity
+            android:name=".activities.MoviePosterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_movie_poster"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".activities.AdminActivity"
+            android:label="@string/title_activity_admin"
+            android:theme="@style/DrawerTheme_Dark" />
+    </application>
+
+</manifest>
