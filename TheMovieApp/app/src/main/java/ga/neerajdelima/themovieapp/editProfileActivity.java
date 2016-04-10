@@ -66,7 +66,6 @@ public class EditProfileActivity extends AppCompatActivity {
      * @param view the current view of the edit profile screen
      */
     public void saveChanges(View view) {
-
         userNameText.setText(userNameText.getText());
         firstNameText.setText(firstNameText.getText());
         lastNameText.setText(lastNameText.getText());
@@ -79,7 +78,6 @@ public class EditProfileActivity extends AppCompatActivity {
         major = String.valueOf(spinner.getSelectedItem());
 
         password = password.equals(oldPassword) ? password : userModel.md5(password);
-
 
         if ("".equals(firstName) || "".equals(userName) || "".equals(lastName)
                 || "".equals(password)) {

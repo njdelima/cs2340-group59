@@ -151,7 +151,10 @@ public class User {
 
         final User that = (User) obj;
         return ( (this.getUsername().equals(that.getUsername()) ) &&
-                ( this.getPassword().equals(that.getPassword()) ) );
+                ( this.getPassword().equals(that.getPassword()) ) &&
+                ( this.getMajor().equals(that.getMajor())) &&
+                ( this.getFirstName().equals(that.getFirstName())) &&
+                ( this.getLastName().equals(that.getLastName())));
     }
     @Override
     public String toString() {
