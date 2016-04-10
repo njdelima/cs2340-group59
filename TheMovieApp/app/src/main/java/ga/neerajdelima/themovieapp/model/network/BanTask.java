@@ -15,8 +15,8 @@ public class BanTask extends FetchTask{
     private boolean set;
     /**
      * Constructor of BanTask
-     * @param username username
-     * @param set whether the user is banned
+     * @param u username
+     * @param s whether the user is banned
      */
     public BanTask(String u, boolean s) {
         super("http://128.61.104.207:2340/api/users/ban.php");
