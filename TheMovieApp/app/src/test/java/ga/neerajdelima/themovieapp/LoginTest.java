@@ -20,11 +20,13 @@ public class LoginTest extends InstrumentationTestCase {
 
     protected void setUp() throws Exception {
         super.setUp();
+        userModel = new UserModel();
         System.out.print("EEE");
-        userModel.setLoggedInUser("jae");
+        userModel.setLoggedInUser("minho");
         Thread.sleep(10000);
-        userModel.getLoggedInUser();
-        userModel.processLogin(loginActivity, "jae", "1");
+        userModels.add(userModel.getLoggedInUser());
+        userModel.processLogin(loginActivity, "minho", "12345");
+        Thread.sleep(10000);
         userModels.add(userModel.getLoggedInUser());
         userModel.processLogin(loginActivity, "leepogi", "akals1168");
         userModels.add(userModel.getLoggedInUser());
