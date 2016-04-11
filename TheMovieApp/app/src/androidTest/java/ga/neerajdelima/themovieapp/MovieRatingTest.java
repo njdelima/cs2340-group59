@@ -6,7 +6,10 @@ package ga.neerajdelima.themovieapp;
 
 
 import ga.neerajdelima.themovieapp.ResultActivity;
-import android.test.AndroidTestCase;
+
+import android.support.test.InstrumentationRegistry;
+//import android.test.AndroidTestCase;
+import android.test.ActivityInstrumentationTestCase2;
 import android.app.Activity;
 import android.support.test.runner.AndroidJUnit4;
 import android.support.test.rule.ActivityTestRule;
@@ -22,24 +25,22 @@ import org.junit.runner.RunWith;
  * Test on onMovieRatingResponse method
  */
 @RunWith(AndroidJUnit4.class)
-public class MovieRatingTest extends AndroidTestCase{
+public class MovieRatingTest {
 
     @Rule
             public ActivityTestRule<ResultActivity> mResultActivityRule = new ActivityTestRule<ResultActivity>(ResultActivity.class);
 
     Activity activity;
+    int totalRating;
+    int totalCount;
 
     @Before
     public void setUp() throws Exception {
-        super.setUp();
-        activity = mResultActivityRule.getActivity();
-        /*int totalRating;
-        int totalCount;*/
 
     }
 
     @Test
     public void testVerifyActualInt() {
-        assertEquals(false, );
+
     }
 }
