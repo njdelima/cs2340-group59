@@ -14,8 +14,8 @@ public class AdminTask extends FetchTask{
     private boolean set;
     /**
      * Constructor of AdminTask
-     * @param username username
-     * @param set whether the user is admin
+     * @param u username
+     * @param s whether the user is admin
      */
 
     public AdminTask(String u, boolean s) {
