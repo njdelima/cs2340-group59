@@ -50,7 +50,7 @@ public class AdminHomeActivity extends AppCompatActivity implements FetchUserLis
     }
 
     @Override
-    public void onFetchUserListComplete(ArrayList<User> users) {
+    public void onFetchUserListComplete(List<User> users) {
          for (User u : users) {
              userList.add(u.getUsername() + "\n"
                      + u.getFirstName() + " " + u.getLastName() + "\n"

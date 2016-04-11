@@ -16,7 +16,7 @@ import org.json.JSONObject;
  */
 public class FetchMovieRatingTask extends FetchTask {
     public FetchMovieRatingResponse delegate;
-    String imdbId;
+    String  imdbId;
 
     public FetchMovieRatingTask(String imdbId) {
         super("http://128.61.104.207:2340/api/ratings/fetch.php");

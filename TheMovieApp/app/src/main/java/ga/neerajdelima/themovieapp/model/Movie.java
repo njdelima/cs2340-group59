@@ -57,7 +57,7 @@ public class Movie implements Comparable<Movie> {
 
     @Override
     public int compareTo(Movie o) {
-        if (o == null) throw new NullPointerException("Specified object is null.");
+        if (o == null) throw new  NullPointerException("Specified object is null.");
         if (o == this) return 0;
 
         double thisAverageRating = this.totalRating / this.ratingCount;
