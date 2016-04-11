@@ -101,6 +101,9 @@ public class Movie implements Comparable<Movie> {
 
     @Override
     public int compareTo(Movie o) {
+        if (o == null) {
+            throw new IllegalArgumentException("Cannot comapre to a non existant movie");
+        }
         if (o == this) {
             return 0;
         }
