@@ -14,7 +14,6 @@ public class User {
     private boolean locked;
     private boolean banned;
     private boolean admin;
-
     /**
      * Constructor of User
      * @param username username
