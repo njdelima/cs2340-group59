@@ -1,17 +1,15 @@
 package ga.neerajdelima.themovieapp;
 
-import ga.neerajdelima.themovieapp.model.User;
 import ga.neerajdelima.themovieapp.model.Movie;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 /**
  * Created by Eduardo on 4/11/2016.
  */
-public class MovieCompareTo {
+public class MovieCompareToTest {
     @Test
     public void createNewMovie() {
         Movie movie = new Movie("tt0468569","The Dark Knight", 10, 4);
