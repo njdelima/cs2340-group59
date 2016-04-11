@@ -28,7 +28,7 @@ import org.junit.runner.RunWith;
 public class MovieRatingTest {
 
     @Rule
-            public ActivityTestRule<ResultActivity> mResultActivityRule = new ActivityTestRule<ResultActivity>(ResultActivity.class);
+    public ActivityTestRule<ResultActivity> mResultActivityRule = new ActivityTestRule<ResultActivity>(ResultActivity.class);
 
     Activity activity;
     int totalRating;
