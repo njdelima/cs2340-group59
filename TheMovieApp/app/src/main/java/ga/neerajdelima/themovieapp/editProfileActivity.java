@@ -18,40 +18,31 @@ import ga.neerajdelima.themovieapp.model.UserModel;
  * @version 1.0
  */
 
-public class editProfileActivity extends AppCompatActivity {
-
-    private Intent intent;
+public class EditProfileActivity extends AppCompatActivity {
     private UserModel userModel;
     private User currentUser;
     private EditText userNameText;
     private EditText firstNameText;
     private EditText lastNameText;
     private EditText passwordText;
-    private String firstName;
-    private String userName;
-    private String lastName;
-    private String password;
     private String major;
     private String oldPassword;
     private Spinner spinner;
-    private String[] majors;
-    private int sp_position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-        intent = this.getIntent();
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
         major = currentUser.getMajor();
-        majors = getResources().getStringArray(R.array.majors_array);
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
-        sp_position = ad.getPosition(major);
+        final String[] majors = getResources().getStringArray(R.array.majors_array);
+        final ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
+        final int spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setSelection(sp_position);
+        spinner.setSelection(spPosition);
 
 //      ArrayAdapter arr = (ArrayAdapter) spinner.getAdapter();
 //        int spinnerPos = arr.getPosition(major);
@@ -75,27 +66,25 @@ public class editProfileActivity extends AppCompatActivity {
      * @param view the current view of the edit profile screen
      */
     public void saveChanges(View view) {
-
         userNameText.setText(userNameText.getText());
         firstNameText.setText(firstNameText.getText());
         lastNameText.setText(lastNameText.getText());
         passwordText.setText(passwordText.getText());
 
-        firstName = firstNameText.getText().toString();
-        userName = userNameText.getText().toString();
-        lastName = lastNameText.getText().toString();
-        password = passwordText.getText().toString();
+        final String firstName = firstNameText.getText().toString();
+        final String userName = userNameText.getText().toString();
+        final String lastName = lastNameText.getText().toString();
+        String password = passwordText.getText().toString();
         major = String.valueOf(spinner.getSelectedItem());
 
         password = password.equals(oldPassword) ? password : userModel.md5(password);
 
-
-        if (firstName.equals("") || userName.equals("") || lastName.equals("")
-                || password.equals("") || major.equals("")) {
-            Toast.makeText(editProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+        if ("".equals(firstName) || "".equals(userName) || "".equals(lastName)
+                || "".equals(password)) {
+            Toast.makeText(EditProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
-            Intent intent = new Intent(this, ProfileActivity.class);
+            final Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
     }

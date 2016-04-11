@@ -13,17 +13,21 @@ import org.json.JSONObject;
 public class LockTask extends FetchTask {
     private String username;
     private boolean set;
-
-    public LockTask(String username, boolean set) {
+    /**
+     * Constructor of LockTask
+     * @param u username
+     * @param s whether the user is locked
+     */
+    public LockTask(String u, boolean s) {
         super("http://128.61.104.207:2340/api/users/lock.php");
-        this.username = username;
-        this.set = set;
+        this.username = u;
+        this.set = s;
     }
     @Override
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("username", username);
             data.put("locked", set);
             Log.d("JSON data", data.toString());

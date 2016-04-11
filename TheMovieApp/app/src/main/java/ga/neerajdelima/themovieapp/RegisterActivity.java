@@ -19,18 +19,16 @@ import ga.neerajdelima.themovieapp.model.network.NetworkCheckTask;
 
 /**
  * Class that handles RegisterActivity.
- * @author
+ * @author Neeraj Delima
  * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
-    Intent intent;
-    UserModel userModel;
+    private UserModel userModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        intent = this.getIntent();
         userModel = new UserModel();
     }
     /**
@@ -49,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
      * @param view the cancel button
      */
     public void cancelRegistration(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
+        final Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
@@ -57,14 +55,16 @@ public class RegisterActivity extends AppCompatActivity {
      * Same as login, checks the network connection before attempting registration
      */
     private class RegisterNetworkCheckTask extends NetworkCheckTask {
-
+        /**
+         * Constructor of RegisterNetworkCheckTask.
+         */
         public RegisterNetworkCheckTask() {
             super("http://128.61.104.207:2340/api/users/add.php");
         }
 
         @Override
         protected void onPostExecute(Object response) {
-            boolean success = (boolean) response;
+            final boolean success = (boolean) response;
             if (success) {
                 new ProcessRegisterTask().execute();
             } else {
@@ -79,19 +79,21 @@ public class RegisterActivity extends AppCompatActivity {
      */
     private class ProcessRegisterTask extends FetchTask {
 
-        String username;
-        String password;
-        String confirmPassword;
-
+        private String username;
+        private String password;
+        private String confirmPassword;
+        /**
+         * Constructor of ProcessRegisterTask
+         */
         public ProcessRegisterTask() {
             super("http://128.61.104.207:2340/api/users/add.php");
         }
 
         @Override
         protected void onPreExecute() {
-            EditText usernameText = (EditText) findViewById(R.id.register_username_text);
-            EditText passwordText = (EditText) findViewById(R.id.register_password_text);
-            EditText confirmPasswordText = (EditText) findViewById(R.id.register_password_confirm);
+            final EditText usernameText = (EditText) findViewById(R.id.register_username_text);
+            final EditText passwordText = (EditText) findViewById(R.id.register_password_text);
+            final EditText confirmPasswordText = (EditText) findViewById(R.id.register_password_confirm);
 
             username = usernameText.getText().toString();
             password = userModel.md5(passwordText.getText().toString());
@@ -111,7 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
                     return false;
                 }
                 connection.setConnectTimeout(0);
-                JSONObject data = new JSONObject();
+                final JSONObject data = new JSONObject();
                 data.put("username", username);
                 data.put("password", password);
                 sendPostData(data);
@@ -135,9 +137,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Object response) {
-            boolean success = (boolean) response;
+            final boolean success = (boolean) response;
             if (success) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                final Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         }

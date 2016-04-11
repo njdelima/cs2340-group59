@@ -16,28 +16,19 @@ import ga.neerajdelima.themovieapp.model.User;
  * @author Komal Hirani
  * @version 1.0
  */
-public class viewProfileActivity extends AppCompatActivity {
-    Intent intent;
-    UserModel userModel;
-    User currentUser;
+public class ViewProfileActivity extends AppCompatActivity {
+    private UserModel userModel;
     private ListView mDrawerList;
-    private ArrayAdapter<String> mAdapter;
-    TextView userName;
-    TextView firstName;
-    TextView lastName;
-    TextView passWord;
-    TextView major;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
-        intent = this.getIntent();
         userModel = new UserModel();
-        currentUser = userModel.getLoggedInUser();
+        final User currentUser = userModel.getLoggedInUser();
         mDrawerList = (ListView) findViewById(R.id.navList);
-        String[] optsArray = getResources().getStringArray(R.array.navigation_array);
+        final String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -46,15 +37,15 @@ public class viewProfileActivity extends AppCompatActivity {
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
-        userName = (TextView) findViewById(R.id.view_profile_userName);
+        final TextView userName = (TextView) findViewById(R.id.view_profile_userName);
         userName.setText(currentUser.getUsername());
-        firstName = (TextView) findViewById(R.id.view_profile_firstName);
+        final TextView firstName = (TextView) findViewById(R.id.view_profile_firstName);
         firstName.setText(currentUser.getFirstName());
-        lastName = (TextView) findViewById(R.id.view_profile_lastName);
+        final TextView lastName = (TextView) findViewById(R.id.view_profile_lastName);
         lastName.setText(currentUser.getLastName());
-        passWord = (TextView) findViewById(R.id.view_profile_password);
+        final TextView passWord = (TextView) findViewById(R.id.view_profile_password);
         passWord.setText(currentUser.getPassword());
-        major = (TextView) findViewById(R.id.view_profile_major);
+        final TextView major = (TextView) findViewById(R.id.view_profile_major);
         major.setText(currentUser.getMajor());
     }
 
@@ -63,20 +54,20 @@ public class viewProfileActivity extends AppCompatActivity {
      * @param view the current view of the navigation bar
      */
     private void handleNavClick(View view) {
-        String label = ((TextView) view).getText().toString();
-        if (label.equals("Logout")) {
+        final String label = ((TextView) view).getText().toString();
+        if ("Logout".equals(label)) {
             logout();
         }
-        if (label.equals("Profile")) {
-            Intent intent = new Intent(this, ProfileActivity.class);
+        if ("Profile".equals(label)) {
+            final Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Search")){
-            Intent intent = new Intent(this, SearchActivity.class);
+        if ("Search".equals(label)){
+            final Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Home")) {
-            Intent intent = new Intent(this, HomeActivity.class);
+        if ("Home".equals(label)) {
+            final Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }
     }
@@ -86,7 +77,7 @@ public class viewProfileActivity extends AppCompatActivity {
      * @param optsArray the array that lists all of the options presented in the navigation bar
      */
     private void addDrawerItems(String[] optsArray) {
-        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
+        final ArrayAdapter<String> mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
 
@@ -95,7 +86,7 @@ public class viewProfileActivity extends AppCompatActivity {
      */
     private void logout() {
         userModel.setLoggedInUser(null);
-        Intent intent = new Intent(this, LoginActivity.class);
+        final Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -104,7 +95,7 @@ public class viewProfileActivity extends AppCompatActivity {
      * @param view the current view of the view profile screen
      */
     public void editProfile(View view) {
-        Intent intent = new Intent(this, editProfileActivity.class);
+        final Intent intent = new Intent(this, EditProfileActivity.class);
         startActivity(intent);
     }
 }

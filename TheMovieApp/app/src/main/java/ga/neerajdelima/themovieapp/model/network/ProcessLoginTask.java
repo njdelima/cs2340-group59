@@ -19,12 +19,13 @@ import org.json.JSONObject;
 public class ProcessLoginTask extends FetchTask {
 
     public ProcessLoginResponse delegate;
-    private int isAdmin;
-    private int isBan;
-    private int isLocked;
     private String username;
     private String password;
-
+    /**
+     * Constructor of ProcessLoginTask
+     * @param username username
+     * @param password password
+     */
     public ProcessLoginTask(String username, String password) {
         super("http://128.61.104.207:2340/api/users/fetch.php");
         this.username = username;
@@ -35,30 +36,28 @@ public class ProcessLoginTask extends FetchTask {
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("username", username);
             Log.d("JSON data", data.toString());
             sendPostData(data); // POST the username to the URL. The DB returns the password for the username
             Log.d("Checkpoint", "made it past sendpostdata");
-            JSONObject response = new JSONObject(getInputString()); // Get the returned password
-            String retrievedPassword = response.getString("password"); // parse JSON
-            String retrievedIsAdmin = response.getString("admin");
-            String retrievedIsLocked = response.getString("locked");
-            String retrievedIsBan = response.getString("banned");
-            isBan = Integer.parseInt(retrievedIsBan);
-            isLocked = Integer.parseInt(retrievedIsLocked);
-            isAdmin = Integer.parseInt(retrievedIsAdmin);
+            final JSONObject response = new JSONObject(getInputString()); // Get the returned password
+            final String retrievedPassword = response.getString("password"); // parse JSON
+            final String retrievedIsAdmin = response.getString("admin");
+            final String retrievedIsLocked = response.getString("locked");
+            final String retrievedIsBan = response.getString("banned");
+            final int isBan = Integer.parseInt(retrievedIsBan);
+            final int isLocked = Integer.parseInt(retrievedIsLocked);
+            final int isAdmin = Integer.parseInt(retrievedIsAdmin);
             Log.d("RETRIEVED PASSWORD", retrievedPassword);
-            Log.d("RETRIEVED IS ADMIN", "" + isAdmin);
-            Log.d("RETRIEVED IS BANNED", "" + isBan);
-            Log.d("RETRIEVED IS LOCKED", "" + isLocked);
             if (isAdmin == 1) {
                 return 4;
             } else if (isBan == 1) {
                 return 3;
             } else if (isLocked == 1) {
                 return 2;
-            } if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
+            }
+            if (retrievedPassword.equals(password)) { // CHECK THE PASSWORD
                 return 1;
             }
 
@@ -70,7 +69,7 @@ public class ProcessLoginTask extends FetchTask {
 
     @Override
     protected void onPostExecute(Object response) {
-        int success = (Integer) response;
+        final int success = (Integer) response;
         if (success == 4) {
             delegate.onProcessLoginAsAdmin(this.username);
         } else if (success == 3) {

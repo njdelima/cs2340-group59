@@ -27,7 +27,7 @@ public class RatingsModel {
      * @param searchText the text to search
      */
     public void searchForMovie(Activity activity, String searchText) {
-        MovieSearcherTask movieSearcherTask = new MovieSearcherTask(searchText);
+        final MovieSearcherTask movieSearcherTask = new MovieSearcherTask(searchText);
         movieSearcherTask.delegate = (MovieSearcherResponse) activity;
         movieSearcherTask.execute();
     }
@@ -59,7 +59,7 @@ public class RatingsModel {
      * @param imdbID the 9 digit imdbId of the movie in question
      */
     public void getMovieRating(Activity activity, String imdbID) {
-        FetchMovieRatingTask fetchMovieRatingTask = new FetchMovieRatingTask(imdbID);
+        final FetchMovieRatingTask fetchMovieRatingTask = new FetchMovieRatingTask(imdbID);
         fetchMovieRatingTask.delegate = (FetchMovieRatingResponse) activity;
         fetchMovieRatingTask.execute();
     }
@@ -72,11 +72,11 @@ public class RatingsModel {
      * onMovieInfoResponse() method
      * All the returned information about the movie will be passed as params
      * to onMovieInfoResponse() method.
-     * @param activity
-     * @param title
+     * @param activity activity is to be executed
+     * @param title movie title
      */
     public void getMovieInfoByTitle(Activity activity, String title) {
-        FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
+        final FetchMovieInfoTask fetchMovieInfoTask = new FetchMovieInfoTask(title);
         fetchMovieInfoTask.delegate = (FetchMovieInfoResponse) activity;
         fetchMovieInfoTask.execute();
     }
@@ -90,11 +90,11 @@ public class RatingsModel {
      * onTopMoviesResponse() method
      * The returned movies are passed as an arraylist to the onTopMoviesResponse()
      * method
-     * @param activity
-     * @param major
+     * @param activity activity is to be executed
+     * @param major user's major
      */
     public void getTopMovies(Activity activity, String major) {
-        FetchTopMoviesTask fetchTopMoviesTask = new FetchTopMoviesTask(major);
+        final FetchTopMoviesTask fetchTopMoviesTask = new FetchTopMoviesTask(major);
         fetchTopMoviesTask.delegate = (FetchTopMoviesResponse) activity;
         fetchTopMoviesTask.execute();
     }

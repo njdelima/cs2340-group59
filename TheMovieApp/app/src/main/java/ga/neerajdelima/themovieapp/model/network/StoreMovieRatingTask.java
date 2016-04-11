@@ -13,10 +13,15 @@ import org.json.JSONObject;
  * Created by Joshua on 2/29/16.
  */
 public class StoreMovieRatingTask extends FetchTask {
-    String username;
-    String imdbId;
-    int rating;
-
+    private String username;
+    private String imdbId;
+    private int rating;
+    /**
+     * Constructor of StoreMovieRatingTask
+     * @param username username
+     * @param imdbId imdbID
+     * @param rating rating of movie
+     */
     public StoreMovieRatingTask(String username, String imdbId, int rating) {
         super("http://128.61.104.207:2340/api/ratings/add.php");
         this.username = username;
@@ -28,7 +33,7 @@ public class StoreMovieRatingTask extends FetchTask {
     protected Object doInBackground(Object... args) {
         try {
             connection.setConnectTimeout(0);
-            JSONObject data = new JSONObject();
+            final JSONObject data = new JSONObject();
             data.put("username", username);
             data.put("id", imdbId);
             data.put("rating", rating);

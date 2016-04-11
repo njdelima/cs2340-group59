@@ -21,22 +21,16 @@ import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
 
 /**
  * Class that handles HomeActivity.
- * @author
+ * @author Neeraj Delima
  * @version 1.0
  */
 
 public class HomeActivity extends AppCompatActivity implements FetchTopMoviesResponse {
-
     private ListView mDrawerList;
-    private ArrayAdapter<String> mAdapter;
-    private ArrayAdapter<String> ad;
-    UserModel userModel;
-    RatingsModel ratingsModel;
-    List<Movie> results;
-    Spinner spinner;
-    String major;
-    String[] majors;
-    int sp_position;
+    private UserModel userModel;
+    private RatingsModel ratingsModel;
+    private Spinner spinner;
+    private String major;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,16 +40,16 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         ratingsModel = new RatingsModel();
 
         mDrawerList = (ListView) findViewById(R.id.navList);
-        String[] optsArray = getResources().getStringArray(R.array.navigation_array);
+        final String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
-        majors = getResources().getStringArray(R.array.majorsfilter_array);
+        final String[] majors = getResources().getStringArray(R.array.majorsfilter_array);
         spinner = (Spinner) findViewById(R.id.major_spinner);
-        ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
+        final ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
         major = "all";
-        sp_position = ad.getPosition(major);
+        final int spPosition = ad.getPosition(major);
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setSelection(sp_position);
+        spinner.setSelection(spPosition);
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -73,20 +67,20 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
      * @param view the current view of the main home screen
      */
     private void handleNavClick(View view) {
-        String label = ((TextView) view).getText().toString();
-        if (label.equals("Logout")) {
+        final String label = ((TextView) view).getText().toString();
+        if ("Logout".equals(label)) {
             logout();
         }
-        if (label.equals("Profile")) {
-            Intent intent = new Intent(this, ProfileActivity.class);
+        if ("Profile".equals(label)) {
+            final Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Search")){
-            Intent intent = new Intent(this, SearchActivity.class);
+        if ("Search".equals(label)){
+            final Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         }
-        if (label.equals("Home")) {
-            Intent intent = new Intent(this, HomeActivity.class);
+        if ("Home".equals(label)) {
+            final Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }
     }
@@ -95,7 +89,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
      * @param optsArray the array that lists all of the options presented in the navigation bar
      */
     private void addDrawerItems(String[] optsArray) {
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optsArray);
+        final ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optsArray);
         mDrawerList.setAdapter(mAdapter);
     }
     /**
@@ -103,15 +97,14 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
      */
     private void logout() {
         userModel.setLoggedInUser(null);
-        Intent intent = new Intent(this, LoginActivity.class);
+        final Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
     @Override
     public void onTopMoviesResponse(List<Movie> results) {
-        this.results = results; //results is a sorted arraylist
-        ArrayList<String> actualResults = new ArrayList<String>();
-        ArrayList<String> movieTitles = new ArrayList<String>();
+        final ArrayList<String> actualResults = new ArrayList<String>();
+        final ArrayList<String> movieTitles = new ArrayList<String>();
         if (results == null) {
             actualResults.add("No recommendations by " + major + " majors");
         } else {
@@ -123,25 +116,34 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
             }
         }
 
-        updateListView(actualResults.toArray(new String[actualResults.size()]),movieTitles.toArray(new String[movieTitles.size()]));
+        updateListView(actualResults.toArray(new String[actualResults.size()]), movieTitles.toArray(new String[movieTitles.size()]));
 
     }
+    /**
+     * Filter list
+     * @param view view
+     */
     public void filter(View view) {
         major = String.valueOf(spinner.getSelectedItem());
         ratingsModel.getTopMovies(HomeActivity.this,major);
     }
+    /**
+     * Update the list
+     * @param results result of the fetch
+     * @param movieResults movie result
+     */
     private void updateListView(String[] results, final String[] movieResults) {
         final ListView mListView = (ListView) findViewById(R.id.recommend_list);
-        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results);
+        final ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results);
         mListView.setAdapter(mArrayAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                String actual = movieResults[position];
+                final String actual = movieResults[position];
                 //String item = ((TextView) view).getText().toString();
-                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                final Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                 Toast.makeText(getBaseContext(), actual, Toast.LENGTH_LONG).show();
                 intent.putExtra("result", actual);
                 startActivity(intent);

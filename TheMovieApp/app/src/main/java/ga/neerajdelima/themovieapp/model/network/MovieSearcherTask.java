@@ -18,6 +18,10 @@ public class MovieSearcherTask extends FetchTask {
 
     public MovieSearcherResponse delegate;
     private String params;
+    /**
+     * Constructor of MovieSearcherTask
+     * @param params movie name
+     */
 
     public MovieSearcherTask(String params) {
         super();
@@ -39,12 +43,13 @@ public class MovieSearcherTask extends FetchTask {
         Log.d("SENDING REQ", "http://www.omdbapi.com/?" + params);
         sendGetData("http://www.omdbapi.com/", params); // get request i.e. http://www.omdbapi.com/?params
         Log.d("HTTP Response", getResponseMessage()); // Should be 'OK'
+
         return getInputJSON(); // Gets the response from the API
     }
 
     @Override
     protected void onPostExecute(Object response) {
-        JSONObject serverResponse = (JSONObject) response;
+        final JSONObject serverResponse = (JSONObject) response;
         Log.d("Server response", serverResponse.toString()); // Look through this in the logs
         delegate.onMovieSearchComplete(serverResponse);
     }
