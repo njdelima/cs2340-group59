@@ -16,19 +16,20 @@
         android:layout_height="wrap_content"
         android:text="Buzz Movie Selector"
         android:textAlignment="center"
-        android:textSize="30sp"/>
+        android:textSize="50sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent" />
 
     <EditText
         android:id="@+id/username_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/main_title"
         android:hint="@string/username_hint"
-        android:layout_alignParentLeft="true"
+        android:padding="20dp"
+        android:layout_below="@+id/main_title"
         android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp"
-        android:padding="20dp" />
+        android:layout_alignParentEnd="true" />
     <EditText
         android:id="@+id/password_text"
         android:inputType="textPassword"
@@ -45,12 +46,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/password_text"
-        android:hint="@string/login_hint"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:padding="20dp"
-        android:onClick="checkLogin"/>
+        android:onClick="checkLogin"
+        android:text="Login!"/>
 
     <Button
         android:id="@+id/register_button"
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@id/login_button"
-        android:hint="@string/register_hint"
+        android:text="Register"
         android:onClick="registerClick"/>
     <TextView
         android:layout_width="wrap_content"

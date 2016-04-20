@@ -144,7 +144,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
                 final String actual = movieResults[position];
                 //String item = ((TextView) view).getText().toString();
                 final Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                Toast.makeText(getBaseContext(), actual, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getBaseContext(), actual, Toast.LENGTH_LONG).show();
                 intent.putExtra("result", actual);
                 startActivity(intent);
             }
