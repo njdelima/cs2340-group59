@@ -35,7 +35,7 @@ public class MovieSearcherTask extends FetchTask {
         } catch (UnsupportedEncodingException e) {
             Log.d("UnsupportedEncodingException", e.getStackTrace().toString());
         }
-        params = "s=" + params;
+        params = "s=" + params + "&type=movie";
     }
 
     @Override

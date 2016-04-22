@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/listItemImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="#C000"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listItemTopBar">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.70"
+                android:id="@+id/listItemMovieName"
+                android:text="Movie Name"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:id="@+id/listItemMovieRating"
+                android:text="N/A"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listItemMovieYearRating"
+            android:layout_below="@+id/listItemTopBar"
+            android:layout_alignLeft="@+id/listItemTopBar"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="11sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listItemMoviePlot"
+            android:layout_below="@+id/listItemMovieYearRating"
+            android:layout_alignLeft="@+id/listItemMovieYearRating"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

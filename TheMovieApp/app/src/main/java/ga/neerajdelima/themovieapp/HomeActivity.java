@@ -1,8 +1,17 @@
 package ga.neerajdelima.themovieapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.view.View;
@@ -11,7 +20,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Spinner;
 
+import org.w3c.dom.Text;
+
+import java.io.InputStream;
+import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import ga.neerajdelima.themovieapp.model.Movie;
@@ -50,6 +65,16 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         spinner.setAdapter(ad);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setSelection(spPosition);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                filter(view);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -57,6 +82,8 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
         ratingsModel.getTopMovies(HomeActivity.this, "all");
 
 //        String message = "Logged in as: " + userModel.getLoggedInUsername();
@@ -103,21 +130,10 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
     }
     @Override
     public void onTopMoviesResponse(List<Movie> results) {
-        final ArrayList<String> actualResults = new ArrayList<String>();
-        final ArrayList<String> movieTitles = new ArrayList<String>();
         if (results == null) {
-            actualResults.add("No recommendations by " + major + " majors");
-        } else {
-            for (int i = 0; i < results.size(); i++) {
-                actualResults.add(results.get(i).toString());
-            }
-            for (int i = 0; i < results.size(); i++) {
-                movieTitles.add(results.get(i).getTitle());
-            }
+            results = new ArrayList<>();
         }
-
-        updateListView(actualResults.toArray(new String[actualResults.size()]), movieTitles.toArray(new String[movieTitles.size()]));
-
+        updateListView((ArrayList) results);
     }
     /**
      * Filter list
@@ -125,29 +141,91 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
      */
     public void filter(View view) {
         major = String.valueOf(spinner.getSelectedItem());
-        ratingsModel.getTopMovies(HomeActivity.this,major);
+        ratingsModel.getTopMovies(HomeActivity.this, major);
     }
-    /**
-     * Update the list
-     * @param results result of the fetch
-     * @param movieResults movie result
-     */
-    private void updateListView(String[] results, final String[] movieResults) {
-        final ListView mListView = (ListView) findViewById(R.id.recommend_list);
-        final ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, results);
-        mListView.setAdapter(mArrayAdapter);
+
+    private void updateListView(final ArrayList<Movie> movies) {
+        ListView mListView = (ListView) findViewById(R.id.recommend_list);
+        MovieAdapter movieAdapter = new MovieAdapter(this, movies);
+        mListView.setAdapter(movieAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position,
-                                    long id) {
-                final String actual = movieResults[position];
-                //String item = ((TextView) view).getText().toString();
-                final Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                //Toast.makeText(getBaseContext(), actual, Toast.LENGTH_LONG).show();
-                intent.putExtra("result", actual);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String movieTitle = movies.get(position).getTitle();
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                intent.putExtra("result", movieTitle);
                 startActivity(intent);
             }
         });
+    }
+
+    private class MovieAdapter extends ArrayAdapter<Movie> {
+        HashMap<String, Bitmap> images;
+
+        public MovieAdapter(Context context, ArrayList<Movie> movies) {
+            super(context, 0, movies);
+            images = new HashMap<>();
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            Movie movie = getItem(position);
+
+            if (convertView == null) {
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_movie, parent, false);
+            }
+
+            ImageView movieImage = (ImageView) convertView.findViewById(R.id.listItemImage);
+            TextView movieName = (TextView) convertView.findViewById(R.id.listItemMovieName);
+            TextView movieYear = (TextView) convertView.findViewById(R.id.listItemMovieYearRating);
+            TextView moviePlot = (TextView) convertView.findViewById(R.id.listItemMoviePlot);
+            TextView movieRating = (TextView) convertView.findViewById(R.id.listItemMovieRating);
+
+            if (images.containsKey(movie.getImdbID())) {
+                movieImage.setImageBitmap(images.get(movie.getImdbID()));
+            } else {
+                new DownloadImageTask(movieImage, movie.getImdbID()).execute(movie.getPoster());
+            }
+            movieName.setText(movie.getTitle());
+            movieYear.setText(movie.getYear() + " \u2022 " + movie.getGenre());
+            moviePlot.setText(movie.getPlot().substring(0,50) + " ...");
+
+
+            DecimalFormat df = new DecimalFormat("#.#");
+
+            double rating = ((double)movie.getTotalRating()) / movie.getRatingCount();
+            movieRating.setText("★ " + df.format(rating));
+
+            return convertView;
+        }
+
+        private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+            ImageView bmImage;
+            String imdbID;
+
+            public DownloadImageTask(ImageView bmImage, String imdbID) {
+                this.bmImage = bmImage;
+                this.imdbID = imdbID;
+            }
+
+            protected Bitmap doInBackground(String... urls) {
+                String urldisplay = urls[0];
+                Bitmap mIcon11 = null;
+                try {
+                    InputStream in = new java.net.URL(urldisplay).openStream();
+                    mIcon11 = BitmapFactory.decodeStream(in);
+                } catch (Exception e) {
+                    Log.e("Error", e.getMessage());
+                    e.printStackTrace();
+                }
+                return mIcon11;
+            }
+
+            protected void onPostExecute(Bitmap result) {
+                images.put(imdbID, result);
+                bmImage.setImageBitmap(result);
+            }
+        }
     }
 }

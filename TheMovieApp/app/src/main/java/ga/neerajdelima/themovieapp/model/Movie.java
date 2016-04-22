@@ -1,13 +1,23 @@
 package ga.neerajdelima.themovieapp.model;
 
+import android.text.Html;
+import android.text.Spanned;
+import android.widget.TextView;
+
+import ga.neerajdelima.themovieapp.R;
+
 /**
  * Created by Joshua on 3/7/16.
  */
 public class Movie implements Comparable<Movie> {
     private String imdbID;
     private String title;
+    private String year;
     private int totalRating;
     private int ratingCount;
+    private String poster;
+    private String genre;
+    private String plot;
     /**
      * Constructor of Movie
      * @param imdbID imdbID
@@ -15,6 +25,10 @@ public class Movie implements Comparable<Movie> {
      * @param totalRating total rating
      * @param ratingCount number of rating
      */
+
+    public Movie(String title) {
+        this.title = title;
+    }
     public Movie(String imdbID, String title, int totalRating, int ratingCount) {
         this.imdbID = imdbID;
         this.title = title;
@@ -22,7 +36,37 @@ public class Movie implements Comparable<Movie> {
         this.ratingCount = ratingCount;
     }
 
+    public Movie(String imdbID, String title, String year, String genre, String plot,
+                 int totalRating, int ratingCount, String poster) {
+        this.imdbID = imdbID;
+        this.title = title;
+        this.year = year;
+        this.totalRating = totalRating;
+        this.ratingCount = ratingCount;
+        this.poster = poster;
+        this.genre = genre;
+        this.plot = plot;
+    }
 
+    public String getPlot() {
+        return this.plot;
+    }
+    public void setPlot(String plot) {
+        this.plot = plot;
+    }
+    public String getYear() {
+        return this.year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+    public String getGenre() {
+        return this.genre;
+    }
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
     /**
      * @return imdbID
      */
@@ -77,6 +121,10 @@ public class Movie implements Comparable<Movie> {
         this.title = title;
     }
 
+    public void setPoster(String poster) { this.poster = poster; }
+
+    public String getPoster() { return this.poster; }
+
     @Override
     public int hashCode() {return imdbID.hashCode() + title.hashCode();}
 
@@ -99,10 +147,14 @@ public class Movie implements Comparable<Movie> {
                   this.getTitle() == that.getTitle()) );
     }
 
+    //public Spanned getDisplay() {
+     //   String s = "<font color=#ecb540>" + this.title + "</font>";
+
+//    }
     @Override
     public int compareTo(Movie o) {
         if (o == null) {
-            throw new IllegalArgumentException("Cannot comapre to a non existant movie");
+            throw new IllegalArgumentException("Cannot compare to a non existent movie");
         }
         if (o == this) {
             return 0;
@@ -122,9 +174,7 @@ public class Movie implements Comparable<Movie> {
     @Override
     public String toString() {
         String s = "";
-        //s = s + "imdbID: " + this.imdbID + ", ";
-        //s = s + "title: " + this.title + ", ";
-        s = s + this.title + ",";
+        s = s + this.title + " (" + this.year + ") ";
         s = s + "Average Rating: " + this.totalRating / this.ratingCount;
         return s;
     }

@@ -11,44 +11,34 @@
         android:id="@+id/home_main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="ga.neerajdelima.themovieapp.HomeActivity">
 
         <TextView
             android:id="@+id/main_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buzz Movie Selector"
+            android:text="Recommendations"
             android:textAlignment="center"
-            android:textSize="30sp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Movie Recommendations"
-            android:textAlignment="center"
-            android:layout_below="@id/main_title"
-            android:id="@+id/recommend_title"/>
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/main_title"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
             android:id="@+id/major_spinner"
-            android:layout_below="@id/recommend_title"
             android:entries="@array/majors_array" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/filter_button"
-            android:text="Filter"
-            android:layout_below="@id/major_spinner"
-            android:onClick="filter"/>
+
+
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/recommend_list"
-            android:layout_below="@id/filter_button"/>
+            android:layout_below="@id/major_spinner"/>
 
     </RelativeLayout>
 

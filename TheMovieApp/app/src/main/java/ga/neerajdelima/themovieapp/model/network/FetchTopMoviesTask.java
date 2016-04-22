@@ -69,7 +69,15 @@ public class FetchTopMoviesTask extends FetchTask {
 
                 final JSONObject curRating = (JSONObject) jsonResponse.opt(key);
 
-                final Movie movie = new Movie(key, curRating.optString("title"), curRating.optInt("total_rating"), curRating.optInt("rating_count"));
+                String title = curRating.optString("title");
+                int totalRating = curRating.optInt("total_rating");
+                int ratingCount = curRating.optInt("rating_count");
+                String poster = curRating.optString("poster");
+                String year = curRating.optString("year");
+                String genre = curRating.optString("genre");
+                String plot = curRating.optString("plot");
+
+                final Movie movie = new Movie(key, title, year, genre, plot, totalRating, ratingCount, poster);
 
                 results.add(movie);
             }
