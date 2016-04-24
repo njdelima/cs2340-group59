@@ -16,89 +16,121 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="ga.neerajdelima.themovieapp.HomeActivity">
-        <TextView
-            android:id="@+id/view_profile_main"
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User Profile"
-            android:textAlignment="center"
-            android:textSize="30sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_userName_label"
-            android:text="User Name: "
-            android:layout_below="@id/view_profile_main"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_userName"
-            android:layout_toRightOf="@id/view_profile_userName_label"
-            android:layout_below="@id/view_profile_main"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_password_label"
-            android:text="Password: "
-            android:layout_below="@id/view_profile_userName_label"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_password"
-            android:layout_toRightOf="@id/view_profile_password_label"
-            android:layout_below="@id/view_profile_userName"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_firstName_label"
-            android:text="First Name: "
-            android:layout_below="@id/view_profile_password_label"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_firstName"
-            android:layout_toRightOf="@id/view_profile_firstName_label"
-            android:layout_below="@id/view_profile_password"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_lastName_label"
-            android:text="Last Name: "
-            android:layout_below="@id/view_profile_firstName_label"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_lastName"
-            android:layout_toRightOf="@id/view_profile_lastName_label"
-            android:layout_below="@id/view_profile_firstName"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_major_label"
-            android:text="Major: "
-            android:layout_below="@id/view_profile_lastName_label"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/view_profile_major"
-            android:layout_toRightOf="@id/view_profile_major_label"
-            android:layout_below="@id/view_profile_lastName"/>
+            android:layout_height="29dp"
+            android:id="@+id/username_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_userName_label"
+                android:text="Username: "
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_userName"
+                android:layout_toRightOf="@id/view_profile_userName_label"
+                android:fontFamily="sans-serif-light"
+                android:textSize="15sp"
+                android:gravity="center_vertical"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:id="@+id/firstName_layout"
+            android:layout_below="@+id/username_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_firstName_label"
+                android:text="First Name: "
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_firstName"
+                android:layout_toRightOf="@id/view_profile_firstName_label"
+                android:fontFamily="sans-serif-light"
+                android:textSize="15sp"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:id="@+id/lastName_layout"
+            android:layout_below="@id/firstName_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_lastName_label"
+                android:text="Last Name: "
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_lastName"
+                android:layout_toRightOf="@id/view_profile_lastName_label"
+                android:fontFamily="sans-serif-light"
+                android:textSize="15sp"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:id="@+id/major_layout"
+            android:layout_below="@+id/lastName_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_major_label"
+                android:text="Major: "
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/view_profile_major"
+                android:layout_toRightOf="@id/view_profile_major_label"
+                android:fontFamily="sans-serif-light"
+                android:textSize="15sp"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/view_edit_button"
             android:text="Edit Profile"
-            android:layout_below="@id/view_profile_major_label"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:onClick="editProfile"/>
+            android:onClick="editProfile"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
     </RelativeLayout>
     <ListView
         android:id="@id/navList"
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:layout_gravity="left|start"
-        android:background="#ffeeeeee"/>
-
+        android:background="#B000"/>
 </android.support.v4.widget.DrawerLayout>

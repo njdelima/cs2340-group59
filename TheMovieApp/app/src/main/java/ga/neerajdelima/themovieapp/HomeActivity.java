@@ -69,7 +69,6 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         getSupportActionBar().setTitle(Html.fromHtml("<font color=#ecb540>" + getSupportActionBar().getTitle() + "</font>"));
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
 
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
@@ -146,6 +145,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
 
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -169,7 +169,7 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
             logout();
         }
         if ("Profile".equals(label)) {
-            final Intent intent = new Intent(this, ProfileActivity.class);
+            final Intent intent = new Intent(this, ViewProfileActivity.class);
             startActivity(intent);
         }
         if ("Search".equals(label)){

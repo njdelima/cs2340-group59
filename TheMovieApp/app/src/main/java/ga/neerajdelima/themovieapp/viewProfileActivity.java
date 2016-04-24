@@ -1,8 +1,13 @@
 package ga.neerajdelima.themovieapp;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,6 +25,10 @@ public class ViewProfileActivity extends AppCompatActivity {
     private UserModel userModel;
     private ListView mDrawerList;
 
+    private ActionBarDrawerToggle mDrawerToggle;
+    private DrawerLayout mDrawerLayout;
+    private String mActivityTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -27,6 +36,14 @@ public class ViewProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_profile);
         userModel = new UserModel();
         final User currentUser = userModel.getLoggedInUser();
+
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=#ecb540>" + getSupportActionBar().getTitle() + "</font>"));
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mActivityTitle = getTitle().toString();
+
         mDrawerList = (ListView) findViewById(R.id.navList);
         final String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
@@ -37,18 +54,63 @@ public class ViewProfileActivity extends AppCompatActivity {
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
+        setupDrawer();
+
         final TextView userName = (TextView) findViewById(R.id.view_profile_userName);
         userName.setText(currentUser.getUsername());
         final TextView firstName = (TextView) findViewById(R.id.view_profile_firstName);
         firstName.setText(currentUser.getFirstName());
         final TextView lastName = (TextView) findViewById(R.id.view_profile_lastName);
         lastName.setText(currentUser.getLastName());
-        final TextView passWord = (TextView) findViewById(R.id.view_profile_password);
-        passWord.setText(currentUser.getPassword());
         final TextView major = (TextView) findViewById(R.id.view_profile_major);
         major.setText(currentUser.getMajor());
     }
+    private void setupDrawer() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+                R.string.drawer_open, R.string.drawer_close) {
 
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle("Navigation");
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle(mActivityTitle);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Pass the event to ActionBarDrawerToggle, if it returns
+        // true, then it has handled the app icon touch event
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        // Handle your other action bar items...
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
     /**
      * Method to handle the different options presented in the navigation bar
      * @param view the current view of the navigation bar
@@ -59,7 +121,7 @@ public class ViewProfileActivity extends AppCompatActivity {
             logout();
         }
         if ("Profile".equals(label)) {
-            final Intent intent = new Intent(this, ProfileActivity.class);
+            final Intent intent = new Intent(this, ViewProfileActivity.class);
             startActivity(intent);
         }
         if ("Search".equals(label)){

@@ -1,9 +1,12 @@
 package ga.neerajdelima.themovieapp;
 
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -28,8 +31,24 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=#ecb540>" + getSupportActionBar().getTitle() + "</font>"));
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
         setContentView(R.layout.activity_register);
         userModel = new UserModel();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
     /**
      * Method to create the user's new account.
@@ -82,6 +101,8 @@ public class RegisterActivity extends AppCompatActivity {
         private String username;
         private String password;
         private String confirmPassword;
+        private String email;
+
         /**
          * Constructor of ProcessRegisterTask
          */
@@ -94,10 +115,12 @@ public class RegisterActivity extends AppCompatActivity {
             final EditText usernameText = (EditText) findViewById(R.id.register_username_text);
             final EditText passwordText = (EditText) findViewById(R.id.register_password_text);
             final EditText confirmPasswordText = (EditText) findViewById(R.id.register_password_confirm);
+            final EditText emailText = (EditText) findViewById(R.id.register_email);
 
             username = usernameText.getText().toString();
             password = userModel.md5(passwordText.getText().toString());
             confirmPassword = userModel.md5(confirmPasswordText.getText().toString());
+            email = emailText.getText().toString();
         }
 
         @Override
@@ -116,6 +139,7 @@ public class RegisterActivity extends AppCompatActivity {
                 final JSONObject data = new JSONObject();
                 data.put("username", username);
                 data.put("password", password);
+                data.put("email", email);
                 sendPostData(data);
                 Log.d("Checkpoint", "made it past x sendpostdata");
                 Log.d("Response mess", getResponseMessage());

@@ -141,7 +141,7 @@ public class SearchActivity extends AppCompatActivity implements MovieSearcherRe
             logout();
         }
         if ("Profile".equals(label)) {
-            final Intent intent = new Intent(this, ProfileActivity.class);
+            final Intent intent = new Intent(this, ViewProfileActivity.class);
             startActivity(intent);
         }
         if ("Search".equals(label)){

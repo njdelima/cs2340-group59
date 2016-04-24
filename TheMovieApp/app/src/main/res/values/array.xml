@@ -4,8 +4,6 @@
         <item>Home</item>
         <item>Search</item>
         <item>Profile</item>
-        <item>Top Rentals</item>
-        <item>New Releases</item>
         <item>Logout</item>
     </string-array>
 </resources>

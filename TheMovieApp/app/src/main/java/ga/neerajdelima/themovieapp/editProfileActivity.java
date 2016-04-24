@@ -3,6 +3,8 @@ package ga.neerajdelima.themovieapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -33,6 +35,12 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=#ecb540>" + getSupportActionBar().getTitle() + "</font>"));
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
         userModel = new UserModel();
         currentUser = userModel.getLoggedInUser();
         spinner = (Spinner) findViewById(R.id.edit_major_spinner);
@@ -61,6 +69,17 @@ public class EditProfileActivity extends AppCompatActivity {
         oldPassword = currentUser.getPassword();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     /**
      * Method that saves all of the changes that the user makes to his/her profile
      * @param view the current view of the edit profile screen
@@ -83,9 +102,10 @@ public class EditProfileActivity extends AppCompatActivity {
                 || "".equals(password)) {
             Toast.makeText(EditProfileActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
-            userModel.updateProfile(currentUser.getUsername(), userName,password, firstName, lastName, major);
-            final Intent intent = new Intent(this, ProfileActivity.class);
+            userModel.updateProfile(currentUser.getUsername(), userName, password, firstName, lastName, major);
+            final Intent intent = new Intent(this, ViewProfileActivity.class);
             startActivity(intent);
+            Toast.makeText(EditProfileActivity.this, "Changes Saved!", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -29,16 +29,19 @@
             android:label="Recommendations"/>
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/CustomTheme.NoActionBar" />
+            android:theme="@style/CustomTheme"
+            android:label="Register"/>
         <activity
             android:name=".ProfileActivity"
             android:theme="@style/CustomTheme"/>
         <activity
             android:name=".ViewProfileActivity"
-            android:theme="@style/CustomTheme"/>
+            android:theme="@style/CustomTheme"
+            android:label="Profile"/>
         <activity
             android:name=".EditProfileActivity"
-            android:theme="@style/CustomTheme"/>
+            android:theme="@style/CustomTheme"
+            android:label="Edit Profile"/>
         <activity
             android:name=".SearchActivity"
             android:theme="@style/CustomTheme"
