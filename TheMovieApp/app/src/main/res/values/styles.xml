@@ -10,7 +10,15 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="CustomTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="CustomTheme" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:colorPrimary">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorForeground</item>
+        <item name="android:buttonStyle">@style/buttonStyle</item>
+        <item name="android:colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/colorBackground</item>
         <item name="android:colorPrimary">@color/colorBackground</item>
         <item name="android:textColor">@color/colorForeground</item>

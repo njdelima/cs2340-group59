@@ -1,15 +1,21 @@
 package ga.neerajdelima.themovieapp;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.os.AsyncTask;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -41,11 +47,16 @@ import ga.neerajdelima.themovieapp.model.network.FetchTopMoviesResponse;
  */
 
 public class HomeActivity extends AppCompatActivity implements FetchTopMoviesResponse {
-    private ListView mDrawerList;
     private UserModel userModel;
     private RatingsModel ratingsModel;
     private Spinner spinner;
     private String major;
+
+    private ListView mDrawerList;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private DrawerLayout mDrawerLayout;
+    private String mActivityTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,9 +65,19 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
         userModel = new UserModel();
         ratingsModel = new RatingsModel();
 
+        /* Styling the ActionBar */
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=#ecb540>" + getSupportActionBar().getTitle() + "</font>"));
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mActivityTitle = getTitle().toString();
+
         mDrawerList = (ListView) findViewById(R.id.navList);
         final String[] optsArray = getResources().getStringArray(R.array.navigation_array);
         addDrawerItems(optsArray);
+
         final String[] majors = getResources().getStringArray(R.array.majorsfilter_array);
         spinner = (Spinner) findViewById(R.id.major_spinner);
         final ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, majors);
@@ -70,11 +91,15 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 filter(view);
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
+
+        ratingsModel.getTopMovies(HomeActivity.this, "all");
+
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -82,13 +107,58 @@ public class HomeActivity extends AppCompatActivity implements FetchTopMoviesRes
                 // Toast.makeText(HomeActivity.this, ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
-        ratingsModel.getTopMovies(HomeActivity.this, "all");
-
+        setupDrawer();
 //        String message = "Logged in as: " + userModel.getLoggedInUsername();
 //        Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
     }
+
+    private void setupDrawer() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
+                R.string.drawer_open, R.string.drawer_close) {
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle("Navigation");
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle(mActivityTitle);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Pass the event to ActionBarDrawerToggle, if it returns
+        // true, then it has handled the app icon touch event
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        // Handle your other action bar items...
+
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+
     /**
      * Method to navigate the user to the selected option.
      * @param view the current view of the main home screen

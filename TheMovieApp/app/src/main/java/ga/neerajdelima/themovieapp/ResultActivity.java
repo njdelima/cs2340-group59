@@ -72,6 +72,10 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
        // totalRatingText.setText(actualTotalRating);
     }
 
+    public void back(View view) {
+        finish();
+    }
+
 
     @Override
     public void onMovieRatingResponse(int totalRating, int ratingCount) {
@@ -130,14 +134,18 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
 
 
         TextView metascoreText = (TextView) findViewById(R.id.movieMetascore);
+        Log.d("METASCORE ERROR", "M= " + metascore);
+
         if (!metascore.equals("N/A")) {
-            int intMetascore = Integer.parseInt(metascore);
-            if (intMetascore > 60) {
-                metascoreText.setBackgroundColor(Color.parseColor("#66CC33"));
-            } else if (intMetascore > 39) {
-                metascoreText.setBackgroundColor(Color.parseColor("#FFCC33"));
-            } else if (intMetascore > 0) {
-                metascoreText.setBackgroundColor(Color.parseColor("#FF0000"));
+            if (isNumeric(metascore)) {
+                int intMetascore = Integer.parseInt(metascore);
+                if (intMetascore > 60) {
+                    metascoreText.setBackgroundColor(Color.parseColor("#66CC33"));
+                } else if (intMetascore > 39) {
+                    metascoreText.setBackgroundColor(Color.parseColor("#FFCC33"));
+                } else if (intMetascore > 0) {
+                    metascoreText.setBackgroundColor(Color.parseColor("#FF0000"));
+                }
             }
         } else {
             metascoreText.setBackgroundColor(Color.parseColor("#777777"));
@@ -146,13 +154,15 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
 
         TextView imdbRatingText = (TextView) findViewById(R.id.movieImdbRating);
         if (!imdbRating.equals("N/A")) {
-            float fImdbRating = Float.parseFloat(imdbRating);
-            if (fImdbRating > 7) {
-                imdbRatingText.setBackgroundColor(Color.parseColor("#66CC33"));
-            } else if (fImdbRating > 4) {
-                imdbRatingText.setBackgroundColor(Color.parseColor("#FFCC33"));
-            } else if (fImdbRating > 0) {
-                imdbRatingText.setBackgroundColor(Color.parseColor("#FF0000"));
+            if (isNumeric(imdbRating)) {
+                float fImdbRating = Float.parseFloat(imdbRating);
+                if (fImdbRating > 7) {
+                    imdbRatingText.setBackgroundColor(Color.parseColor("#66CC33"));
+                } else if (fImdbRating > 4) {
+                    imdbRatingText.setBackgroundColor(Color.parseColor("#FFCC33"));
+                } else if (fImdbRating > 0) {
+                    imdbRatingText.setBackgroundColor(Color.parseColor("#FF0000"));
+                }
             }
         } else {
             imdbRatingText.setBackgroundColor(Color.parseColor("#777777"));
@@ -191,5 +201,17 @@ public class ResultActivity extends AppCompatActivity implements FetchMovieInfoR
         protected void onPostExecute(Bitmap result) {
             bmImage.setImageBitmap(result);
         }
+    }
+
+    private static boolean isNumeric(String str) {
+        try
+        {
+            double d = Double.parseDouble(str);
+        }
+        catch(NumberFormatException nfe)
+        {
+            return false;
+        }
+        return true;
     }
 }

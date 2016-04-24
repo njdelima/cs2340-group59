@@ -22,13 +22,14 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/CustomTheme" />
+            android:theme="@style/CustomTheme.NoActionBar" />
         <activity
             android:name=".HomeActivity"
-            android:theme="@style/CustomTheme" />
+            android:theme="@style/CustomTheme"
+            android:label="Recommendations"/>
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/CustomTheme" />
+            android:theme="@style/CustomTheme.NoActionBar" />
         <activity
             android:name=".ProfileActivity"
             android:theme="@style/CustomTheme"/>
@@ -40,10 +41,11 @@
             android:theme="@style/CustomTheme"/>
         <activity
             android:name=".SearchActivity"
-            android:theme="@style/CustomTheme"/>
+            android:theme="@style/CustomTheme"
+            android:label="Movie Search"/>
         <activity
             android:name=".ResultActivity"
-            android:theme="@style/CustomTheme"/>
+            android:theme="@style/CustomTheme.NoActionBar"/>
         <activity
             android:name=".AdminHomeActivity"
             android:theme="@style/CustomTheme"/>
